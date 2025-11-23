@@ -8,13 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * ResourceReader class.
- *
- * @author jskarpetis
- * @version 1.0
- * Created on 19/11/25.
- */
+
 public class ResourceReader {
 
     public List<List<String>> readCSVAsList(String fileName) throws IOException {
