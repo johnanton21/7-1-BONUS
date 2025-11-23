@@ -1,8 +1,6 @@
 import java.sql.*;
 public class DataH2 {
         public static void main(String[] args) {
-            // Το αρχείο  βρίσκεται στο ~/Downloads/esoda.mv.db
-            // Άρα το path σύνδεσης είναι:
             String jdbcURL = "jdbc:h2:~/test";
             String username = "sa";
             String password = "";
@@ -11,6 +9,7 @@ public class DataH2 {
             try (Connection conn = DriverManager.getConnection(jdbcURL, username, password)) {
                 System.out.println(" Συνδέθηκε στη βάση ");
                 Statement stmt = conn.createStatement();
+                //τεστ για εμφάνιση εσόδων και δαπανών υπουργείων
                 for (String table : tables) {
                     System.out.println(" Περιεχόμενα πίνακα: " + table + " ");
                     try (ResultSet rs = stmt.executeQuery("SELECT * FROM " + table)) {
