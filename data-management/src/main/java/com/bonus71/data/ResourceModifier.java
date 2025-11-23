@@ -1,11 +1,8 @@
 package com.bonus71.data;
 
-/**
- * ResourceModifier class.
- *
- * @author jskarpetis
- * @version 1.0
- * Created on 19/11/25.
- */
 public class ResourceModifier {
+    private String databaseFile;
+    public ResourceModifier(String databaseFile) {
+        this.databaseFile = databaseFile;
+    }
 }
