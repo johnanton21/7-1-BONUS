@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.bonus71.data.test.ResourceReaderTest" time="0.043" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\30698\7-1-BONUS\data-management\target\test-classes;C:\Users\30698\7-1-BONUS\data-management\target\classes;C:\Users\30698\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\30698\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\30698\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\30698\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Athens"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-25\bin"/>
+    <property name="sun.java.command" value="C:\Users\30698\AppData\Local\Temp\surefire5717165912677885267\surefirebooter-20251123114148864_3.jar C:\Users\30698\AppData\Local\Temp\surefire5717165912677885267 2025-11-23T11-41-38_938-jvmRun1 surefire-20251123114148864_1tmp surefire_0-20251123114148864_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\30698\7-1-BONUS\data-management\target\test-classes;C:\Users\30698\7-1-BONUS\data-management\target\classes;C:\Users\30698\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\30698\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\30698\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\30698\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\30698"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-25"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\30698\7-1-BONUS\data-management"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\30698\AppData\Local\Temp\surefire5717165912677885267\surefirebooter-20251123114148864_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="25.0.1+8-LTS-27"/>
+    <property name="user.name" value="30698"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\30698\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\30698\AppData\Local\Temp\"/>
+    <property name="java.version" value="25.0.1"/>
+    <property name="user.dir" value="C:\Users\30698\7-1-BONUS\data-management"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-25\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Users\30698\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\30698\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\dotnet;C:\Program Files (x86)\PuTTY;C:\Program Files\PuTTY;C:\Program Files\Java\jdk-25\bin;%JAVA_HOME5\bin;C:\Program Files\Git\cmd;C:\Users\30698\Downloads\apache-maven-3.9.11\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2025.2.4\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\30698\AppData\Local\Microsoft\WindowsApps;C:\Users\30698\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2025.2.4\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.0.1+8-LTS-27"/>
+    <property name="stdin.encoding" value="Cp1252"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="testReadActualCsv" classname="com.bonus71.data.test.ResourceReaderTest" time="0.022">
+    <system-out><![CDATA[[﻿1. ΕΣΟΔΑ, Column2, Column3, Ευρώ, 1.304.827.000.000]
+[, 11, Φόροι, », 62.055.000.000]
+[, 12, Κοινωνικές εισφορές, », 60.000.000]
+[, 13, Μεταβιβάσεις, », 8.131.000.000]
+[, 14, Πωλήσεις αγαθών και υπηρεσιών, », 2.405.000.000]
+[, 15, Λοιπά τρέχοντα έσοδα, », 2.775.000.000]
+[, 31, Πάγια Περιουσιακά Στοιχεία, », 37.000.000]
+[, 43, Χρεωστικοί τίτλοι, », 11.000.000]
+[, 44, Δάνεια, », 20.000.000]
+[, 45, "Συμμετοχικοί τίτλοι και μερίδια επενδυτικών]
+[κεφαλαίων", », 467.000.000]
+[, 52, Υποχρεώσεις από νόμισμα και καταθέσεις, », 66.000.000]
+[, 53, Χρεωστικοί τίτλοι (υποχρεώσεις), », 25.973.000.000]
+[, 54, Δάνεια, », 1.202.027.000.000]
+[, 57, Χρηματοοικονομικά παράγωγα, », 800.000.000]
+[2. ΕΞΟΔΑ, , , », 1.307.907.506.000]
+[, 21, Παροχές σε εργαζομένους, », 14.889.199.000]
+[, 22, Κοινωνικές παροχές, », 425.136.000]
+[, 23, Μεταβιβάσεις, », 34.741.365.000]
+[, 24, Αγορές αγαθών και υπηρεσιών, », 2.039.542.000]
+[, 25, Επιδοτήσεις, », 80.630.000]
+[, 26, Τόκοι, », 7.701.101.000]
+[, 27, Λοιπές δαπάνες, », 101.553.000]
+[, 29, Πιστώσεις υπό κατανομή, », 17.283.053.000]
+[, 31, Πάγια περιουσιακά στοιχεία, », 2.609.600.000]
+[, 33, Τιμαλφή, », 85.000]
+[, 44, Δάνεια, », 3.741.000.000]
+[, 45, "Συμμετοχικοί τίτλοι και μερίδια επενδυτικών]
+[κεφαλαίων", », 1.755.112.000]
+[, 53, Χρεωστικοί τίτλοι (υποχρεώσεις), », 19.375.000.000]
+[, 54, Δάνεια, », 1.203.165.130.000]
+[, , 3. ΑΠΟΤΕΛΕΣΜΑ ΚΡΑΤΙΚΟΥ ΠΡΟΫΠΟΛΟΓΙΣΜΟΥ (ΕΣΟΔΑ - ΕΞΟΔΑ), », -3.080.506.000]
+]]></system-out>
+  </testcase>
+  <testcase name="testReadCsv" classname="com.bonus71.data.test.ResourceReaderTest" time="0.003">
+    <system-out><![CDATA[[[﻿First_Name, Last_Name], [John, Skarpetis], [Alex, Mikelis], [Γιαννης, Αντωνιαδης]]
+]]></system-out>
+  </testcase>
+</testsuite>
