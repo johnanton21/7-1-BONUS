@@ -6,13 +6,8 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * ResourceReaderTest class.
- *
- * @author jskarpetis
- * @version 1.0
- * Created on 19/11/25.
- */
+
+
 public class ResourceReaderTest {
 
     @Test

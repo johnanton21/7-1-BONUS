@@ -2,13 +2,7 @@ package com.bonus71.bootstrap;
 
 import java.util.Scanner;
 
-/**
- * Main class.
- *
- * @author jskarpetis
- * @version 1.0
- * Created on 19/11/25.
- */
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to the Menu!");
