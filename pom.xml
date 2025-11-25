@@ -12,6 +12,7 @@
     <modules>
         <module>bootstrap</module>
         <module>data-management</module>
+        <module>graphics</module>
     </modules>
 
     <properties>
