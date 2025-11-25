@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d33d048-74e5-4587-b5e8-43afec99db53" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8d33d048-74e5-4587-b5e8-43afec99db53" name="Changes" comment="functions update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "functions-update",
+    "git-widget-placeholder": "menu-feature",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/30694/Documents/PROG 2/bonus_7_1/data-management/src/main/resources",
@@ -123,7 +119,31 @@
       <option name="project" value="LOCAL" />
       <updated>1764006385312</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="functions update">
+      <option name="closed" value="true" />
+      <created>1764076852554</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764076852554</updated>
+    </task>
+    <task id="LOCAL-00007" summary="functions update">
+      <option name="closed" value="true" />
+      <created>1764077431663</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1764077431663</updated>
+    </task>
+    <task id="LOCAL-00008" summary="functions update">
+      <option name="closed" value="true" />
+      <created>1764077437420</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1764077437421</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -131,7 +151,8 @@
     <MESSAGE value="function module commit" />
     <MESSAGE value="data commit" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="functions update" />
+    <option name="LAST_COMMIT_MESSAGE" value="functions update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

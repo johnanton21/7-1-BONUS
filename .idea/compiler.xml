@@ -7,9 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="menu" />
-        <module name="data-management" />
-        <module name="bootstrap" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bootstrap" target="21" />
+      <module name="data-management" target="21" />
+      <module name="menu" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>
