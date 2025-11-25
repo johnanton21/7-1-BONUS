@@ -9,8 +9,13 @@
         <module name="data-management" />
         <module name="bootstrap" />
         <module name="functions" />
-        <module name="menu" />
+      
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bootstrap" target="21" />
+      <module name="data-management" target="21" />
+      <module name="menu" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>
