@@ -1,8 +1,12 @@
 package com.bonus71.data;
 
+import com.bonus71.data.entity.ministry.Environment;
+import com.bonus71.data.repository.*;
+
+import java.sql.SQLException;
 import java.util.Scanner;
 public class DisplayMinistriesMain {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
         Scanner sc = new Scanner(System.in);
         int choice;
@@ -24,41 +28,41 @@ public class DisplayMinistriesMain {
 
                 case 1 -> {
                     System.out.println("=== ΥΠΟΥΡΓΕΙΟ ΠΑΙΔΕΙΑΣ ===");
-                    PaideiasRepository repo = new PaideiasRepository();
+                    EducationRepository repo = new EducationRepository();
                     repo.findAll().forEach(p ->
-                            System.out.println(p.getMeizona() + " | " + p.getOnomasia() + " | " + p.getEvro())
+                            System.out.println(p.getMajorCategory() + " | " + p.getName() + " | " + p.getEuros())
                     );
                 }
 
                 case 2 -> {
                     System.out.println("=== ΥΠΟΥΡΓΕΙΟ ΠΕΡΙΒΑΛΛΟΝΤΟΣ ===");
-                    PerivallonRepository repo = new PerivallonRepository();
+                    EnvironmentRepository repo = new EnvironmentRepository();
                     repo.findAll().forEach(p ->
-                            System.out.println(p.getMeizona() + " | " + p.getOnomasia() + " | " + p.getEvro())
+                            System.out.println(p.getMajorCategory() + " | " + p.getName() + " | " + p.getEuros())
                     );
                 }
 
                 case 3 -> {
                     System.out.println("=== ΥΠΟΥΡΓΕΙΟ ΕΘΝΙΚΗΣ ΑΜΥΝΑΣ ===");
-                    EthnikiAminaRepository repo = new EthnikiAminaRepository();
+                    NationalDefenseRepository repo = new NationalDefenseRepository();
                     repo.findAll().forEach(p ->
-                            System.out.println(p.getMeizona() + " | " + p.getOnomasia() + " | " + p.getEvro())
+                            System.out.println(p.getMajorCategory() + " | " + p.getName() + " | " + p.getEuros())
                     );
                 }
 
                 case 4 -> {
                     System.out.println("=== ΥΠΟΥΡΓΕΙΟ ΟΙΚΟΝΟΜΙΚΩΝ ===");
-                    OikonomikonRepository repo = new OikonomikonRepository();
+                    FinanceMinistryRepository repo = new FinanceMinistryRepository();
                     repo.findAll().forEach(p ->
-                            System.out.println(p.getMeizona() + " | " + p.getOnomasia() + " | " + p.getEvro())
+                            System.out.println(p.getMajorCategory() + " | " + p.getName() + " | " + p.getEuros())
                     );
                 }
 
                 case 5 -> {
                     System.out.println("=== ΥΠΟΥΡΓΕΙΟ ΥΓΕΙΑΣ ===");
-                    YgeiasRepository repo = new YgeiasRepository();
+                    HealthRepository repo = new HealthRepository();
                     repo.findAll().forEach(p ->
-                            System.out.println(p.getMeizona() + " | " + p.getOnomasia() + " | " + p.getEvro())
+                            System.out.println(p.getMajorCategory() + " | " + p.getName() + " | " + p.getEuros())
                     );
                 }
 
