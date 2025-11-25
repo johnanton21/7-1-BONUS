@@ -42,10 +42,15 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependency>
+
+      <dependencies>
+         <dependency>
         <groupId>com.h2database</groupId>
         <artifactId>h2</artifactId>
-        <version>2.4.240</version>
-    </dependency>
+        <version>2.4.240</version> <!-- ή την έκδοση που έχεις -->
+         </dependency>
+      </dependencies>
+
+
 
 </project>
