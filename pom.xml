@@ -13,7 +13,6 @@
     <modules>
         <module>bootstrap</module>
         <module>data-management</module>
-        <module>functions</module>
     </modules>
 
     <properties>
