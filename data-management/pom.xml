@@ -28,7 +28,7 @@
     <dependency>
         <groupId>com.h2database</groupId>
         <artifactId>h2</artifactId>
-        <version>2.4.240</version> <!-- ή την έκδοση που έχεις -->
+        <version>2.4.240</version>
     </dependency>
     </dependencies>
 </project>
