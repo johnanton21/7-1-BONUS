@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d33d048-74e5-4587-b5e8-43afec99db53" name="Changes" comment="functions update" />
+    <list default="true" id="8d33d048-74e5-4587-b5e8-43afec99db53" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +57,7 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "MavenSettings"
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\30694\Documents\PROG 2\bonus_7_1\data-management\src\main\resources" />
