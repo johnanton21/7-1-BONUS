@@ -6,7 +6,7 @@ import com.bonus71.data.repository.NationalDefenseRepository;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class EthnikiAminaMenu {
+public class  EthnikiAminaMenu {
     public static void menu(NationalDefenseRepository repo) throws SQLException {
         Scanner scanner = MainMenus.getScanner();
 

@@ -22,3 +22,4 @@ public class DatabaseConfig {
         return DriverManager.getConnection(URL, USER, PASS);
     }
 }
+

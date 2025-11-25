@@ -9,7 +9,7 @@ import com.bonus71.data.repository.RevenueRepository;
 
 import java.sql.SQLException;
 
-public class DisplayMain {
+public class  DisplayMain {
     public static void main(String[] args) throws SQLException {
 
         // === ΕΜΦΑΝΙΣΗ ΕΞΟΔΩΝ ===
@@ -48,4 +48,3 @@ public class DisplayMain {
         }
     }
 }
-

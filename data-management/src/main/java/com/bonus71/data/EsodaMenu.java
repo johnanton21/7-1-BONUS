@@ -1,5 +1,6 @@
 package com.bonus71.data;
 
+import com.bonus71.data.MainMenus;
 import com.bonus71.data.entity.financial.Revenue;
 import com.bonus71.data.repository.RevenueRepository;
 
@@ -41,4 +42,3 @@ public class EsodaMenu {
         }
     }
 }
-

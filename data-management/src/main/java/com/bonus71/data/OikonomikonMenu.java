@@ -6,7 +6,7 @@ import com.bonus71.data.repository.FinanceMinistryRepository;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class OikonomikonMenu {
+public class  OikonomikonMenu {
 
     public static void menu(FinanceMinistryRepository repo) throws SQLException {
         Scanner scanner = MainMenus.getScanner();
