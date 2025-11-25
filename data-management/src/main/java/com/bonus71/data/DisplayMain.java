@@ -1,40 +1,49 @@
 package com.bonus71.data;
 
+import com.bonus71.data.entity.financial.Expenditure;
+import com.bonus71.data.entity.financial.ExpenditureDetailed;
+import com.bonus71.data.entity.financial.Revenue;
+import com.bonus71.data.repository.ExpenditureDetailedRepository;
+import com.bonus71.data.repository.ExpenditureRepository;
+import com.bonus71.data.repository.RevenueRepository;
+
+import java.sql.SQLException;
+
 public class DisplayMain {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
         // === ΕΜΦΑΝΙΣΗ ΕΞΟΔΩΝ ===
         System.out.println("=== ΕΜΦΑΝΙΣΗ ΕΞΟΔΩΝ ===");
-        ExodaRepository exR = new ExodaRepository();
-        for (Exodo ex : exR.findAll()) {
+        ExpenditureRepository exR = new ExpenditureRepository();
+        for (Expenditure ex : exR.findAll()) {
             System.out.println(
-                    ex.getKodikos() + " | " +
-                            ex.getKatigoria() + " | " +
-                            ex.getEvro()
+                    ex.getCode() + " | " +
+                            ex.getCategory() + " | " +
+                            ex.getEuros()
             );
         }
 
         // === ΕΜΦΑΝΙΣΗ ΕΣΟΔΩΝ ===
         System.out.println("\n=== ΕΜΦΑΝΙΣΗ ΕΣΟΔΩΝ ===");
-        EsodaRepository esR = new EsodaRepository();
-        for (Esoda es : esR.findAll()) {
+        RevenueRepository esR = new RevenueRepository();
+        for (Revenue es : esR.findAll()) {
             System.out.println(
-                    es.getKodikos() + " | " +
-                            es.getKatigoria() + " | " +
-                            es.getEvro()
+                    es.getCode() + " | " +
+                            es.getCategory() + " | " +
+                            es.getEuros()
             );
         }
         // === ΕΜΦΑΝΙΣΗ ΕΞΟΔΩΝ ΑΡΘΡΟΥ 2 ===
         System.out.println("\n=== ΕΞΟΔΑ ΑΡΘΡΟΥ 2 ===");
-        Exoda2Repository ex2R = new Exoda2Repository();
+        ExpenditureDetailedRepository ex2R = new ExpenditureDetailedRepository();
         System.out.println("\n ΚΩΔΙΚΟΣ | ΤΜΗΜΑ | ΤΑΚΤΙΚΟΣ ΠΡΟΥΠΟΛΟΓΙΣΜΟΣ | ΔΗΜΟΣΙΕΣ ΕΠΕΝΔΥΣΕΙΣ | ΣΥΝΟΛΟ");
-        for (Exoda2 ex2 : ex2R.findAll()) {
+        for (ExpenditureDetailed ex2 : ex2R.findAll()) {
             System.out.println(
-                    ex2.getKodikos() + " | " +
-                            ex2.getTmima() + " | " +
-                            ex2.getTaktikosProypologismos() + " | " +
-                            ex2.getProypologismosDimosionEpendyseon() + " | " +
-                            ex2.getSynolo()
+                    ex2.getCode() + " | " +
+                            ex2.getDepartment() + " | " +
+                            ex2.getRegularBudget() + " | " +
+                            ex2.getPublicInvestmentBudget() + " | " +
+                            ex2.getTotal()
             );
         }
     }

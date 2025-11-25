@@ -1,20 +1,23 @@
 package com.bonus71.data;
 
+import com.bonus71.data.repository.*;
+
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class EditMain {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
-        ExodaRepository exodaRepo = new ExodaRepository();
-        EsodaRepository esodaRepo = new EsodaRepository();
-        PaideiasRepository paideiaRepo = new PaideiasRepository();
-        PerivallonRepository perivRepo = new PerivallonRepository();
-        EthnikiAminaRepository amynaRepo = new EthnikiAminaRepository();
-        OikonomikonRepository oikRepo = new OikonomikonRepository();
-        YgeiasRepository ygeiasRepo = new YgeiasRepository();
+        ExpenditureRepository exodaRepo = new ExpenditureRepository();
+        RevenueRepository esodaRepo = new RevenueRepository();
+        EducationRepository paideiaRepo = new EducationRepository();
+        EnvironmentRepository perivRepo = new EnvironmentRepository();
+        NationalDefenseRepository amynaRepo = new NationalDefenseRepository();
+        FinanceMinistryRepository oikRepo = new FinanceMinistryRepository();
+        HealthRepository ygeiasRepo = new HealthRepository();
 
         while (true) {
             System.out.println("\n===== ΜΕΝΟΥ ΕΠΕΞΕΡΓΑΣΙΑΣ =====");
