@@ -1,0 +1,17 @@
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n\r\n    <groupId>bonus71</groupId>\r\n    <artifactId>bonus_7_1</artifactId>\r\n    <version>1.0-SNAPSHOT</version>\r\n    <packaging>pom</packaging>\r\n\r\n    <modules>\r\n        <module>menu</module>\r\n    </modules>\r\n\r\n    <properties>\r\n        <maven.compiler.source>17</maven.compiler.source>\r\n        <maven.compiler.target>17</maven.compiler.target>\r\n    </properties>\r\n\r\n\r\n    <dependencyManagement>\r\n        <dependencies>\r\n\r\n            <dependency>\r\n                <groupId>org.junit.jupiter</groupId>\r\n                <artifactId>junit-jupiter-api</artifactId>\r\n                <version>5.8.1</version>\r\n                <scope>test</scope>\r\n            </dependency>\r\n\r\n            <dependency>\r\n                <groupId>org.junit.jupiter</groupId>\r\n                <artifactId>junit-jupiter-engine</artifactId>\r\n                <version>5.8.1</version>\r\n                <scope>test</scope>\r\n            </dependency>\r\n\r\n        </dependencies>\r\n    </dependencyManagement>\r\n\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision 80f3ea357b49e2db64be25db744da5e37660a58d)
++++ b/pom.xml	(date 1763750030909)
+@@ -39,4 +39,6 @@
+         </dependencies>
+     </dependencyManagement>
+ 
++
++
+ </project>
