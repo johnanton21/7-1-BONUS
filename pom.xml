@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>menu</module>
         <module>bootstrap</module>
         <module>data-management</module>
     </modules>
