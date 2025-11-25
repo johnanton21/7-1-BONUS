@@ -26,3 +26,5 @@ replay_pid*
 *.DS_STORE
 .idea
 /data-management/src/main/java/com/bonus71/data/DatabaseH2M.java
+*target
+target/
