@@ -48,23 +48,23 @@ public class FirstMenuGui {
             lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 13));
             lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
             lblNewLabel.setBackground(Color.WHITE);
-            lblNewLabel.setBounds(140, 28, 130, 14);
+            lblNewLabel.setBounds(162, 24, 130, 14);
             frame.getContentPane().add(lblNewLabel);
 
             JButton btnNewButton = new JButton("ENTER");
-            btnNewButton.setBounds(160, 209, 85, 21);
+            btnNewButton.setBounds(188, 229, 85, 21);
             frame.getContentPane().add(btnNewButton);
 
             JCheckBox chckbxNewCheckBox = new JCheckBox("1. Εμφάνιση των στοιχείων του κρατικού προϋπολογισμού του τρέχοντος έτους");
-            chckbxNewCheckBox.setBounds(6, 49, 424, 26);
+            chckbxNewCheckBox.setBounds(6, 49, 482, 26);
             frame.getContentPane().add(chckbxNewCheckBox);
 
             JCheckBox chckbxNewCheckBox_1 = new JCheckBox("3. Κατηγοριοποίηση δαπανών και εσόδων ανά υπουργείο ή τομέα");
-            chckbxNewCheckBox_1.setBounds(6, 100, 410, 21);
+            chckbxNewCheckBox_1.setBounds(6, 100, 435, 21);
             frame.getContentPane().add(chckbxNewCheckBox_1);
 
             JCheckBox chckbxNewCheckBox_2 = new JCheckBox("4. Σύγκριση δεδομένων του κρατικού προϋπολογισμού με άλλες χώρες");
-            chckbxNewCheckBox_2.setBounds(6, 124, 410, 21);
+            chckbxNewCheckBox_2.setBounds(6, 124, 430, 21);
             frame.getContentPane().add(chckbxNewCheckBox_2);
 
             JCheckBox chckbxNewCheckBox_3 = new JCheckBox("5. Εφαρμoγή αλλαγών");
@@ -72,7 +72,7 @@ public class FirstMenuGui {
             frame.getContentPane().add(chckbxNewCheckBox_3);
 
             JCheckBox chckbxNewCheckBox_4 = new JCheckBox("6. Ανάλυση στατιστικών δεδομένων χρησιμοποιώντας γραφήματα");
-            chckbxNewCheckBox_4.setBounds(6, 170, 393, 21);
+            chckbxNewCheckBox_4.setBounds(6, 170, 410, 21);
             frame.getContentPane().add(chckbxNewCheckBox_4);
 
             JCheckBox chckbxNewCheckBox_5 = new JCheckBox("7. Έξοδος");
