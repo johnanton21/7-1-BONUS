@@ -1,0 +1,15 @@
+Index: data-management/src/test/java/com/bonus71/data/test/ResourceReaderTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.bonus71.data.test;\r\n\r\nimport com.bonus71.data.ResourceReader;\r\nimport org.junit.jupiter.api.Test;\r\n\r\nimport java.io.IOException;\r\nimport java.util.List;\r\n\r\n\r\n\r\npublic class ResourceReaderTest {\r\n\r\n    @Test\r\n    void testReadCsv() throws IOException {\r\n        ResourceReader resourceReader = new ResourceReader();\r\n        List<List<String>> results = resourceReader.readCSVAsList(\"Test_CSV.csv\");\r\n        System.out.println(results);\r\n    }\r\n\r\n    @Test\r\n    void testReadActualCsv() throws IOException {\r\n        ResourceReader resourceReader = new ResourceReader();\r\n        List<List<String>> results = resourceReader.readCSVAsList(\"kratproesodaexoda.csv\");\r\n\r\n        for (List<String> result : results) {\r\n            System.out.println(result);\r\n        }\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/data-management/src/test/java/com/bonus71/data/test/ResourceReaderTest.java b/data-management/src/test/java/com/bonus71/data/test/ResourceReaderTest.java
+--- a/data-management/src/test/java/com/bonus71/data/test/ResourceReaderTest.java	(revision 14e4d8ae63e9ca22da2cb410500edd73d049d945)
++++ b/data-management/src/test/java/com/bonus71/data/test/ResourceReaderTest.java	(date 1764005530930)
+@@ -1,6 +1,5 @@
+ package com.bonus71.data.test;
+ 
+-import com.bonus71.data.ResourceReader;
+ import org.junit.jupiter.api.Test;
+ 
+ import java.io.IOException;
