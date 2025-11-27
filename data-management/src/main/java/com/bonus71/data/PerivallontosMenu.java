@@ -6,7 +6,7 @@ import com.bonus71.data.repository.EnvironmentRepository;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class PerivallontosMenu {
+public class  PerivallontosMenu {
     public static void menu(EnvironmentRepository repo) throws SQLException {
         Scanner scanner = MainMenus.getScanner();
 

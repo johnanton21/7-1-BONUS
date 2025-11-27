@@ -1,6 +1,5 @@
 package com.bonus71.data;
 
-import com.bonus71.data.entity.ministry.Environment;
 import com.bonus71.data.repository.*;
 
 import java.sql.SQLException;
@@ -76,5 +75,3 @@ public class DisplayMinistriesMain {
         sc.close();
     }
 }
-
-

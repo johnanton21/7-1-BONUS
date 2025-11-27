@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DatabaseConfig {
 
-    private static final String URL = "jdbc:h2:~/test;DB_CLOSE_DELAY=-1";
+    private static final String URL = "jdbc:h2:~/test";
     private static final String USER = "sa";
     private static final String PASS = "";
 
@@ -22,3 +22,4 @@ public class DatabaseConfig {
         return DriverManager.getConnection(URL, USER, PASS);
     }
 }
+
