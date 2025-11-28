@@ -9,10 +9,10 @@ import com.bonus71.data.repository.RevenueRepository;
 import java.sql.SQLException;
 
 public class DisplayFunctionA {
-    public static void main(String[] args) throws SQLException {
+    public static void showAll() throws SQLException {
 
-        // === ΕΜΦΑΝΙΣΗ ΕΞΟΔΩΝ ===
-        System.out.println("=== ΕΜΦΑΝΙΣΗ ΕΞΟΔΩΝ ===");
+        //  === DISPLAY EXPENDITURES ===
+        System.out.println("\n === DISPLAY EXPENDITURES ===");
         ExpenditureRepository exR = new ExpenditureRepository();
         for (Expenditure ex : exR.findAll())
             System.out.println(
@@ -21,8 +21,8 @@ public class DisplayFunctionA {
                             ex.getEuros()
             );
 
-        // === ΕΜΦΑΝΙΣΗ ΕΣΟΔΩΝ ===
-        System.out.println("\n=== ΕΜΦΑΝΙΣΗ ΕΣΟΔΩΝ ===");
+        // === DISPLAY REVENUES ==="
+        System.out.println("\n === DISPLAY REVENUES ===");
         RevenueRepository esR = new RevenueRepository();
         for (Revenue es : esR.findAll()) {
             System.out.println(
@@ -31,10 +31,10 @@ public class DisplayFunctionA {
                             es.getEuros()
             );
         }
-        // === ΕΜΦΑΝΙΣΗ ΕΞΟΔΩΝ ΑΡΘΡΟΥ 2 ===
-        System.out.println("\n=== ΕΞΟΔΑ ΑΡΘΡΟΥ 2 ===");
+        // === DISPLAY ARTICLE 2 EXPENDITURES ===
+        System.out.println("\n === DISPLAY ARTICLE 2 EXPENDITURES ===");
         ExpenditureDetailedRepository ex2R = new ExpenditureDetailedRepository();
-        System.out.println("\n ΚΩΔΙΚΟΣ | ΤΜΗΜΑ | ΤΑΚΤΙΚΟΣ ΠΡΟΥΠΟΛΟΓΙΣΜΟΣ | ΔΗΜΟΣΙΕΣ ΕΠΕΝΔΥΣΕΙΣ | ΣΥΝΟΛΟ");
+        System.out.println("\n CODE | DEPARTMENT | REGULAR BUDGET | PUBLIC INVESTMENTS | TOTAL");
         for (ExpenditureDetailed ex2 : ex2R.findAll()) {
             System.out.println(
                     ex2.getCode() + " | " +
@@ -46,4 +46,3 @@ public class DisplayFunctionA {
         }
     }
 }
-
