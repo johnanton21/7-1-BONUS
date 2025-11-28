@@ -10,5 +10,11 @@
     </parent>
 
     <artifactId>functions</artifactId>
-
+    <dependencies>
+        <dependency>
+            <groupId>bonus71</groupId>
+            <artifactId>data-management</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

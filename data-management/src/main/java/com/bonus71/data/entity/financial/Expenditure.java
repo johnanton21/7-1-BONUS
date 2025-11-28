@@ -1,5 +1,7 @@
 package com.bonus71.data.entity.financial;
 
+import com.bonus71.data.config.DatabaseConfig;
+
 public class Expenditure {
     private int code;
     private String category;
