@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project>
-    xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -11,15 +10,17 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>menu</module>
         <module>bootstrap</module>
         <module>data-management</module>
+        <module>functions</module>
         <module>graphics</module>
     </modules>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
+
+        <junit.version>5.8.1</junit.version>
     </properties>
 
 
@@ -29,29 +30,18 @@
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-api</artifactId>
-                <version>5.8.1</version>
+                <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
 
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-engine</artifactId>
-                <version>5.8.1</version>
+                <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
 
         </dependencies>
     </dependencyManagement>
-
-
-      <dependencies>
-         <dependency>
-        <groupId>com.h2database</groupId>
-        <artifactId>h2</artifactId>
-        <version>2.4.240</version> <!-- ή την έκδοση που έχεις -->
-         </dependency>
-      </dependencies>
-
-
 
 </project>
