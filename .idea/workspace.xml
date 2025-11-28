@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="Final DataBase deletes">
+    <list default="true" id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="change main method and greek">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/main/functions/DisplayFunctionA.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/main/functions/DisplayFunctionA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/main/functions/EditFunctionC.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/main/functions/EditFunctionC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
     "Application.FirstMenuGui.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dataconnect",
+    "git-widget-placeholder": "#23 on dataconnect",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
@@ -137,7 +137,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764347759973</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="change main method">
+      <option name="closed" value="true" />
+      <created>1764348715083</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764348715083</updated>
+    </task>
+    <task id="LOCAL-00006" summary="change main method and greek">
+      <option name="closed" value="true" />
+      <created>1764349081974</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764349081974</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -145,6 +161,8 @@
     <MESSAGE value="Pom changes" />
     <MESSAGE value="Final DataBaseConfig changes" />
     <MESSAGE value="Final DataBase deletes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final DataBase deletes" />
+    <MESSAGE value="change main method" />
+    <MESSAGE value="change main method and greek" />
+    <option name="LAST_COMMIT_MESSAGE" value="change main method and greek" />
   </component>
 </project>

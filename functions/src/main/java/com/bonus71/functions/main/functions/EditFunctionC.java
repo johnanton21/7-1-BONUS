@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class EditFunctionC {
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) throws SQLException {
+    public static void editData() throws SQLException {
 
         ExpenditureRepository exodaRepo = new ExpenditureRepository();
         RevenueRepository esodaRepo = new RevenueRepository();
@@ -20,16 +20,16 @@ public class EditFunctionC {
         HealthRepository ygeiasRepo = new HealthRepository();
 
         while (true) {
-            System.out.println("\n===== ΜΕΝΟΥ ΕΠΕΞΕΡΓΑΣΙΑΣ =====");
-            System.out.println("1. Εξοδα");
-            System.out.println("2. Εσοδα");
-            System.out.println("3. Υπουργείο Παιδείας");
-            System.out.println("4. Υπουργείο Περιβάλλοντος");
-            System.out.println("5. Υπουργείο Εθνικής Άμυνας");
-            System.out.println("6. Υπουργείο Οικονομικών");
-            System.out.println("7. Υπουργείο Υγείας");
-            System.out.println("0. Έξοδος");
-            System.out.print("Επιλογή: ");
+            System.out.println("\n===== DATA MANAGEMENT MENU =====");
+            System.out.println("1. Expenditures");
+            System.out.println("2. Revenues");
+            System.out.println("3. Ministry of Education");
+            System.out.println("4. Ministry of the Environment");
+            System.out.println("5. Ministry of National Defense");
+            System.out.println("6. Ministry of Finance");
+            System.out.println("7. Ministry of Health");
+            System.out.println("0. Exit");
+            System.out.print("Your choice: ");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -43,10 +43,10 @@ public class EditFunctionC {
                 case 6 -> MinistryOfFinanceMenu.menu(oikRepo);
                 case 7 -> MinistryOfTHealthMenu.menu(ygeiasRepo);
                 case 0 -> {
-                    System.out.println("Έξοδος...");
+                    System.out.println("Exit...");
                     return;
                 }
-                default -> System.out.println("Λάθος επιλογή!");
+                default -> System.out.println("invalid choice!");
             }
         }
     }
