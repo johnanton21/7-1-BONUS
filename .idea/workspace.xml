@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="change main method and greek" />
+    <list default="true" id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="add mainMenus at bootstrap">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/ExpsensesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/ExpsensesMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/RevenueMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/RevenueMenu.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +17,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="dataconnect" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,8 +30,18 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/johnanton21/7-1-BONUS.git&quot;,
-    &quot;accountId&quot;: &quot;14448cf0-abc9-4147-bf29-275c385ef4dc&quot;
+    &quot;url&quot;: &quot;https://github.com/johnanton21/7-1-BONUS&quot;,
+    &quot;accountId&quot;: &quot;6a04ac5d-85c1-4459-96b1-06a3eaa4c776&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;johnanton21&quot;,
+    &quot;repository&quot;: &quot;7-1-BONUS&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -43,11 +57,17 @@
     "Application.DisplayMain.executor": "Run",
     "Application.FirstMenuGui.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "dataconnect",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bootstrap/src/main/java/com/bonus71/bootstrap" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="FirstMenuGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yourapp.graphics.FirstMenuGui" />
@@ -67,15 +87,10 @@
         <item itemvalue="Application.FirstMenuGui" />
         <item itemvalue="Application.FirstMenuGui" />
         <item itemvalue="Application.FirstMenuGui" />
+        <item itemvalue="Application.FirstMenuGui" />
+        <item itemvalue="Application.FirstMenuGui" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -109,13 +124,40 @@
       <option name="project" value="LOCAL" />
       <updated>1764332677215</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Final DataBase deletes">
+      <option name="closed" value="true" />
+      <created>1764347759973</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764347759973</updated>
+    </task>
+    <task id="LOCAL-00005" summary="change main method">
+      <option name="closed" value="true" />
+      <created>1764348715083</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764348715083</updated>
+    </task>
+    <task id="LOCAL-00006" summary="change main method and greek">
+      <option name="closed" value="true" />
+      <created>1764349081974</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764349081974</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Deleted files" />
     <MESSAGE value="Pom changes" />
     <MESSAGE value="Final DataBaseConfig changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final DataBaseConfig changes" />
+    <MESSAGE value="Final DataBase deletes" />
+    <MESSAGE value="change main method" />
+    <MESSAGE value="change main method and greek" />
+    <option name="LAST_COMMIT_MESSAGE" value="change main method and greek" />
   </component>
 </project>
