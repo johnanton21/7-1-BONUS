@@ -18,23 +18,17 @@ public class FinancialService {
         this.revenueRepository = new RevenueRepository();
     }
 
-    /**
-     * Get all revenues from database
-     */
+
     public List<Revenue> getAllRevenues() throws SQLException {
         return revenueRepository.findAll();
     }
 
-    /**
-     * Get all expenditures from database
-     */
+
     public List<Expenditure> getAllExpenditures() throws SQLException {
         return expenditureRepository.findAll();
     }
 
-    /**
-     * Calculate total revenue
-     */
+
     public double calculateTotalRevenue() throws SQLException {
         List<Revenue> revenues = revenueRepository.findAll();
         double total = 0.0;
@@ -46,9 +40,7 @@ public class FinancialService {
         return total;
     }
 
-    /**
-     * Calculate total expenditure
-     */
+
     public double calculateTotalExpenditure() throws SQLException {
         List<Expenditure> expenditures = expenditureRepository.findAll();
         double total = 0.0;
@@ -60,28 +52,18 @@ public class FinancialService {
         return total;
     }
 
-    /**
-     * Calculate fiscal balance (revenue - expenditure)
-     * Positive value = surplus
-     * Negative value = deficit
-     */
-    public double calculateFiscalBalance() throws SQLException {
+      public double calculateFiscalBalance() throws SQLException {
         double totalRevenue = calculateTotalRevenue();
         double totalExpenditure = calculateTotalExpenditure();
         return totalRevenue - totalExpenditure;
     }
 
-    /**
-     * Check if fiscal balance is positive (surplus) or negative (deficit)
-     * @return true if surplus, false if deficit
-     */
+
     public boolean isSurplus() throws SQLException {
         return calculateFiscalBalance() >= 0;
     }
 
-    /**
-     * Get fiscal balance status as string
-     */
+
     public String getFiscalBalanceStatus() throws SQLException {
         double balance = calculateFiscalBalance();
         if (balance > 0) {
@@ -93,52 +75,37 @@ public class FinancialService {
         }
     }
 
-    /**
-     * Update revenue data
-     */
+
     public void updateRevenue(Revenue revenue) throws SQLException {
         revenueRepository.update(revenue);
     }
 
-    /**
-     * Update expenditure data
-     */
+
     public void updateExpenditure(Expenditure expenditure) throws SQLException {
         expenditureRepository.update(expenditure);
     }
 
-    /**
-     * Add new revenue entry
-     */
+
     public void addRevenue(Revenue revenue) throws SQLException {
         revenueRepository.insert(revenue);
     }
 
-    /**
-     * Add new expenditure entry
-     */
+
     public void addExpenditure(Expenditure expenditure) throws SQLException {
         expenditureRepository.insert(expenditure);
     }
 
-    /**
-     * Delete revenue by code
-     */
+
     public void deleteRevenue(int code) throws SQLException {
         revenueRepository.delete(code);
     }
 
-    /**
-     * Delete expenditure by code
-     */
+
     public void deleteExpenditure(int code) throws SQLException {
         expenditureRepository.delete(code);
     }
 
-    /**
-     * Parse amount string to double
-     * Handles various formats including commas and spaces
-     */
+
     private double parseAmount(String amount) {
         if (amount == null || amount.trim().isEmpty()) {
             return 0.0;

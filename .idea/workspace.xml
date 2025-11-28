@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="Pom changes">
+    <list default="true" id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="Final DataBaseConfig changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/config/DatabaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/config/DatabaseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/FinancialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/FinancialService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,12 +103,21 @@
       <option name="project" value="LOCAL" />
       <updated>1764331788168</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Final DataBaseConfig changes">
+      <option name="closed" value="true" />
+      <created>1764332677215</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764332677215</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Deleted files" />
     <MESSAGE value="Pom changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pom changes" />
+    <MESSAGE value="Final DataBaseConfig changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final DataBaseConfig changes" />
   </component>
 </project>
