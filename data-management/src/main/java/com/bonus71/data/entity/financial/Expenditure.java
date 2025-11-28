@@ -1,5 +1,4 @@
 package com.bonus71.data.entity.financial;
-
 public class Expenditure {
     private int code;
     private String category;
