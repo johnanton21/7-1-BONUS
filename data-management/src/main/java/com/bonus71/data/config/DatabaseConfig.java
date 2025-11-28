@@ -6,15 +6,15 @@ import java.sql.SQLException;
 
 public class DatabaseConfig {
 
-    private static final String URL = "jdbc:h2:~/test";
-    private static final String USER = "sa";
-    private static final String PASS = "";
+    private static final String URL = "jdbc:mysql://mainline.proxy.rlwy.net:13518/railway?useSSL=true&requireSSL=true&serverTimezone=UTC";
+    private static final String USER = "root";
+    private static final String PASS = "xvRyHXdJgJHaVvQIcJclFMKzxPAmlsXs";
 
     static {
         try {
-            Class.forName("org.h2.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Unable to load H2 driver!", e);
+            throw new RuntimeException("Unable to load MySQL driver!", e);
         }
     }
 
