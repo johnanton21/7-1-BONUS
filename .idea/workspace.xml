@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="change main method and greek">
-      <change beforePath="$PROJECT_DIR$/bootstrap/src/main/java/com/bonus71/bootstrap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/src/main/java/com/bonus71/bootstrap/Main.java" afterDir="false" />
+    <list default="true" id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="delete random class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/functions/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/ExpsensesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/ExpsensesMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfEducationMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfEducationMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfFinanceMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfFinanceMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTHealthMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTHealthMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTheEnvironmentMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTheEnvironmentMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/NationalDefenseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/NationalDefenseMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/RevenueMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/RevenueMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +140,31 @@
       <option name="project" value="LOCAL" />
       <updated>1764006385312</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="change main method">
+      <option name="closed" value="true" />
+      <created>1764429971665</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764429971665</updated>
+    </task>
+    <task id="LOCAL-00007" summary="delete mainmenus">
+      <option name="closed" value="true" />
+      <created>1764430031531</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1764430031531</updated>
+    </task>
+    <task id="LOCAL-00008" summary="delete random class">
+      <option name="closed" value="true" />
+      <created>1764430073100</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1764430073100</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -140,7 +172,10 @@
     <MESSAGE value="function module commit" />
     <MESSAGE value="data commit" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="change main method" />
+    <MESSAGE value="delete mainmenus" />
+    <MESSAGE value="delete random class" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete random class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
