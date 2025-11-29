@@ -1,12 +1,13 @@
-package com.bonus71.data;
+package com.bonus71.functions.menus;
+
+import com.bonus71.data.MainMenus;
 import com.bonus71.data.entity.ministry.Health;
 import com.bonus71.data.repository.HealthRepository;
 
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class YgeiaMenu {
-
+public class MinistryOfTHealthMenu {
     public static void menu(HealthRepository repo) throws SQLException {
         Scanner scanner = MainMenus.getScanner();
 

@@ -1,12 +1,13 @@
-package com.bonus71.data;
+package com.bonus71.functions.menus;
 
+import com.bonus71.data.MainMenus;
 import com.bonus71.data.entity.ministry.Environment;
 import com.bonus71.data.repository.EnvironmentRepository;
 
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class  PerivallontosMenu {
+public class MinistryOfTheEnvironmentMenu {
     public static void menu(EnvironmentRepository repo) throws SQLException {
         Scanner scanner = MainMenus.getScanner();
 
@@ -41,4 +42,3 @@ public class  PerivallontosMenu {
         }
     }
 }
-
