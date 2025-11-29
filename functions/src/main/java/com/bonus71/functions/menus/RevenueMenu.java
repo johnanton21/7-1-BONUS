@@ -1,6 +1,6 @@
 package com.bonus71.functions.menus;
 
-import com.bonus71.functions.MainMenus;
+import com.bonus71.bootstrap.Main;
 import com.bonus71.data.entity.financial.Revenue;
 import com.bonus71.data.repository.RevenueRepository;
 
@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class RevenueMenu {
     public static void menu(RevenueRepository repo) throws SQLException {
-        Scanner scanner = MainMenus.getScanner();
+        Scanner scanner = Main.getScanner();
 
         System.out.println("\n--- REVENUE ---");
         System.out.println("1. View");
