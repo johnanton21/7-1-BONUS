@@ -1,4 +1,4 @@
-package com.bonus71.functions;
+package com.bonus71.functions.main.functions;
 
 import com.bonus71.data.entity.financial.Expenditure;
 import com.bonus71.data.entity.financial.Revenue;
@@ -7,7 +7,7 @@ import com.bonus71.data.repository.RevenueRepository;
 
 import java.sql.SQLException;
 import java.util.List;
-package com.bonus71.functions.main.functions;
+
 public class FinancialService {
 
     private final ExpenditureRepository expenditureRepository;
