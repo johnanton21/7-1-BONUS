@@ -11,9 +11,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main extends JFrame {
     private final FinancialService financialService = new FinancialService();
+
+    private  static final Scanner scanner = new Scanner(System.in);
+    public static Scanner getScanner() {
+        return scanner;
+    }
 
     public Main() {
         setTitle("Budget Management System");
