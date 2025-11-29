@@ -1,6 +1,6 @@
 package com.bonus71.functions.menus;
 
-import com.bonus71.data.MainMenus;
+import com.bonus71.functions.MainMenus;
 import com.bonus71.data.entity.ministry.Health;
 import com.bonus71.data.repository.HealthRepository;
 
