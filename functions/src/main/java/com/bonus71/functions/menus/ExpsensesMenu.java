@@ -1,6 +1,6 @@
 package com.bonus71.functions.menus;
 
-import com.bonus71.data.MainMenus;
+import com.bonus71.functions.MainMenus;
 import com.bonus71.data.entity.financial.Expenditure;
 import com.bonus71.data.repository.ExpenditureRepository;
 

@@ -4,13 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="change main method and greek">
-      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/FinancialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/main/functions/FinancialService.java" afterDir="false" />
+    <list default="true" id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/Comparison/YearsComparison.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/YearsComparisonRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/YearsComparisonMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/src/main/java/com/bonus71/bootstrap/MainMenus.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/MainMenus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/main/functions/FinancialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/main/functions/FinancialService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/ExpsensesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/ExpsensesMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfEducationMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfEducationMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfFinanceMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfFinanceMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTHealthMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTHealthMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTheEnvironmentMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTheEnvironmentMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/NationalDefenseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/NationalDefenseMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/RevenueMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/RevenueMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -43,16 +62,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.DisplayMain.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FirstMenuGui.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dataconnect&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DisplayMain.executor": "Run",
+    "Application.FirstMenuGui.executor": "Run",
+    "Application.YearsComparisonMenu.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "mdata",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="FirstMenuGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yourapp.graphics.FirstMenuGui" />
