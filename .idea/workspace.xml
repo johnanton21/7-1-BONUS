@@ -4,33 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="delete random class">
+    <list default="true" id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="change main method and greek">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/functions/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/ExpsensesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/ExpsensesMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfEducationMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfEducationMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfFinanceMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfFinanceMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTHealthMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTHealthMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTheEnvironmentMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTheEnvironmentMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/NationalDefenseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/NationalDefenseMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/RevenueMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/RevenueMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-management/target/classes/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main-update" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,36 +24,35 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;katerinamwraith3&quot;
+    &quot;assignee&quot;: &quot;dimitratrochidou&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/johnanton21/7-1-BONUS.git&quot;,
-    &quot;accountId&quot;: &quot;2ca0f029-7512-42a7-ac7f-c3af9559182b&quot;
+    &quot;url&quot;: &quot;https://github.com/johnanton21/7-1-BONUS&quot;,
+    &quot;accountId&quot;: &quot;6a04ac5d-85c1-4459-96b1-06a3eaa4c776&quot;
   }
 }</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="35hCKlthzDGxzL7r2tahsGa3iV3" />
+  <component name="ProjectId" id="35y0C7qUDv7Iduc3sHNoQqKOlxM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DisplayMain.executor": "Run",
-    "Application.FirstMenuGui.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main-update",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DisplayMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FirstMenuGui.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dataconnect&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="FirstMenuGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yourapp.graphics.FirstMenuGui" />
@@ -92,100 +77,45 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8d33d048-74e5-4587-b5e8-43afec99db53" name="Changes" comment="" />
-      <created>1763552856341</created>
+      <changelist id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="" />
+      <created>1764066877643</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1763552856341</updated>
+      <updated>1764066877643</updated>
     </task>
-    <task id="LOCAL-00001" summary="Menu and MenuTest commit">
+    <task id="LOCAL-00001" summary="Deleted files">
       <option name="closed" value="true" />
-      <created>1763553545388</created>
+      <created>1764331527156</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1763553545388</updated>
+      <updated>1764331527156</updated>
     </task>
-    <task id="LOCAL-00002" summary="function module commit">
+    <task id="LOCAL-00002" summary="Pom changes">
       <option name="closed" value="true" />
-      <created>1763908409791</created>
+      <created>1764331788168</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1763908409791</updated>
+      <updated>1764331788168</updated>
     </task>
-    <task id="LOCAL-00003" summary="function module commit">
+    <task id="LOCAL-00003" summary="Final DataBaseConfig changes">
       <option name="closed" value="true" />
-      <created>1763917239360</created>
+      <created>1764332677215</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1763917239360</updated>
+      <updated>1764332677215</updated>
     </task>
-    <task id="LOCAL-00004" summary="data commit">
-      <option name="closed" value="true" />
-      <created>1764005596691</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1764005596691</updated>
-    </task>
-    <task id="LOCAL-00005" summary="test">
-      <option name="closed" value="true" />
-      <created>1764006385311</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1764006385312</updated>
-    </task>
-    <task id="LOCAL-00006" summary="change main method">
-      <option name="closed" value="true" />
-      <created>1764429971665</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1764429971665</updated>
-    </task>
-    <task id="LOCAL-00007" summary="delete mainmenus">
-      <option name="closed" value="true" />
-      <created>1764430031531</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1764430031531</updated>
-    </task>
-    <task id="LOCAL-00008" summary="delete random class">
-      <option name="closed" value="true" />
-      <created>1764430073100</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1764430073100</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Menu and MenuTest commit" />
-    <MESSAGE value="function module commit" />
-    <MESSAGE value="data commit" />
-    <MESSAGE value="test" />
-    <MESSAGE value="change main method" />
-    <MESSAGE value="delete mainmenus" />
-    <MESSAGE value="delete random class" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete random class" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="Deleted files" />
+    <MESSAGE value="Pom changes" />
+    <MESSAGE value="Final DataBaseConfig changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final DataBaseConfig changes" />
   </component>
 </project>
