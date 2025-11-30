@@ -9,6 +9,7 @@
         <module name="data-management" />
         <module name="bootstrap" />
         <module name="graphics" />
+        <module name="api" />
         <module name="functions" />
       </profile>
     </annotationProcessing>
