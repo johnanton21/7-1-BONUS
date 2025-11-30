@@ -9,7 +9,6 @@
         <module name="data-management" />
         <module name="bootstrap" />
         <module name="graphics" />
-        <module name="menu" />
         <module name="functions" />
       </profile>
     </annotationProcessing>
