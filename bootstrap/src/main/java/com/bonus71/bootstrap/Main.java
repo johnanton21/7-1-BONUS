@@ -5,7 +5,7 @@ import com.bonus71.data.entity.financial.ExpenditureDetailed;
 import com.bonus71.data.entity.financial.Revenue;
 import com.bonus71.data.entity.ministry.*;
 import com.bonus71.data.repository.*;
-import com.bonus71.functions.FinancialService;
+import com.bonus71.functions.main.functions.FinancialService;
 
 import javax.swing.*;
 import java.awt.*;
