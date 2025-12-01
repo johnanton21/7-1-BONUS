@@ -16,11 +16,6 @@ import java.util.Scanner;
 public class Main extends JFrame {
     private final FinancialService financialService = new FinancialService();
 
-    private  static final Scanner scanner = new Scanner(System.in);
-    public static Scanner getScanner() {
-        return scanner;
-    }
-
     public Main() {
         setTitle("Budget Management System");
         setSize(700, 600);

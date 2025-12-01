@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class RevenueMenu {
     public static void menu(RevenueRepository repo) throws SQLException {
-        Scanner scanner = Main.getScanner();
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("\n--- REVENUE ---");
         System.out.println("1. View");

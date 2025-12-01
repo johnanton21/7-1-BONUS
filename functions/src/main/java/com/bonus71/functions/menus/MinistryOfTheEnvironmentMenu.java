@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class MinistryOfTheEnvironmentMenu {
     public static void menu(EnvironmentRepository repo) throws SQLException {
-        Scanner scanner = Main.getScanner();
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("\n--- MINISTRY OF THE ENVIRONMENT ---");
         System.out.println("1. View");

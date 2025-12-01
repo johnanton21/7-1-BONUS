@@ -7,6 +7,15 @@
     <list default="true" id="7b8f4528-9725-4fcc-8758-c1e0deef85cc" name="Changes" comment="greek to english">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
+    <list default="true" id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="delete old files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/ExpsensesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/ExpsensesMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfEducationMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfEducationMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfFinanceMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfFinanceMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTHealthMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTHealthMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTheEnvironmentMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTheEnvironmentMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/NationalDefenseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/NationalDefenseMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/RevenueMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/RevenueMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +25,36 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dimitratrochidou&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/johnanton21/7-1-BONUS&quot;,
+    &quot;accountId&quot;: &quot;6a04ac5d-85c1-4459-96b1-06a3eaa4c776&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;johnanton21&quot;,
+    &quot;repository&quot;: &quot;7-1-BONUS&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="35y0C7qUDv7Iduc3sHNoQqKOlxM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "git-widget-placeholder": "mdata"
@@ -23,5 +62,56 @@
 }]]></component>
   <component name="TaskManager">
     <servers />
+  </component>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="delete random class" />
+      <created>1763552856341</created>
+      <changelist id="1af5d2ab-9881-4448-a3ee-1b67e39a3762" name="Changes" comment="" />
+      <created>1764066877643</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764066877643</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Deleted files">
+      <option name="closed" value="true" />
+      <created>1764331527156</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764331527156</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Pom changes">
+      <option name="closed" value="true" />
+      <created>1764331788168</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764331788168</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Final DataBaseConfig changes">
+      <option name="closed" value="true" />
+      <created>1764332677215</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764332677215</updated>
+    </task>
+    <task id="LOCAL-00004" summary="delete old files">
+      <option name="closed" value="true" />
+      <created>1764437557096</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764437557097</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Deleted files" />
+    <MESSAGE value="Pom changes" />
+    <MESSAGE value="Final DataBaseConfig changes" />
+    <MESSAGE value="delete old files" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete old files" />
   </component>
 </project>
