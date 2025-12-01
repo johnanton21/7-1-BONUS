@@ -8,8 +8,7 @@ import java.util.Scanner;
 
 public class NationalDefenseMenu {
     public static void menu(NationalDefenseRepository repo) throws SQLException {
-        Scanner scanner = Main.getScanner();
-
+        Scanner scanner = new Scanner(System.in);
         System.out.println("\n--- NATIONAL DEFENSE  ---");
         System.out.println("1. View");
         System.out.println("2. Add");

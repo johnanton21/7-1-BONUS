@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class MinistryOfFinanceMenu {
     public static void menu(FinanceMinistryRepository repo) throws SQLException {
-        Scanner scanner = Main.getScanner();
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("\n--- MINISTRY OF FINANCE ---");
         System.out.println("1. View");
