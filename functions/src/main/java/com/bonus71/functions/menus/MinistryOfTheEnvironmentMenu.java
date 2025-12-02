@@ -1,6 +1,5 @@
 package com.bonus71.functions.menus;
 
-import com.bonus71.bootstrap.Main;
 import com.bonus71.data.entity.ministry.Environment;
 import com.bonus71.data.repository.EnvironmentRepository;
 
@@ -37,7 +36,7 @@ public class MinistryOfTheEnvironmentMenu {
                 repo.update(new Environment(m, o, e));
             }
             case 4 -> {
-                System.out.print("Code to delete:: "); int m = scanner.nextInt();
+                System.out.print("Code to delete: "); int m = scanner.nextInt();
                 repo.delete(m);
             }
         }

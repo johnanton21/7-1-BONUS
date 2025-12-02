@@ -1,4 +1,4 @@
-package com.bonus71.functionstest;
+package com.bonus71.functionstest.main.functions.test;
 
 import com.bonus71.functions.main.functions.EditFunctionC;
 import org.junit.jupiter.api.Test;

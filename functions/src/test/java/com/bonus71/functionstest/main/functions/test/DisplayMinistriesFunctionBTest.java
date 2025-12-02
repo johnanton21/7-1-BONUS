@@ -1,4 +1,4 @@
-package com.bonus71.functionstest;
+package com.bonus71.functionstest.main.functions.test;
 
 import com.bonus71.data.entity.financial.Expenditure;
 import com.bonus71.data.repository.ExpenditureRepository;
