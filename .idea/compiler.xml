@@ -12,5 +12,8 @@
         <module name="functions" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>
