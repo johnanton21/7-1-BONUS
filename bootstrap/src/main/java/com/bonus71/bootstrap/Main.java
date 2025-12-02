@@ -5,12 +5,14 @@ import com.bonus71.data.entity.financial.ExpenditureDetailed;
 import com.bonus71.data.entity.financial.Revenue;
 import com.bonus71.data.entity.ministry.*;
 import com.bonus71.data.repository.*;
-import com.bonus71.functions.FinancialService;
+import com.bonus71.functions.main.functions.*;
+import com.bonus71.functions.menus.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main extends JFrame {
     private final FinancialService financialService = new FinancialService();
@@ -42,7 +44,7 @@ public class Main extends JFrame {
         JButton btn1 = createMenuButton("1. Display Government Budget Data");
         JButton btn2 = createMenuButton("2. Display Fiscal Balance");
         JButton btn3 = createMenuButton("3. Categorize by Ministry");
-        JButton btn4 = createMenuButton("4. Compare with Other Countries");
+        JButton btn4 = createMenuButton("4. Compare with Other Years");
         JButton btn5 = createMenuButton("5. Apply Changes (Edit Data)");
         JButton btn6 = createMenuButton("6. Analyze Statistical Data");
         JButton btn7 = createMenuButton("7. Exit");
@@ -50,7 +52,7 @@ public class Main extends JFrame {
         btn1.addActionListener(e -> displayBudgetData());
         btn2.addActionListener(e -> displayFiscalBalance());
         btn3.addActionListener(e -> categorizeByMinistry());
-        btn4.addActionListener(e -> compareWithOtherCountries());
+        btn4.addActionListener(e -> compareWithOtherYears());
         btn5.addActionListener(e -> applyChanges());
         btn6.addActionListener(e -> analyzeStatisticalData());
         btn7.addActionListener(e -> exitApplication());
@@ -202,13 +204,10 @@ public class Main extends JFrame {
         }
     }
 
-    // OPTION 4: Compare with Other Countries
-    private void compareWithOtherCountries() {
-        JOptionPane.showMessageDialog(this,
-                "This feature is not yet implemented.\n\n" +
-                "Future implementation: Compare Greek budget data with EU countries.",
-                "Compare with Other Countries",
-                JOptionPane.INFORMATION_MESSAGE);
+    // OPTION 4: Compare with Other Years
+    private void compareWithOtherYears() {
+        YearsComparisonMenu menuyc = new YearsComparisonMenu();
+        menuyc.show();
     }
 
     // OPTION 5: Apply Changes (Edit Data)

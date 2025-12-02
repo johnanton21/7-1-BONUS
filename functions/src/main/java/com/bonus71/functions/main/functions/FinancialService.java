@@ -1,4 +1,4 @@
-package com.bonus71.functions;
+package com.bonus71.functions.main.functions;
 
 import com.bonus71.data.entity.financial.Expenditure;
 import com.bonus71.data.entity.financial.Revenue;
