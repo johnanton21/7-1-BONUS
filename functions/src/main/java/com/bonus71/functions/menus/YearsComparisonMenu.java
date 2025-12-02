@@ -4,7 +4,7 @@ import com.bonus71.data.repository.YearsComparisonRepository;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class YearsComparisonMenuTest {
+public class YearsComparisonMenu {
 
     private final YearsComparisonRepository repository = new YearsComparisonRepository();
     private final Scanner scanner = new Scanner(System.in);
