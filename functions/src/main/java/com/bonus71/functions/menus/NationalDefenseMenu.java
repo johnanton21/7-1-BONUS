@@ -24,18 +24,18 @@ public class NationalDefenseMenu {
                     System.out.println(p.getMajorCategory() + " | " + p.getName() + " | " + p.getEuros()));
             case 2 -> {
                 System.out.print("Code: "); int m = scanner.nextInt(); scanner.nextLine();
-                System.out.print("Ονομασία: "); String o = scanner.nextLine();
-                System.out.print("Ευρώ: "); String e = scanner.nextLine();
+                System.out.print("Name: "); String o = scanner.nextLine();
+                System.out.print("Euros: "); String e = scanner.nextLine();
                 repo.insert(new com.bonus71.data.entity.ministry.NationalDefense(m, o, e));
             }
             case 3 -> {
                 System.out.print("Code: "); int m = scanner.nextInt(); scanner.nextLine();
-                System.out.print("Νέα ονομασία: "); String o = scanner.nextLine();
-                System.out.print("Νέο ευρώ: "); String e = scanner.nextLine();
+                    System.out.print("New name: "); String o = scanner.nextLine();
+                System.out.print("Νew euros: "); String e = scanner.nextLine();
                 repo.update(new com.bonus71.data.entity.ministry.NationalDefense(m, o, e));
             }
             case 4 -> {
-                System.out.print("Μείζονα Κατηγορία για διαγραφή: "); int m = scanner.nextInt();
+                System.out.print("Code to delete: "); int m = scanner.nextInt();
                 repo.delete(m);
             }
         }
