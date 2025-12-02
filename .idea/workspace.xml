@@ -132,10 +132,8 @@
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Deleted files" />
-    <MESSAGE value="Pom changes" />
-    <MESSAGE value="Final DataBaseConfig changes" />
-    <MESSAGE value="delete old files" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete old files" />
+    <MESSAGE value="Merge pull request #42 from johnanton21/data-dependencies&#10;&#10;attempt to connect year-comparison with bootstrap" />
+    <MESSAGE value="change main method and greek" />
+    <option name="LAST_COMMIT_MESSAGE" value="change main method and greek" />
   </component>
 </project>

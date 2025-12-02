@@ -1,6 +1,5 @@
 package com.bonus71.functions.menus;
 
-import com.bonus71.bootstrap.Main;
 import com.bonus71.data.entity.ministry.Environment;
 import com.bonus71.data.repository.EnvironmentRepository;
 
