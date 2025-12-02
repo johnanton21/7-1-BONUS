@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d33d048-74e5-4587-b5e8-43afec99db53" name="Changes" comment="Update Main Pom">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8d33d048-74e5-4587-b5e8-43afec99db53" name="Changes" comment="Update Main Pom" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,11 +79,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1764343967528</updated>
-      <workItem from="1764343969801" duration="4684000" />
+      <workItem from="1764343969801" duration="4778000" />
     </task>
+    <task id="LOCAL-00001" summary="Update Main Pom">
+      <option name="closed" value="true" />
+      <created>1764353213945</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764353213945</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update Main Pom">
+      <option name="closed" value="true" />
+      <created>1764353231931</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764353231932</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update Main Pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Main Pom" />
   </component>
 </project>
