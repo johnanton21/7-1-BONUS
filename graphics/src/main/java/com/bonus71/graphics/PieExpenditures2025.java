@@ -31,7 +31,7 @@ public class PieExpenditures2025 {
 
             PiePlot plot = (PiePlot) chart.getPlot();
 
-// === 3. Labels: ΜΟΝΟ όνομα + ποσοστό ===
+// === 3. Labels ===
             plot.setLabelGenerator(
                     new org.jfree.chart.labels.StandardPieSectionLabelGenerator("{0} ({2})")
             );
