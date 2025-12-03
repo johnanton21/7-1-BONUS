@@ -7,6 +7,9 @@ import com.bonus71.data.entity.ministry.*;
 import com.bonus71.data.repository.*;
 import com.bonus71.functions.main.functions.*;
 import com.bonus71.functions.menus.*;
+import com.bonus71.graphics.PerMinistryPie2025;
+import com.bonus71.graphics.PieExpenditures2025;
+import com.bonus71.graphics.PieRevenues2025;
 
 import javax.swing.*;
 import java.awt.*;
@@ -523,11 +526,7 @@ public class Main extends JFrame {
 
     // OPTION 6: Analyze Statistical Data
     private void analyzeStatisticalData() {
-        JOptionPane.showMessageDialog(this,
-                "This feature is not yet implemented.\n\n" +
-                "Future implementation: Generate charts and graphs for budget analysis.",
-                "Analyze Statistical Data",
-                JOptionPane.INFORMATION_MESSAGE);
+        PieRevenues2025.showChart();
     }
 
     // OPTION 7: Exit
