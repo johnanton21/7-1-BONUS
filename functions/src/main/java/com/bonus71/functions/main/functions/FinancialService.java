@@ -23,7 +23,6 @@ public class FinancialService {
         return revenueRepository.findAll();
     }
 
-
     public List<Expenditure> getAllExpenditures() throws SQLException {
         return expenditureRepository.findAll();
     }
@@ -40,7 +39,6 @@ public class FinancialService {
         return total;
     }
 
-
     public double calculateTotalExpenditure() throws SQLException {
         List<Expenditure> expenditures = expenditureRepository.findAll();
         double total = 0.0;
@@ -52,20 +50,19 @@ public class FinancialService {
         return total;
     }
 
-      public double calculateFiscalBalance() throws SQLException {
+    public double calculateFiscalBalance() throws SQLException {
         double totalRevenue = calculateTotalRevenue();
         double totalExpenditure = calculateTotalExpenditure();
         return totalRevenue - totalExpenditure;
     }
 
-
     public boolean isSurplus() throws SQLException {
         return calculateFiscalBalance() >= 0;
     }
 
-
     public String getFiscalBalanceStatus() throws SQLException {
         double balance = calculateFiscalBalance();
+
         if (balance > 0) {
             return "Surplus: " + String.format("%.2f", balance) + " euros";
         } else if (balance < 0) {
@@ -80,26 +77,21 @@ public class FinancialService {
         revenueRepository.update(revenue);
     }
 
-
     public void updateExpenditure(Expenditure expenditure) throws SQLException {
         expenditureRepository.update(expenditure);
     }
-
 
     public void addRevenue(Revenue revenue) throws SQLException {
         revenueRepository.insert(revenue);
     }
 
-
     public void addExpenditure(Expenditure expenditure) throws SQLException {
         expenditureRepository.insert(expenditure);
     }
 
-
     public void deleteRevenue(int code) throws SQLException {
         revenueRepository.delete(code);
     }
-
 
     public void deleteExpenditure(int code) throws SQLException {
         expenditureRepository.delete(code);
@@ -112,8 +104,11 @@ public class FinancialService {
         }
 
         try {
-            // Remove spaces, commas, and other non-numeric characters except dot and minus
-            String cleaned = amount.replaceAll("[^0-9.-]", "");
+
+            String cleaned = amount.replaceAll("[^0-9.,-]", "");
+            cleaned = cleaned.replace(".", "");
+            cleaned = cleaned.replace(",", ".");
+
             return Double.parseDouble(cleaned);
         } catch (NumberFormatException e) {
             System.err.println("Warning: Could not parse amount '" + amount + "', treating as 0.0");
@@ -121,3 +116,4 @@ public class FinancialService {
         }
     }
 }
+

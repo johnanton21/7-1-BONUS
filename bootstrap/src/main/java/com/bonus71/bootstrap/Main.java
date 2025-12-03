@@ -7,12 +7,14 @@ import com.bonus71.data.entity.ministry.*;
 import com.bonus71.data.repository.*;
 import com.bonus71.functions.main.functions.*;
 import com.bonus71.functions.menus.*;
+import com.bonus71.graphics.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Scanner;
+
+import static com.bonus71.graphics.Comparison23_25.*;
 
 public class Main extends JFrame {
     private final FinancialService financialService = new FinancialService();
@@ -147,7 +149,7 @@ public class Main extends JFrame {
     // OPTION 3: Categorize by Ministry
     private void categorizeByMinistry() {
         String[] ministries = {
-            "Ministry of Education",
+            "Ministry of Education, Religious Affairs and Sports",
             "Ministry of Environment",
             "Ministry of National Defense",
             "Ministry of Finance",
@@ -165,7 +167,7 @@ public class Main extends JFrame {
                 sb.append("MAJOR CATEGORY | NAME | EUROS\n");
                 sb.append("─────────────────────────────────────────\n");
 
-                if (choice.contains("Education")) {
+                if (choice.contains("Education, Religious Affairs and Sports")) {
                     for (Education e : new EducationRepository().findAll()) {
                         sb.append(e.getMajorCategory()).append(" | ")
                           .append(e.getName()).append(" | ")
@@ -258,7 +260,7 @@ public class Main extends JFrame {
         String[] categories = {
             "Expenditures",
             "Revenues",
-            "Ministry of Education",
+            "Ministry of Education, Religious Affairs and Sports",
             "Ministry of Environment",
             "Ministry of National Defense",
             "Ministry of Finance",
@@ -274,7 +276,7 @@ public class Main extends JFrame {
                 switch (choice) {
                     case "Expenditures" -> editExpenditures();
                     case "Revenues" -> editRevenues();
-                    case "Ministry of Education" -> editEducation();
+                    case "Ministry of Education, Religious Affairs and Sports" -> editEducation();
                     case "Ministry of Environment" -> editEnvironment();
                     case "Ministry of National Defense" -> editNationalDefense();
                     case "Ministry of Finance" -> editFinanceMinistry();
@@ -401,7 +403,7 @@ public class Main extends JFrame {
     }
 
     private void editEducation() throws SQLException {
-        editMinistryGeneric("Education", new EducationRepository());
+        editMinistryGeneric("Education, Religious Affairs and Sports", new EducationRepository());
     }
 
     private void editEnvironment() throws SQLException {
@@ -523,11 +525,7 @@ public class Main extends JFrame {
 
     // OPTION 6: Analyze Statistical Data
     private void analyzeStatisticalData() {
-        JOptionPane.showMessageDialog(this,
-                "This feature is not yet implemented.\n\n" +
-                "Future implementation: Generate charts and graphs for budget analysis.",
-                "Analyze Statistical Data",
-                JOptionPane.INFORMATION_MESSAGE);
+         Comparison22_25.showChart();
     }
 
     // OPTION 7: Exit
@@ -566,3 +564,4 @@ public class Main extends JFrame {
         });
     }
 }
+

@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7f664af-cf2a-4d49-b611-bed214db6842" name="Changes" comment="move file">
+    <list default="true" id="574ccf33-10be-459c-8639-db48d34457c8" name="Changes" comment="financial service fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/src/main/java/com/bonus71/bootstrap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/src/main/java/com/bonus71/bootstrap/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfEducationMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfEducationMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,22 +28,22 @@
     &quot;assignee&quot;: &quot;alikiprog&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/johnanton21/7-1-BONUS&quot;,
-    &quot;accountId&quot;: &quot;6a04ac5d-85c1-4459-96b1-06a3eaa4c776&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/johnanton21/7-1-BONUS.git",
+    "accountId": "81aa625f-52a8-4f52-9796-ee10a61e2e62"
   },
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
     },
-    &quot;owner&quot;: &quot;johnanton21&quot;,
-    &quot;repository&quot;: &quot;7-1-BONUS&quot;
+    "owner": "johnanton21",
+    "repository": "7-1-BONUS"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -120,7 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="resolve" />
-    <MESSAGE value="move file" />
-    <option name="LAST_COMMIT_MESSAGE" value="move file" />
+    <MESSAGE value="financial service fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="financial service fixed" />
   </component>
 </project>
