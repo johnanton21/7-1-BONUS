@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574ccf33-10be-459c-8639-db48d34457c8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PieExpenditures2025.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PieExpenditures2025.java" afterDir="false" />
-    </list>
+    <list default="true" id="574ccf33-10be-459c-8639-db48d34457c8" name="Changes" comment="financial service fixed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,16 +59,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
-    "Application.PerMinistryPie2025.executor": "Run",
-    "Application.PieRevenues2025.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "workspace-edit",
-    "kotlin-language-version-configured": "true"
-    "Application.PieExpenditures2025.executor": "Run",
-    "Application.PieRevenues2025.executor": "Run",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "mdata"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -135,17 +121,15 @@
     </attachedChunks>
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="574ccf33-10be-459c-8639-db48d34457c8" name="Changes" comment="" />
-      <created>1764778401567</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1764778401567</updated>
-      <created>1764769140775</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1764769140775</updated>
+    <task id="LOCAL-00001" summary="financial service fixed">
+      <option name="closed" value="true" />
+      <created>1764782995299</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764782995299</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +149,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update Main Pom" />
     <MESSAGE value="resolve" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Main Pom" />
+    <MESSAGE value="financial service fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="financial service fixed" />
   </component>
 </project>
