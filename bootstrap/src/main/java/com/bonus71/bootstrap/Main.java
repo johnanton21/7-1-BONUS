@@ -205,10 +205,53 @@ public class Main extends JFrame {
     }
 
     // OPTION 4: Compare with Other Years
+    private final YearsComparisonMenu yearsComparisonMenu = new YearsComparisonMenu();
     private void compareWithOtherYears() {
-        YearsComparisonMenu menuyc = new YearsComparisonMenu();
-        menuyc.show();
+        String[] options = {
+                "Compare 2025 with 2022",
+                "Compare 2025 with 2023",
+                "Compare 2025 with 2024",
+                "General Conclusions"
+        };
+
+        String choice = (String) JOptionPane.showInputDialog(
+                this,
+                "Select comparison:",
+                "Years Comparison",
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                options,
+                options[0]
+        );
+
+        if (choice == null) return;
+
+        try {
+            String result;
+
+            switch (choice) {
+                case "Compare 2025 with 2022" -> result =
+                        yearsComparisonMenu.compare(2025, 2022);
+
+                case "Compare 2025 with 2023" -> result =
+                        yearsComparisonMenu.compare(2025, 2023);
+
+                case "Compare 2025 with 2024" -> result =
+                        yearsComparisonMenu.compare(2025, 2024);
+
+                case "General Conclusions" -> result =
+                        yearsComparisonMenu.generalConclusions();
+
+                default -> result = "Invalid choice.";
+            }
+
+            showTextDialog("Year Comparison Result", result);
+
+        } catch (SQLException e) {
+            showError("Error loading comparison data: " + e.getMessage());
+        }
     }
+
 
     // OPTION 5: Apply Changes (Edit Data)
     private void applyChanges() {
