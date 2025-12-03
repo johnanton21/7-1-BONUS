@@ -7,15 +7,14 @@ import com.bonus71.data.entity.ministry.*;
 import com.bonus71.data.repository.*;
 import com.bonus71.functions.main.functions.*;
 import com.bonus71.functions.menus.*;
-import com.bonus71.graphics.PerMinistryPie2025;
-import com.bonus71.graphics.PieExpenditures2025;
-import com.bonus71.graphics.PieRevenues2025;
+import com.bonus71.graphics.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Scanner;
+
+import static com.bonus71.graphics.Comparison23_25.*;
 
 public class Main extends JFrame {
     private final FinancialService financialService = new FinancialService();
@@ -526,7 +525,7 @@ public class Main extends JFrame {
 
     // OPTION 6: Analyze Statistical Data
     private void analyzeStatisticalData() {
-        PieRevenues2025.showChart();
+         Comparison22_25.showChart();
     }
 
     // OPTION 7: Exit
