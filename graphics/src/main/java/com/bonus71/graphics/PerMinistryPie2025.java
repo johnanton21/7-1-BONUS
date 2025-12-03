@@ -50,7 +50,7 @@ public class PerMinistryPie2025 {
                     false
             );
 
-            // === 3. Labels: όνομα + ποσό ===
+
             PiePlot plot = (PiePlot) chart.getPlot();
             plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0}: {1} €"));
             plot.setSimpleLabels(false);
@@ -58,7 +58,7 @@ public class PerMinistryPie2025 {
             plot.setLabelFont(new Font("SansSerif", Font.BOLD, 12));
             plot.setInteriorGap(0.04);
 
-            // === 4. Window ===
+
             JFrame frame = new JFrame("Πίτα Λεπτομερή Έξοδα 2025");
             frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             frame.setContentPane(new ChartPanel(chart));

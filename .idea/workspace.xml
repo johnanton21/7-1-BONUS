@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="574ccf33-10be-459c-8639-db48d34457c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PerMinistryPie2025.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PieExpenditures2025.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/Comparison22_25.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/Comparison23_25.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/Comparison24_25.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bootstrap/src/main/java/com/bonus71/bootstrap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/src/main/java/com/bonus71/bootstrap/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/IndicativeClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PieRevenues2025.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PerMinistryPie2025.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PerMinistryPie2025.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PieExpenditures2025.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PieExpenditures2025.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PieRevenues2025.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PieRevenues2025.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,12 +64,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "git-widget-placeholder": "charts"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;charts&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bonus71.bootstrap.Main" />
@@ -95,6 +96,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -111,6 +113,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update Main Pom" />

@@ -11,7 +11,6 @@ import javax.swing.*;
 
 public class PieRevenues2025 {
 
-    @SuppressWarnings("checkstyle:FinalLocalVariable")
     public static void showChart() {
 
         // === 1. Dataset ===
