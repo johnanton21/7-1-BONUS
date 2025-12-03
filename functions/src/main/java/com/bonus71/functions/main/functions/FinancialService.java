@@ -19,7 +19,6 @@ public class FinancialService {
     }
 
 
-
     public List<Revenue> getAllRevenues() throws SQLException {
         return revenueRepository.findAll();
     }
@@ -27,7 +26,6 @@ public class FinancialService {
     public List<Expenditure> getAllExpenditures() throws SQLException {
         return expenditureRepository.findAll();
     }
-
 
 
     public double calculateTotalRevenue() throws SQLException {
@@ -75,7 +73,6 @@ public class FinancialService {
     }
 
 
-
     public void updateRevenue(Revenue revenue) throws SQLException {
         revenueRepository.update(revenue);
     }
@@ -119,3 +116,4 @@ public class FinancialService {
         }
     }
 }
+
