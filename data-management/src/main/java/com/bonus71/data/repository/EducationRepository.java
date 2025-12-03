@@ -1,0 +1,71 @@
+package com.bonus71.data.repository;
+
+import com.bonus71.data.config.DatabaseConfig;
+import com.bonus71.data.entity.ministry.Education;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class EducationRepository {
+
+    public List<Education> findAll() throws SQLException {
+        List<Education> list = new ArrayList<>();
+        String sql = "SELECT * FROM EDUCATION";
+
+        try (Connection conn = DatabaseConfig.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery()) {
+
+            while (rs.next()) {
+                list.add(new Education(
+                        rs.getInt("MAJOR_CATEGORY"),
+                        rs.getString("NAME"),
+                        rs.getString("EUROS")
+                ));
+            }
+        }
+
+        return list;
+    }
+
+    public void insert(Education ministry) throws SQLException {
+        String sql = "INSERT INTO EDUCATION VALUES (?, ?, ?)";
+
+        try (Connection conn = DatabaseConfig.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setInt(1, ministry.getMajorCategory());
+            ps.setString(2, ministry.getName());
+            ps.setString(3, ministry.getEuros());
+
+            ps.executeUpdate();
+        }
+    }
+
+    public void update(Education ministry) throws SQLException {
+        String sql = "UPDATE EDUCATION " +
+                "SET NAME=?, EUROS=? WHERE MAJOR_CATEGORY=?";
+
+        try (Connection conn = DatabaseConfig.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setString(1, ministry.getName());
+            ps.setString(2, ministry.getEuros());
+            ps.setInt(3, ministry.getMajorCategory());
+
+            ps.executeUpdate();
+        }
+    }
+
+    public void delete(int majorCategory) throws SQLException {
+        String sql = "DELETE FROM EDUCATION WHERE MAJOR_CATEGORY=?";
+
+        try (Connection conn = DatabaseConfig.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setInt(1, majorCategory);
+            ps.executeUpdate();
+        }
+    }
+}

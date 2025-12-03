@@ -12,12 +12,16 @@
     <modules>
         <module>bootstrap</module>
         <module>data-management</module>
+        <module>functions</module>
         <module>graphics</module>
+        <module>api</module>
     </modules>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
+
+        <junit.version>5.8.1</junit.version>
     </properties>
 
 
@@ -27,16 +31,28 @@
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-api</artifactId>
-                <version>5.8.1</version>
+                <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
 
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-engine</artifactId>
-                <version>5.8.1</version>
+                <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>8.4.0</version>
+            </dependency>
+                <dependency>
+                    <groupId>org.jfree</groupId>
+                    <artifactId>jfreechart</artifactId>
+                    <version>1.5.4</version>
+                </dependency>
+
+
 
         </dependencies>
     </dependencyManagement>
