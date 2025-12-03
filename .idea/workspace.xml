@@ -34,22 +34,22 @@
     &quot;assignee&quot;: &quot;VasilikiVarsou&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/johnanton21/7-1-BONUS.git",
-    "accountId": "14448cf0-abc9-4147-bf29-275c385ef4dc"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/johnanton21/7-1-BONUS.git&quot;,
+    &quot;accountId&quot;: &quot;14448cf0-abc9-4147-bf29-275c385ef4dc&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "johnanton21",
-    "repository": "7-1-BONUS"
+    &quot;owner&quot;: &quot;johnanton21&quot;,
+    &quot;repository&quot;: &quot;7-1-BONUS&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -58,14 +58,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.PieExpenditures2025.executor": "Run",
-    "Application.PieRevenues2025.executor": "Run",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PieExpenditures2025.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PieRevenues2025.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bonus71.bootstrap.Main" />
@@ -104,10 +104,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.PieExpenditures2025" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.PieExpenditures2025" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
