@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="574ccf33-10be-459c-8639-db48d34457c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PerMinistryPie2025.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PieExpenditures2025.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/src/main/java/com/bonus71/bootstrap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/src/main/java/com/bonus71/bootstrap/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/IndicativeClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PieRevenues2025.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,22 +34,22 @@
     &quot;assignee&quot;: &quot;VasilikiVarsou&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/johnanton21/7-1-BONUS&quot;,
-    &quot;accountId&quot;: &quot;6a04ac5d-85c1-4459-96b1-06a3eaa4c776&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/johnanton21/7-1-BONUS.git",
+    "accountId": "2ca0f029-7512-42a7-ac7f-c3af9559182b"
   },
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
     },
-    &quot;owner&quot;: &quot;johnanton21&quot;,
-    &quot;repository&quot;: &quot;7-1-BONUS&quot;
+    "owner": "johnanton21",
+    "repository": "7-1-BONUS"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -66,9 +61,20 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
-    "git-widget-placeholder": "charts"
+    "Application.PerMinistryPie2025.executor": "Run",
+    "Application.PieRevenues2025.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "workspace-edit",
+    "kotlin-language-version-configured": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\30694\Documents\PROG 2\bonus_7_1\.gitignore" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bonus71.bootstrap.Main" />
@@ -102,11 +108,17 @@
     <attachedChunks>
       <set>
         <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="574ccf33-10be-459c-8639-db48d34457c8" name="Changes" comment="" />
+      <created>1764778401567</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764778401567</updated>
+    </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
