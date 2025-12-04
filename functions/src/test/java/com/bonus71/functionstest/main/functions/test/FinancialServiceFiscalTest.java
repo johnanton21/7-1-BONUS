@@ -65,4 +65,26 @@ public class FinancialServiceFiscalTest {
         assertTrue(service.isSurplus());
         assertTrue(service.getFiscalBalanceStatus().contains("Balanced"));
     }
+    @Test
+    void testParseAmountVariousFormats() throws Exception {
+        var method = FinancialService.class.getDeclaredMethod("parseAmount", String.class);
+        method.setAccessible(true);
+
+        // Βοηθητική κλήση της private μεθόδου
+        double val1 = (double) method.invoke(service, "1.234,56€");
+        double val2 = (double) method.invoke(service, "2,50");
+        double val3 = (double) method.invoke(service, "1000");
+        double val4 = (double) method.invoke(service, "€3.500");
+        double val5 = (double) method.invoke(service, null);
+        double val6 = (double) method.invoke(service, "");
+        double val7 = (double) method.invoke(service, "abc");
+
+        assertEquals(1234.56, val1, 0.001);
+        assertEquals(2.50, val2, 0.001);
+        assertEquals(1000.0, val3, 0.001);
+        assertEquals(3500.0, val4, 0.001);
+        assertEquals(0.0, val5, 0.001);
+        assertEquals(0.0, val6, 0.001);
+        assertEquals(0.0, val7, 0.001);
+    }
 }
