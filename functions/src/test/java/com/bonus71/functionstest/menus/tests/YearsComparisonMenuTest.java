@@ -2,34 +2,81 @@ package com.bonus71.functionstest;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.sql.SQLException;
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
-@Test
-void testCompare2025With2022_ShowsCorrectOutput() {
-    // Προσομοίωση εισόδου: επιλογή 1 (συγκρίνει 2025 με 2022), μετά έξοδος
-    String input = "1\n0\n";
-    System.setIn(new ByteArrayInputStream(input.getBytes()));
+// === FAKE REPOSITORY ΓΙΑ TESTING ===
+class FakeYearsComparisonRepository extends YearsComparisonRepository {
+    private final Map<Integer, YearsComparison> data = new HashMap<>();
 
-    // Καταγραφή εξόδου
-    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-    System.setOut(new PrintStream(outputStream));
+    public void add(int year, YearsComparison yc) {
+        data.put(year, yc);
+    }
 
-    // Fake repository με δεδομένα
-    FakeYearsRepo fakeRepo = new FakeYearsRepo();
-    fakeRepo.addData(2025, new YearsComparison(2025, "61000000000", "57900000000", "3100000000"));
-    fakeRepo.addData(2022, new YearsComparison(2022, "59600000000", "71300000000", "-11700000000"));
+    @Override
+    public YearsComparison findByYear(int year) {
+        return data.get(year);  // επιστρέφει μόνο από μνήμη
+    }
+}
 
-    YearsComparisonMenu menu = new YearsComparisonMenu(fakeRepo, new Scanner(System.in));
-    menu.show();
+public class YearsComparisonMenuTest {
 
-    String output = outputStream.toString();
+    @Test
+    void testCompare_ReturnsCorrectFormattedString() throws SQLException {
+        // Arrange
+        FakeYearsComparisonRepository fakeRepo = new FakeYearsComparisonRepository();
 
-    assertTrue(output.contains("Compare2025 with 2022"));
-    assertTrue(output.contains("Net Revenues 2025:"));
-    assertTrue(output.contains("Expenses 2022:"));
-    assertTrue(output.contains("Balance2025:"));
+        fakeRepo.add(2025,
+                new YearsComparison(2025, "61000000000", "57900000000", "3100000000"));
+        fakeRepo.add(2022,
+                new YearsComparison(2022, "59600000000", "71300000000", "-11700000000"));
+
+        YearsComparisonMenu menu = new YearsComparisonMenu(fakeRepo);
+
+        // Act
+        String result = menu.compare(2025, 2022);
+
+        // Assert
+        assertTrue(result.contains("=== Comparison 2025 vs 2022 ==="));
+        assertTrue(result.contains("Net Revenues 2025: 61000000000"));
+        assertTrue(result.contains("Net Revenues 2022: 59600000000"));
+        assertTrue(result.contains("Expenses 2025:    57900000000"));
+        assertTrue(result.contains("Expenses 2022:    71300000000"));
+        assertTrue(result.contains("Balance 2025:     3100000000"));
+        assertTrue(result.contains("Balance 2022:     -11700000000"));
+    }
+
+    @Test
+    void testCompare_WhenYearNotFound_ReturnsErrorMessage() throws SQLException {
+        // Arrange
+        FakeYearsComparisonRepository fakeRepo = new FakeYearsComparisonRepository();
+
+        // μόνο το 2025 υπάρχει
+        fakeRepo.add(2025,
+                new YearsComparison(2025, "10", "5", "5"));
+
+        YearsComparisonMenu menu = new YearsComparisonMenu(fakeRepo);
+
+        // Act
+        String result = menu.compare(2025, 2020);
+
+        // Assert
+        assertEquals("No data found for 2025 or 2020", result);
+    }
+
+    @Test
+    void testGeneralConclusions_ReturnsCorrectText() {
+        // Arrange
+        YearsComparisonMenu menu = new YearsComparisonMenu(); // δεν χρειάζεται repo
+
+        // Act
+        String result = menu.generalConclusions();
+
+        // Assert (ελέγχουμε βασικές φράσεις)
+        assertTrue(result.contains("General Conclusions for the Four-Year Period"));
+        assertTrue(result.contains("Revenues: Increase steadily from 2022"));
+        assertTrue(result.contains("2024: +0.3B slight surplus"));
+        assertTrue(result.contains("2025 (Jan–Oct): +3.1B surplus"));
+    }
 }
