@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="574ccf33-10be-459c-8639-db48d34457c8" name="Changes" comment="financial service fixed">
+    <list default="true" id="0e41dc20-1ddc-4297-a08e-8556d1a2f859" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/src/main/java/com/bonus71/bootstrap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/src/main/java/com/bonus71/bootstrap/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfEducationMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfEducationMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/YearsComparisonMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/YearsComparisonMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/test/java/com/bonus71/functionstest/menus/tests/YearsComparisonMenuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/test/java/com/bonus71/functionstest/menus/tests/YearsComparisonMenuTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,21 +15,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="varsou" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;VasilikiVarsou&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "alikiprog"
   }
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
+    "url": "https://github.com/johnanton21/7-1-BONUS",
+    "accountId": "6a04ac5d-85c1-4459-96b1-06a3eaa4c776"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="36NMKslDIifhwOWDFHdlxqgzNCH" />
     "url": "https://github.com/johnanton21/7-1-BONUS.git",
     "accountId": "81aa625f-52a8-4f52-9796-ee10a61e2e62"
   },
@@ -54,56 +57,44 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
-    "git-widget-placeholder": "#63 on mdata"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dataconnect",
+    "kotlin-language-version-configured": "true"
   }
 }</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
+      <module name="7-1-BONUS" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="7-1-BONUS" />
       <option name="filePath" />
       <method v="2" />
     </configuration>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="financial service fixed">
-      <option name="closed" value="true" />
-      <created>1764782995299</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1764782995299</updated>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e41dc20-1ddc-4297-a08e-8556d1a2f859" name="Changes" comment="" />
+      <created>1764842516790</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764842516790</updated>
     </task>
-    <task id="LOCAL-00002" summary="financial service fixed">
-      <option name="closed" value="true" />
-      <created>1764783090346</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1764783090346</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update Main Pom" />
-    <MESSAGE value="resolve" />
-    <MESSAGE value="financial service fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="financial service fixed" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/YearsComparisonMenu.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
