@@ -33,6 +33,24 @@
   "associatedIndex": 8
 }]]></component>
   <component name="ProjectId" id="36NMKslDIifhwOWDFHdlxqgzNCH" />
+    "url": "https://github.com/johnanton21/7-1-BONUS.git",
+    "accountId": "81aa625f-52a8-4f52-9796-ee10a61e2e62"
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;johnanton21&quot;,
+    &quot;repository&quot;: &quot;7-1-BONUS&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="3673pRywMuslqUjGsW5AUXlGf6t" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,7 +62,7 @@
     "git-widget-placeholder": "dataconnect",
     "kotlin-language-version-configured": "true"
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="7-1-BONUS" />
