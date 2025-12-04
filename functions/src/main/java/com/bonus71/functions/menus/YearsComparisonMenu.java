@@ -7,7 +7,14 @@ import java.sql.SQLException;
 
 public class YearsComparisonMenu {
 
-    private final YearsComparisonRepository repo = new YearsComparisonRepository();
+    private final YearsComparisonRepository repo;
+    //  1ος constructor – χρησιμοποιείται στο κανονικό πρόγραμμα
+    public YearsComparisonMenu() {
+        this.repo = new YearsComparisonRepository();
+    }
+    // 2ος constructor – χρησιμοποιείται στα tests με fake repo
+    public YearsComparisonMenu(YearsComparisonRepository repo) {
+        this.repo = repo;
 
     public YearsComparison getYear(int year) throws SQLException {
         return repo.findByYear(year);
