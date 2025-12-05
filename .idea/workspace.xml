@@ -4,97 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e41dc20-1ddc-4297-a08e-8556d1a2f859" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/YearsComparisonMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/YearsComparisonMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/test/java/com/bonus71/functionstest/menus/tests/YearsComparisonMenuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/test/java/com/bonus71/functionstest/menus/tests/YearsComparisonMenuTest.java" afterDir="false" />
+    <list default="true" id="67368ee8-86c2-4b5d-8132-edc56dd25b89" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "alikiprog"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/johnanton21/7-1-BONUS",
-    "accountId": "6a04ac5d-85c1-4459-96b1-06a3eaa4c776"
-  }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
-  <component name="ProjectId" id="36NMKslDIifhwOWDFHdlxqgzNCH" />
-    "url": "https://github.com/johnanton21/7-1-BONUS.git",
-    "accountId": "81aa625f-52a8-4f52-9796-ee10a61e2e62"
-  },
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
-    },
-    &quot;owner&quot;: &quot;johnanton21&quot;,
-    &quot;repository&quot;: &quot;7-1-BONUS&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="3673pRywMuslqUjGsW5AUXlGf6t" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dataconnect",
-    "kotlin-language-version-configured": "true"
-  }
-}</component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="7-1-BONUS" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="7-1-BONUS" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="0e41dc20-1ddc-4297-a08e-8556d1a2f859" name="Changes" comment="" />
-      <created>1764842516790</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1764842516790</updated>
-    </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/YearsComparisonMenu.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
