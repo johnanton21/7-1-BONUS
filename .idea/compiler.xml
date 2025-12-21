@@ -12,8 +12,10 @@
         <module name="api (1)" />
         <module name="bootstrap" />
         <module name="graphics" />
-        <module name="api" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>
