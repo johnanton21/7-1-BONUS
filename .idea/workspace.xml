@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67368ee8-86c2-4b5d-8132-edc56dd25b89" name="Changes" comment="pom fixes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/EducationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/EducationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/EnvironmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/EnvironmentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/ExpenditureDetailedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/ExpenditureDetailedRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/ExpenditureRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/ExpenditureRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/FinanceMinistryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/FinanceMinistryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/HealthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/HealthRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/NationalDefenseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/NationalDefenseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/RevenueRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/RevenueRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/YearsComparisonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/repository/YearsComparisonRepository.java" afterDir="false" />
+    <list default="true" id="67368ee8-86c2-4b5d-8132-edc56dd25b89" name="Changes" comment="repository classes checkstyle fixes">
+      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/config/DatabaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/config/DatabaseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/Comparison/YearsComparison.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/Comparison/YearsComparison.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/financial/Expenditure.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/financial/Expenditure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/financial/ExpenditureDetailed.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/financial/ExpenditureDetailed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/financial/Revenue.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/financial/Revenue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +66,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766326106474</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="repository classes checkstyle fixes">
+      <option name="closed" value="true" />
+      <created>1766329318717</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1766329318717</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +91,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="checkstyle configuration" />
     <MESSAGE value="pom fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="pom fixes" />
+    <MESSAGE value="repository classes checkstyle fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="repository classes checkstyle fixes" />
   </component>
 </project>
