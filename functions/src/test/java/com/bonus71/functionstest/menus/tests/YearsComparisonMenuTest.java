@@ -1,12 +1,13 @@
-package com.bonus71.functionstest;
+package com.bonus71.functionstest.menus.tests;
+import com.bonus71.data.entity.Comparison.YearsComparison;
+import com.bonus71.data.repository.YearsComparisonRepository;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-// === FAKE REPOSITORY ΓΙΑ TESTING ===
+
 class FakeYearsComparisonRepository extends YearsComparisonRepository {
     private final Map<Integer, YearsComparison> data = new HashMap<>();
 

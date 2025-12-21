@@ -1,6 +1,9 @@
+package com.bonus71.functionstest.menus.repos;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
+import com.bonus71.data.entity.Comparison.YearsComparison;
+import com.bonus71.data.repository.YearsComparisonRepository;
 import java.util.HashMap;
 import java.util.Map;
 
