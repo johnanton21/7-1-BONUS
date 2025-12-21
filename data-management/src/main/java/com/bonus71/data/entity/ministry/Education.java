@@ -6,33 +6,33 @@ public class Education {
   private String name;
   private String euros;
 
-public Education(int majorCategory, String name, String euros) {
+  public Education(int majorCategory, String name, String euros) {
     this.majorCategory = majorCategory;
     this.name = name;
     this.euros = euros;
-}
+  }
 
-public int getMajorCategory() {
+  public int getMajorCategory() {
     return majorCategory;
-}
+  }
 
-public void setMajorCategory(int majorCategory) {
+  public void setMajorCategory(int majorCategory) {
     this.majorCategory = majorCategory;
-}
+  }
 
-public String getName() {
+  public String getName() {
     return name;
-}
+  }
 
-public void setName(String name) {
+  public void setName(String name) {
     this.name = name;
-}
+  }
 
-public String getEuros() {
+  public String getEuros() {
     return euros;
-}
+  }
 
-public void setEuros(String euros) {
+  public void setEuros(String euros) {
     this.euros = euros;
-}
+  }
 }
