@@ -2,36 +2,36 @@ package com.bonus71.functions.menus;
 
 import com.bonus71.data.entity.Comparison.YearsComparison;
 import com.bonus71.data.repository.YearsComparisonRepository;
-
 import java.sql.SQLException;
 
 public class YearsComparisonMenu {
 
-    private final YearsComparisonRepository repo;
+  private final YearsComparisonRepository repo;
 
-    // ➤ Constructor για κανονική χρήση (default DB)
-    public YearsComparisonMenu() {
-        this.repo = new YearsComparisonRepository();
+
+  public YearsComparisonMenu() {
+
+    this.repo = new YearsComparisonRepository();
+  }
+
+
+  public YearsComparisonMenu(YearsComparisonRepository repo) {
+    this.repo = repo;
+  }
+
+  public YearsComparison getYear(int year) throws SQLException {
+    return repo.findByYear(year);
+  }
+
+  public String compare(int baseYear, int otherYear) throws SQLException {
+    YearsComparison base = repo.findByYear(baseYear);
+    YearsComparison other = repo.findByYear(otherYear);
+
+    if (base == null || other == null) {
+      return "No data found for " + baseYear + " or " + otherYear;
     }
 
-    // ➤ Νέo Constructor για testing με fake repository
-    public YearsComparisonMenu(YearsComparisonRepository repo) {
-        this.repo = repo;
-    }
-
-    public YearsComparison getYear(int year) throws SQLException {
-        return repo.findByYear(year);
-    }
-
-    public String compare(int baseYear, int otherYear) throws SQLException {
-        YearsComparison base = repo.findByYear(baseYear);
-        YearsComparison other = repo.findByYear(otherYear);
-
-        if (base == null || other == null) {
-            return "No data found for " + baseYear + " or " + otherYear;
-        }
-
-        return String.format("""
+    return String.format("""
                 === Comparison %d vs %d ===
 
                 Net Revenues %d: %s
@@ -50,11 +50,11 @@ public class YearsComparisonMenu {
                 otherYear, other.getExpenses(),
                 baseYear, base.getBalance(),
                 otherYear, other.getBalance()
-        );
-    }
+    );
+  }
 
-    public String generalConclusions() {
-        return """
+  public String generalConclusions() {
+    return """
                 === General Conclusions for the Four-Year Period ===
 
                 Revenues: Increase steadily from 2022 → 2023 → 2024 (~59.6 → ~74.0 billion €).
