@@ -65,8 +65,8 @@ public class HealthRepository {
     try (Connection conn = DatabaseConfig.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
 
-        ps.setInt(1, majorCategory);
-        ps.executeUpdate();
+      ps.setInt(1, majorCategory);
+      ps.executeUpdate();
     }
   }
 }
