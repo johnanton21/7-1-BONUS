@@ -1,52 +1,55 @@
 package com.bonus71.functionstest.menus.repos;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
 import com.bonus71.data.entity.Comparison.YearsComparison;
 import com.bonus71.data.repository.YearsComparisonRepository;
 import java.util.HashMap;
 import java.util.Map;
+import org.junit.jupiter.api.Test;
 
 public class FakeYearsComparisonRepositoryTest {
 
-    // Fake repository που δεν συνδέεται με βάση
-    static class FakeYearsComparisonRepository extends YearsComparisonRepository {
-        private final Map<Integer, YearsComparison> data = new HashMap<>();
+  // Fake repository που δεν συνδέεται με βάση
+  static class FakeYearsComparisonRepository extends YearsComparisonRepository {
+    private final Map<Integer, YearsComparison> data = new HashMap<>();
 
-        public void add(int year, YearsComparison yc) {
-            data.put(year, yc);
-        }
-
-        @Override
-        public YearsComparison findByYear(int year) {
-            return data.get(year);  // Επιστρέφει μόνο από τη μνήμη
-        }
+    public void add(int year, YearsComparison yc) {
+      data.put(year, yc);
     }
 
-    @Test
+    @Override
+    public YearsComparison findByYear(int year) {
+      return data.get(year);  // Επιστρέφει μόνο από τη μνήμη
+    }
+  }
+
+  @Test
     void testFindExistingYearReturnsCorrectData() {
-        FakeYearsComparisonRepository fakeRepo = new FakeYearsComparisonRepository();
+    FakeYearsComparisonRepository fakeRepo = new FakeYearsComparisonRepository();
 
-        YearsComparison yc = new YearsComparison(
+    YearsComparison yc = new YearsComparison(
                 2025, "61000000000", "57900000000", "3100000000"
-        );
+    );
 
-        fakeRepo.add(2025, yc);
+    fakeRepo.add(2025, yc);
 
-        YearsComparison result = fakeRepo.findByYear(2025);
+    YearsComparison result = fakeRepo.findByYear(2025);
 
-        assertNotNull(result);
-        assertEquals("61000000000", result.getNetRevenues());
-        assertEquals("57900000000", result.getExpenses());
-        assertEquals("3100000000", result.getBalance());
-    }
+    assertNotNull(result);
+    assertEquals("61000000000", result.getNetRevenues());
+    assertEquals("57900000000", result.getExpenses());
+    assertEquals("3100000000", result.getBalance());
+  }
 
-    @Test
+  @Test
     void testFindMissingYearReturnsNull() {
-        FakeYearsComparisonRepository fakeRepo = new FakeYearsComparisonRepository();
+    FakeYearsComparisonRepository fakeRepo = new FakeYearsComparisonRepository();
 
-        YearsComparison result = fakeRepo.findByYear(2023);
+    YearsComparison result = fakeRepo.findByYear(2023);
 
-        assertNull(result);
-    }
+    assertNull(result);
+  }
 }

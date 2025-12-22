@@ -17,8 +17,8 @@ public class DisplayFunctionATest {
 
   @Before
     public void setUp() {
-      outContent = new ByteArrayOutputStream();
-      System.setOut(new PrintStream(outContent));
+    outContent = new ByteArrayOutputStream();
+    System.setOut(new PrintStream(outContent));
   }
 
   @After
