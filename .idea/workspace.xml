@@ -6,17 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="67368ee8-86c2-4b5d-8132-edc56dd25b89" name="Changes" comment="checkstyle fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/ministry/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/ministry/Education.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/ministry/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/ministry/Environment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/ministry/FinanceMinistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/ministry/FinanceMinistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/ministry/Health.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/ministry/Health.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/ministry/NationalDefense.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-management/src/main/java/com/bonus71/data/entity/ministry/NationalDefense.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/Comparison22_25.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/Comparison22_25.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/Comparison23_25.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/Comparison23_25.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/Comparison24_25.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/Comparison24_25.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PerMinistryPie2025.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PerMinistryPie2025.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PieExpenditures2025.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PieExpenditures2025.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PieRevenues2025.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/src/main/java/com/bonus71/graphics/PieRevenues2025.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/ExpsensesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/ExpsensesMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfEducationMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfEducationMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfFinanceMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfFinanceMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTHealthMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTHealthMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTheEnvironmentMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/MinistryOfTheEnvironmentMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/NationalDefenseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/NationalDefenseMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/RevenueMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/RevenueMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/YearsComparisonMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/main/java/com/bonus71/functions/menus/YearsComparisonMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/test/java/com/bonus71/functionstest/main/functions/test/DisplayFunctionATest.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/test/java/com/bonus71/functionstest/main/functions/test/DisplayFunctionATest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/test/java/com/bonus71/functionstest/main/functions/test/DisplayMinistriesFunctionBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/test/java/com/bonus71/functionstest/main/functions/test/DisplayMinistriesFunctionBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/test/java/com/bonus71/functionstest/main/functions/test/EditFunctionCTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/test/java/com/bonus71/functionstest/main/functions/test/EditFunctionCTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Comparison22_25.executor": "Run",
-    "git-widget-placeholder": "#73 on mdata",
+    "git-widget-placeholder": "#76 on mdata",
     "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable"
   }
 }]]></component>
@@ -98,7 +98,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766337192517</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="checkstyle fixes">
+      <option name="closed" value="true" />
+      <created>1766338808588</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1766338808588</updated>
+    </task>
+    <task id="LOCAL-00007" summary="checkstyle fixes">
+      <option name="closed" value="true" />
+      <created>1766400256558</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1766400256558</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
