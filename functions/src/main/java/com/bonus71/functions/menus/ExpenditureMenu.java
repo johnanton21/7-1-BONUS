@@ -6,7 +6,7 @@ import com.bonus71.data.repository.ExpenditureRepository;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class ExpensesMenu {
+public class ExpenditureMenu {
   public static void menu(ExpenditureRepository repo) throws SQLException {
     Scanner scanner = new Scanner(System.in);
 

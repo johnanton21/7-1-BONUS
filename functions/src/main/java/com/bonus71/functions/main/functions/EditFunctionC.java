@@ -7,7 +7,7 @@ import com.bonus71.data.repository.FinanceMinistryRepository;
 import com.bonus71.data.repository.HealthRepository;
 import com.bonus71.data.repository.NationalDefenseRepository;
 import com.bonus71.data.repository.RevenueRepository;
-import com.bonus71.functions.menus.ExpensesMenu;
+import com.bonus71.functions.menus.ExpenditureMenu;
 import com.bonus71.functions.menus.MinistryOfEducationMenu;
 import com.bonus71.functions.menus.MinistryOfFinanceMenu;
 import com.bonus71.functions.menus.MinistryOfHealthMenu;
@@ -46,7 +46,7 @@ public class EditFunctionC {
       scanner.nextLine();
 
       switch (choice) {
-        case 1 -> ExpensesMenu.menu(exodaRepo);
+        case 1 -> ExpenditureMenu.menu(exodaRepo);
         case 2 -> RevenueMenu.menu(esodaRepo);
         case 3 -> MinistryOfEducationMenu.menu(paideiaRepo);
         case 4 -> MinistryOfEnvironmentMenu.menu(perivRepo);
