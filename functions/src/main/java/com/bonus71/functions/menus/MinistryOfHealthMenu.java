@@ -5,7 +5,7 @@ import com.bonus71.data.repository.HealthRepository;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class MinistryOfTHealthMenu {
+public class MinistryOfHealthMenu {
   @SuppressWarnings("checkstyle:OneStatementPerLine")
   public static void menu(HealthRepository repo) throws SQLException {
     Scanner scanner = new Scanner(System.in);
