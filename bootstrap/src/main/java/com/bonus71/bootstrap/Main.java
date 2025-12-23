@@ -316,7 +316,10 @@ public class Main extends JFrame {
                 String euros = JOptionPane.showInputDialog(this, "Enter Euros:");
                 if (euros == null) return;
 
-                repo.insert(new Expenditure(Integer.parseInt(code), category, euros));
+                Integer codeInt = parseInteger(code, "Code");
+                if (codeInt == null) return;
+
+                repo.insert(new Expenditure(codeInt, category, euros));
                 JOptionPane.showMessageDialog(this, "Expenditure added successfully!");
             }
             case "Update" -> {
@@ -327,18 +330,24 @@ public class Main extends JFrame {
                 String euros = JOptionPane.showInputDialog(this, "Enter new Euros:");
                 if (euros == null) return;
 
-                repo.update(new Expenditure(Integer.parseInt(code), category, euros));
+                Integer codeInt = parseInteger(code, "Code");
+                if (codeInt == null) return;
+
+                repo.update(new Expenditure(codeInt, category, euros));
                 JOptionPane.showMessageDialog(this, "Expenditure updated successfully!");
             }
             case "Delete" -> {
                 String code = JOptionPane.showInputDialog(this, "Enter Code to delete:");
                 if (code == null) return;
 
+                Integer codeInt = parseInteger(code, "Code");
+                if (codeInt == null) return;
+
                 int confirm = JOptionPane.showConfirmDialog(this,
                         "Are you sure you want to delete this expenditure?",
                         "Confirm Delete", JOptionPane.YES_NO_OPTION);
                 if (confirm == JOptionPane.YES_OPTION) {
-                    repo.delete(Integer.parseInt(code));
+                    repo.delete(codeInt);
                     JOptionPane.showMessageDialog(this, "Expenditure deleted successfully!");
                 }
             }
@@ -373,7 +382,10 @@ public class Main extends JFrame {
                 String euros = JOptionPane.showInputDialog(this, "Enter Euros:");
                 if (euros == null) return;
 
-                repo.insert(new Revenue(Integer.parseInt(code), category, euros));
+                Integer codeInt = parseInteger(code, "Code");
+                if (codeInt == null) return;
+
+                repo.insert(new Revenue(codeInt, category, euros));
                 JOptionPane.showMessageDialog(this, "Revenue added successfully!");
             }
             case "Update" -> {
@@ -384,18 +396,24 @@ public class Main extends JFrame {
                 String euros = JOptionPane.showInputDialog(this, "Enter new Euros:");
                 if (euros == null) return;
 
-                repo.update(new Revenue(Integer.parseInt(code), category, euros));
+                Integer codeInt = parseInteger(code, "Code");
+                if (codeInt == null) return;
+
+                repo.update(new Revenue(codeInt, category, euros));
                 JOptionPane.showMessageDialog(this, "Revenue updated successfully!");
             }
             case "Delete" -> {
                 String code = JOptionPane.showInputDialog(this, "Enter Code to delete:");
                 if (code == null) return;
 
+                Integer codeInt = parseInteger(code, "Code");
+                if (codeInt == null) return;
+
                 int confirm = JOptionPane.showConfirmDialog(this,
                         "Are you sure you want to delete this revenue?",
                         "Confirm Delete", JOptionPane.YES_NO_OPTION);
                 if (confirm == JOptionPane.YES_OPTION) {
-                    repo.delete(Integer.parseInt(code));
+                    repo.delete(codeInt);
                     JOptionPane.showMessageDialog(this, "Revenue deleted successfully!");
                 }
             }
@@ -476,7 +494,9 @@ public class Main extends JFrame {
                 String euros = JOptionPane.showInputDialog(this, "Enter Euros:");
                 if (euros == null) return;
 
-                int majorCat = Integer.parseInt(major);
+                Integer majorCat = parseInteger(major, "Major Category");
+                if (majorCat == null) return;
+
                 if (repo instanceof EducationRepository r) r.insert(new Education(majorCat, name, euros));
                 else if (repo instanceof EnvironmentRepository r) r.insert(new Environment(majorCat, name, euros));
                 else if (repo instanceof NationalDefenseRepository r) r.insert(new NationalDefense(majorCat, name, euros));
@@ -493,7 +513,9 @@ public class Main extends JFrame {
                 String euros = JOptionPane.showInputDialog(this, "Enter new Euros:");
                 if (euros == null) return;
 
-                int majorCat = Integer.parseInt(major);
+                Integer majorCat = parseInteger(major, "Major Category");
+                if (majorCat == null) return;
+
                 if (repo instanceof EducationRepository r) r.update(new Education(majorCat, name, euros));
                 else if (repo instanceof EnvironmentRepository r) r.update(new Environment(majorCat, name, euros));
                 else if (repo instanceof NationalDefenseRepository r) r.update(new NationalDefense(majorCat, name, euros));
@@ -506,11 +528,13 @@ public class Main extends JFrame {
                 String major = JOptionPane.showInputDialog(this, "Enter Major Category to delete:");
                 if (major == null) return;
 
+                Integer majorCat = parseInteger(major, "Major Category");
+                if (majorCat == null) return;
+
                 int confirm = JOptionPane.showConfirmDialog(this,
                         "Are you sure you want to delete this entry?",
                         "Confirm Delete", JOptionPane.YES_NO_OPTION);
                 if (confirm == JOptionPane.YES_OPTION) {
-                    int majorCat = Integer.parseInt(major);
                     if (repo instanceof EducationRepository r) r.delete(majorCat);
                     else if (repo instanceof EnvironmentRepository r) r.delete(majorCat);
                     else if (repo instanceof NationalDefenseRepository r) r.delete(majorCat);
@@ -550,6 +574,26 @@ public class Main extends JFrame {
 
         JOptionPane.showMessageDialog(this, scrollPane, title,
                 JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    /**
+     * Safely parses a string to an integer with user-friendly error handling.
+     * @param input the string to parse
+     * @param fieldName the name of the field being parsed (for error messages)
+     * @return the parsed integer, or null if parsing fails
+     */
+    private Integer parseInteger(String input, String fieldName) {
+        if (input == null || input.trim().isEmpty()) {
+            showError(fieldName + " cannot be empty!");
+            return null;
+        }
+
+        try {
+            return Integer.parseInt(input.trim());
+        } catch (NumberFormatException e) {
+            showError("Invalid " + fieldName + ": Please enter a valid number.");
+            return null;
+        }
     }
 
     private void showError(String message) {
