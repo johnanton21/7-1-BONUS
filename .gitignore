@@ -24,8 +24,19 @@ hs_err_pid*
 replay_pid*
 
 *.DS_STORE
-.idea
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Specific files
 /data-management/src/main/java/com/bonus71/data/DatabaseH2M.java
+
+# Maven build directories
 *target
 target/
+
+# Claude Code
 .claude
