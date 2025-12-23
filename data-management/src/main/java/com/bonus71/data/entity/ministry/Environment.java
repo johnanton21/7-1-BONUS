@@ -2,37 +2,37 @@ package com.bonus71.data.entity.ministry;
 
 public class Environment {
 
-    private int majorCategory;
-    private String name;
-    private String euros;
+  private int majorCategory;
+  private String name;
+  private String euros;
 
-    public Environment(int majorCategory, String name, String euros) {
-        this.majorCategory = majorCategory;
-        this.name = name;
-        this.euros = euros;
-    }
+  public Environment(int majorCategory, String name, String euros) {
+    this.majorCategory = majorCategory;
+    this.name = name;
+    this.euros = euros;
+  }
 
-    public int getMajorCategory() {
-        return majorCategory;
-    }
+  public int getMajorCategory() {
+    return majorCategory;
+  }
 
-    public void setMajorCategory(int majorCategory) {
-        this.majorCategory = majorCategory;
-    }
+  public void setMajorCategory(int majorCategory) {
+    this.majorCategory = majorCategory;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public String getEuros() {
-        return euros;
-    }
+  public String getEuros() {
+    return euros;
+  }
 
-    public void setEuros(String euros) {
-        this.euros = euros;
-    }
+  public void setEuros(String euros) {
+    this.euros = euros;
+  }
 }

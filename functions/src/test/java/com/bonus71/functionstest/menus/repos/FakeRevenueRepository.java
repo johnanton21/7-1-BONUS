@@ -2,33 +2,32 @@ package com.bonus71.functionstest.menus.repos;
 
 import com.bonus71.data.entity.financial.Revenue;
 import com.bonus71.data.repository.RevenueRepository;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class FakeRevenueRepository extends RevenueRepository {
 
-    private final List<Revenue> data = new ArrayList<>();
+  private final List<Revenue> data = new ArrayList<>();
 
-    @Override
+  @Override
     public List<Revenue> findAll() {
-        return data;
-    }
+    return data;
+  }
 
-    @Override
+  @Override
     public void insert(Revenue r) {
-        data.add(r);
-    }
+    data.add(r);
+  }
 
-    @Override
+  @Override
     public void update(Revenue r) {
-        delete(r.getCode());
-        data.add(r);
-    }
+    delete(r.getCode());
+    data.add(r);
+  }
 
-    @Override
+  @Override
     public void delete(int code) {
-        data.removeIf(x -> x.getCode() == code);
-    }
+    data.removeIf(x -> x.getCode() == code);
+  }
 }
 

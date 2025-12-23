@@ -1,70 +1,71 @@
 package com.bonus71.functionstest.menus.tests;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import com.bonus71.data.entity.ministry.NationalDefense;
 import com.bonus71.data.repository.NationalDefenseRepository;
-import org.junit.jupiter.api.Test;
-
 import java.sql.SQLException;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 class NationalDefenseMenuTest {
 
-    @Test
+  @Test
     void testFindAll() throws SQLException {
-        NationalDefenseRepository repo = new NationalDefenseRepository();
+    NationalDefenseRepository repo = new NationalDefenseRepository();
 
-        List<NationalDefense> results = repo.findAll();
+    List<NationalDefense> results = repo.findAll();
 
-        assertNotNull(results);
-    }
+    assertNotNull(results);
+  }
 
-    @Test
+  @Test
     void testInsert() throws SQLException {
-        NationalDefenseRepository repo = new NationalDefenseRepository();
+    NationalDefenseRepository repo = new NationalDefenseRepository();
 
-        NationalDefense nd = new NationalDefense(1001, "TestDefense", "800");
-        repo.insert(nd);
-
-        boolean exists = repo.findAll().stream()
+    NationalDefense nd = new NationalDefense(1001, "TestDefense", "800");
+    repo.insert(nd);
+    boolean exists = repo.findAll().stream()
                 .anyMatch(x -> x.getMajorCategory() == 1001);
 
-        assertTrue(exists);
-    }
+    assertTrue(exists);
+  }
 
-    @Test
+  @Test
     void testUpdate() throws SQLException {
-        NationalDefenseRepository repo = new NationalDefenseRepository();
+    NationalDefenseRepository repo = new NationalDefenseRepository();
 
-        NationalDefense nd = new NationalDefense(1002, "Old", "100");
-        repo.insert(nd);
+    NationalDefense nd = new NationalDefense(1002, "Old", "100");
+    repo.insert(nd);
 
-        NationalDefense updated = new NationalDefense(1002, "New", "999");
-        repo.update(updated);
+    NationalDefense updated = new NationalDefense(1002, "New", "999");
+    repo.update(updated);
 
-        NationalDefense result = repo.findAll().stream()
+    NationalDefense result = repo.findAll().stream()
                 .filter(x -> x.getMajorCategory() == 1002)
                 .findFirst()
                 .orElse(null);
 
-        assertNotNull(result);
-        assertEquals("New", result.getName());
-        assertEquals("999", result.getEuros());
-    }
+    assertNotNull(result);
+    assertEquals("New", result.getName());
+    assertEquals("999", result.getEuros());
+  }
 
-    @Test
+  @Test
     void testDelete() throws SQLException {
-        NationalDefenseRepository repo = new NationalDefenseRepository();
+    NationalDefenseRepository repo = new NationalDefenseRepository();
 
-        NationalDefense nd = new NationalDefense(1003, "ToDelete", "70");
-        repo.insert(nd);
+    NationalDefense nd = new NationalDefense(1003, "ToDelete", "70");
+    repo.insert(nd);
 
-        repo.delete(1003);
+    repo.delete(1003);
 
-        boolean exists = repo.findAll().stream()
+    boolean exists = repo.findAll().stream()
                 .anyMatch(x -> x.getMajorCategory() == 1003);
 
-        assertFalse(exists);
-    }
+    assertFalse(exists);
+  }
 }
