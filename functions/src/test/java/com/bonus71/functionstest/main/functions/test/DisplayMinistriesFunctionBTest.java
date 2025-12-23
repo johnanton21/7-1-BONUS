@@ -2,7 +2,7 @@ package com.bonus71.functionstest.main.functions.test;
 
 import com.bonus71.data.entity.financial.Expenditure;
 import com.bonus71.data.repository.ExpenditureRepository;
-import com.bonus71.functions.menus.ExpsensesMenu;
+import com.bonus71.functions.menus.ExpensesMenu;
 import org.junit.jupiter.api.Test;
 
 import java.sql.SQLException;
@@ -52,7 +52,7 @@ public class DisplayMinistriesFunctionBTest {
         Scanner scanner = new Scanner("2\n10\nBooks\n25\n");
 
 
-        ExpsensesMenu.menu(repo);
+        ExpensesMenu.menu(repo);
 
         // Έλεγχος ότι το νέο expenditure προστέθηκε
         assertEquals(1, repo.list.size());

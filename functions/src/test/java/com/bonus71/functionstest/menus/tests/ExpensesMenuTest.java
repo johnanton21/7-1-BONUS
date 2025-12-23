@@ -1,7 +1,7 @@
 package com.bonus71.functionstest.menus.tests;
 
 import com.bonus71.data.entity.financial.Expenditure;
-import com.bonus71.functions.menus.ExpsensesMenu;
+import com.bonus71.functions.menus.ExpensesMenu;
 import com.bonus71.functionstest.menus.repos.FakeExpenditureRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,7 +28,7 @@ class ExpensesMenuTest {
 
         Scanner testScanner = new Scanner(System.in);
 
-        ExpsensesMenu.menu(repo);
+        ExpensesMenu.menu(repo);
 
         return out.toString();
     }
