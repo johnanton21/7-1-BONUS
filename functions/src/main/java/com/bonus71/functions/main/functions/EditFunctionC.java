@@ -45,17 +45,20 @@ public class EditFunctionC {
       int choice = scanner.nextInt();
       scanner.nextLine();
 
-      switch (choice) {
-        case 1 -> ExpenditureMenu.menu(exodaRepo);
-        case 2 -> RevenueMenu.menu(esodaRepo);
-        case 3 -> MinistryOfEducationMenu.menu(paideiaRepo);
-        case 4 -> MinistryOfEnvironmentMenu.menu(perivRepo);
-        case 5 -> NationalDefenseMenu.menu(amynaRepo);
-        case 6 -> MinistryOfFinanceMenu.menu(oikRepo);
-        case 7 -> MinistryOfHealthMenu.menu(ygeiasRepo);
-        case 0 -> {
-          System.out.println("Exit...");
-          return;
+            switch (choice) {
+                case 1 -> ExpensesMenu.menu(exodaRepo);
+                case 2 -> RevenueMenu.menu(esodaRepo);
+                case 3 -> MinistryOfEducationMenu.menu(paideiaRepo);
+                case 4 -> MinistryOfTheEnvironmentMenu.menu(perivRepo);
+                case 5 -> NationalDefenseMenu.menu(amynaRepo);
+                case 6 -> MinistryOfFinanceMenu.menu(oikRepo);
+                case 7 -> MinistryOfHealthMenu.menu(ygeiasRepo);
+                case 0 -> {
+                    System.out.println("Exit...");
+                    return;
+                }
+                default -> System.out.println("invalid choice!");
+            }
         }
         default -> System.out.println("invalid choice!");
       }

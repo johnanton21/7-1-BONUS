@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.bonus71.data.entity.financial.Expenditure;
-import com.bonus71.functions.menus.ExpsensesMenu;
+import com.bonus71.functions.menus.ExpensesMenu;
 import com.bonus71.functionstest.menus.repos.FakeExpenditureRepository;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -31,7 +31,7 @@ class ExpensesMenuTest {
 
     Scanner testScanner = new Scanner(System.in);
 
-    ExpsensesMenu.menu(repo);
+        ExpensesMenu.menu(repo);
 
     return out.toString();
   }

@@ -1,7 +1,10 @@
-package com.bonus71.functionstest.menus.tests;
+package com.bonus71.functionstest;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import com.bonus71.data.entity.Comparison.YearsComparison;
+import com.bonus71.data.repository.YearsComparisonRepository;
+import com.bonus71.functions.menus.YearsComparisonMenu;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import com.bonus71.data.entity.Comparison.YearsComparison;
 import com.bonus71.data.repository.YearsComparisonRepository;
@@ -18,10 +21,10 @@ class FakeYearsComparisonRepository extends YearsComparisonRepository {
     data.put(year, yc);
   }
 
-  @Override
-    public YearsComparison findByYear(int year) {
-    return data.get(year);  // επιστρέφει μόνο από μνήμη
-  }
+    @Override
+    public YearsComparison findByYear(int year) throws SQLException {
+        return data.get(year);  // επιστρέφει μόνο από μνήμη
+    }
 }
 
 public class YearsComparisonMenuTest {
