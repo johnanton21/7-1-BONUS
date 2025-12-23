@@ -1,6 +1,11 @@
+package com.bonus71.functionstest.menus.repos;
+
+import com.bonus71.data.entity.Comparison.YearsComparison;
+import com.bonus71.data.repository.YearsComparisonRepository;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,13 +20,13 @@ public class FakeYearsComparisonRepositoryTest {
         }
 
         @Override
-        public YearsComparison findByYear(int year) {
+        public YearsComparison findByYear(int year) throws SQLException {
             return data.get(year);  // Επιστρέφει μόνο από τη μνήμη
         }
     }
 
     @Test
-    void testFindExistingYearReturnsCorrectData() {
+    void testFindExistingYearReturnsCorrectData() throws SQLException {
         FakeYearsComparisonRepository fakeRepo = new FakeYearsComparisonRepository();
 
         YearsComparison yc = new YearsComparison(
@@ -39,7 +44,7 @@ public class FakeYearsComparisonRepositoryTest {
     }
 
     @Test
-    void testFindMissingYearReturnsNull() {
+    void testFindMissingYearReturnsNull() throws SQLException {
         FakeYearsComparisonRepository fakeRepo = new FakeYearsComparisonRepository();
 
         YearsComparison result = fakeRepo.findByYear(2023);
