@@ -10,7 +10,7 @@ import com.bonus71.data.repository.RevenueRepository;
 import com.bonus71.functions.menus.ExpensesMenu;
 import com.bonus71.functions.menus.MinistryOfEducationMenu;
 import com.bonus71.functions.menus.MinistryOfFinanceMenu;
-import com.bonus71.functions.menus.MinistryOfTHealthMenu;
+import com.bonus71.functions.menus.MinistryOfHealthMenu;
 import com.bonus71.functions.menus.MinistryOfTheEnvironmentMenu;
 import com.bonus71.functions.menus.NationalDefenseMenu;
 import com.bonus71.functions.menus.RevenueMenu;
@@ -52,7 +52,7 @@ public class EditFunctionC {
         case 4 -> MinistryOfTheEnvironmentMenu.menu(perivRepo);
         case 5 -> NationalDefenseMenu.menu(amynaRepo);
         case 6 -> MinistryOfFinanceMenu.menu(oikRepo);
-        case 7 -> MinistryOfTHealthMenu.menu(ygeiasRepo);
+        case 7 -> MinistryOfHealthMenu.menu(ygeiasRepo);
         case 0 -> {
           System.out.println("Exit...");
           return;
