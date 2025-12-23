@@ -11,7 +11,7 @@ import com.bonus71.functions.menus.ExpensesMenu;
 import com.bonus71.functions.menus.MinistryOfEducationMenu;
 import com.bonus71.functions.menus.MinistryOfFinanceMenu;
 import com.bonus71.functions.menus.MinistryOfHealthMenu;
-import com.bonus71.functions.menus.MinistryOfTheEnvironmentMenu;
+import com.bonus71.functions.menus.MinistryOfEnvironmentMenu;
 import com.bonus71.functions.menus.NationalDefenseMenu;
 import com.bonus71.functions.menus.RevenueMenu;
 import java.sql.SQLException;
@@ -49,7 +49,7 @@ public class EditFunctionC {
         case 1 -> ExpensesMenu.menu(exodaRepo);
         case 2 -> RevenueMenu.menu(esodaRepo);
         case 3 -> MinistryOfEducationMenu.menu(paideiaRepo);
-        case 4 -> MinistryOfTheEnvironmentMenu.menu(perivRepo);
+        case 4 -> MinistryOfEnvironmentMenu.menu(perivRepo);
         case 5 -> NationalDefenseMenu.menu(amynaRepo);
         case 6 -> MinistryOfFinanceMenu.menu(oikRepo);
         case 7 -> MinistryOfHealthMenu.menu(ygeiasRepo);

@@ -5,7 +5,7 @@ import com.bonus71.data.repository.EnvironmentRepository;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class MinistryOfTheEnvironmentMenu {
+public class MinistryOfEnvironmentMenu {
   @SuppressWarnings("checkstyle:OneStatementPerLine")
   public static void menu(EnvironmentRepository repo) throws SQLException {
     Scanner scanner = new Scanner(System.in);
