@@ -70,5 +70,5 @@ public class YearsComparisonMenu {
                 2025 (Jan–Oct): +3.1B surplus
 
                 """;
-    }
+  }
 }

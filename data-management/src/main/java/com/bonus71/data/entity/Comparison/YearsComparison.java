@@ -7,7 +7,7 @@ public class YearsComparison {
   private String expenses;
   private String balance;
 
-public YearsComparison(int year, String netRevenues, String expenses, String balance) {
+  public YearsComparison(int year, String netRevenues, String expenses, String balance) {
     this.year = year;
     this.netRevenues = netRevenues;
     this.expenses = expenses;

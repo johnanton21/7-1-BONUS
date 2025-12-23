@@ -57,6 +57,6 @@ public class ExpenditureDetailed {
   }
 
   public void setTotal(String total) {
-   this.total = total;
+    this.total = total;
   }
 }

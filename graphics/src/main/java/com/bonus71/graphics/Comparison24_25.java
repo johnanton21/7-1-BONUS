@@ -9,7 +9,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
 
 public class Comparison24_25 {
 
- public static void showChart() {
+  public static void showChart() {
 
     DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 
@@ -43,5 +43,5 @@ public class Comparison24_25 {
 
   static void main(String[] args) {
     showChart();
-    }
+  }
 }

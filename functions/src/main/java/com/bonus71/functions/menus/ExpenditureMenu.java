@@ -21,7 +21,8 @@ public class ExpenditureMenu {
 
     switch (ch) {
       case 1 -> repo.findAll().forEach(e ->
-                    System.out.println(e.getCode() + " | " + e.getCategory() + " | " + e.getEuros()));
+                    System.out.println(e.getCode()
+                            + " | " + e.getCategory() + " | " + e.getEuros()));
       case 2 -> {
         System.out.print("Code: ");
         int k = scanner.nextInt();
