@@ -2,32 +2,31 @@ package com.bonus71.functionstest.menus.repos;
 
 import com.bonus71.data.entity.financial.Expenditure;
 import com.bonus71.data.repository.ExpenditureRepository;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class FakeExpenditureRepository extends ExpenditureRepository {
 
-    private final List<Expenditure> data = new ArrayList<>();
+  private final List<Expenditure> data = new ArrayList<>();
 
-    @Override
+  @Override
     public List<Expenditure> findAll() {
-        return data;
-    }
+    return data;
+  }
 
-    @Override
+  @Override
     public void insert(Expenditure e) {
-        data.add(e);
-    }
+    data.add(e);
+  }
 
-    @Override
+  @Override
     public void update(Expenditure e) {
-        delete(e.getCode());
-        data.add(e);
-    }
+    delete(e.getCode());
+    data.add(e);
+  }
 
-    @Override
+  @Override
     public void delete(int code) {
-        data.removeIf(x -> x.getCode() == code);
-    }
+    data.removeIf(x -> x.getCode() == code);
+  }
 }

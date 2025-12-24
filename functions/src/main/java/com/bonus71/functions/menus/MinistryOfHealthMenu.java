@@ -1,0 +1,43 @@
+package com.bonus71.functions.menus;
+
+import com.bonus71.data.entity.ministry.Health;
+import com.bonus71.data.repository.HealthRepository;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class MinistryOfHealthMenu {
+    public static void menu(HealthRepository repo) throws SQLException {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("\n--- MINISTRY OF HEALTH ---");
+        System.out.println("1. View");
+        System.out.println("2. Add");
+        System.out.println("3. Update");
+        System.out.println("4. Delete");
+
+        int ch = scanner.nextInt();
+        scanner.nextLine();
+
+        switch (ch) {
+            case 1 -> repo.findAll().forEach(p ->
+                    System.out.println(p.getMajorCategory() + " | " + p.getName() + " | " + p.getEuros()));
+            case 2 -> {
+                System.out.print("Code: "); int m = scanner.nextInt(); scanner.nextLine();
+                System.out.print("Name: "); String o = scanner.nextLine();
+                System.out.print("Euros: "); String e = scanner.nextLine();
+                repo.insert(new Health(m, o, e));
+            }
+            case 3 -> {
+                System.out.print("Code: "); int m = scanner.nextInt(); scanner.nextLine();
+                System.out.print("New name: "); String o = scanner.nextLine();
+                System.out.print("New euros: "); String e = scanner.nextLine();
+                repo.update(new Health(m, o, e));
+            }
+            case 4 -> {
+                System.out.print("Code to delete: "); int m = scanner.nextInt();
+                repo.delete(m);
+            }
+        }
+    }
+}
