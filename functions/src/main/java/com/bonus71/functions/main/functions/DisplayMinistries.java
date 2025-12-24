@@ -8,7 +8,7 @@ import com.bonus71.data.repository.NationalDefenseRepository;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class DisplayMinistriesFunctionB {
+public class DisplayMinistries {
   public static void showMinistriesData() throws SQLException {
 
     Scanner sc = new Scanner(System.in);
