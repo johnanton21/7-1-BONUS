@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class FakeYearsComparisonRepositoryTest {
 
-    // Fake repository που δεν συνδέεται με βάση
+
     static class FakeYearsComparisonRepository extends YearsComparisonRepository {
         private final Map<Integer, YearsComparison> data = new HashMap<>();
 
@@ -16,8 +16,7 @@ public class FakeYearsComparisonRepositoryTest {
 
         @Override
         public YearsComparison findByYear(int year) {
-            return data.get(year);  // Επιστρέφει μόνο από τη μνήμη
-        }
+            return data.get(year);
     }
 
     @Test
