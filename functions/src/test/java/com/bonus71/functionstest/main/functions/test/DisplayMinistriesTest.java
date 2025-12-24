@@ -4,17 +4,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.bonus71.data.entity.financial.Expenditure;
 import com.bonus71.data.repository.ExpenditureRepository;
-import com.bonus71.functions.menus.ExpensesMenu;
+import com.bonus71.functions.menus.ExpenditureMenu;
 import org.junit.jupiter.api.Test;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import org.junit.jupiter.api.Test;
 
 
-public class DisplayMinistriesFunctionBTest {
+public class DisplayMinistriesTest {
 
 
   static class FakeRepo extends ExpenditureRepository {
@@ -53,9 +52,9 @@ public class DisplayMinistriesFunctionBTest {
 
     Scanner scanner = new Scanner("2\n10\nBooks\n25\n");
 
-        ExpensesMenu.menu(repo);
+        ExpenditureMenu.menu(repo);
 
-    ExpsensesMenu.menu(repo);
+    ExpenditureMenu.menu(repo);
 
     // Έλεγχος ότι το νέο expenditure προστέθηκε
     assertEquals(1, repo.list.size());

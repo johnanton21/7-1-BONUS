@@ -8,7 +8,7 @@ import com.bonus71.data.repository.ExpenditureRepository;
 import com.bonus71.data.repository.RevenueRepository;
 import java.sql.SQLException;
 
-public class DisplayFunctionA {
+public class DisplayExpRev {
   public static void showAll() throws SQLException {
 
 

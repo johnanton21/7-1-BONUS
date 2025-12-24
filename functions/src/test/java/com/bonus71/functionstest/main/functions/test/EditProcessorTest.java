@@ -2,7 +2,7 @@ package com.bonus71.functionstest.main.functions.test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import com.bonus71.functions.main.functions.EditFunctionC;
+import com.bonus71.functions.main.functions.EditProcessor;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import org.junit.jupiter.api.Test;
 
 
-public class EditFunctionCTest {
+public class EditProcessorTest {
 
   @Test
   void testExitDirectly() throws SQLException {
@@ -22,7 +22,7 @@ public class EditFunctionCTest {
     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     System.setOut(new PrintStream(outputStream));
 
-    EditFunctionC.editData();
+    EditProcessor.editData();
 
     String output = outputStream.toString();
     assertTrue(output.contains("Exit..."));
@@ -38,7 +38,7 @@ public class EditFunctionCTest {
     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     System.setOut(new PrintStream(outputStream));
 
-    EditFunctionC.editData();
+    EditProcessor.editData();
 
     String output = outputStream.toString();
     assertTrue(output.contains("invalid choice!"));
@@ -54,7 +54,7 @@ public class EditFunctionCTest {
     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     System.setOut(new PrintStream(outputStream));
 
-    EditFunctionC.editData();
+    EditProcessor.editData();
 
     String output = outputStream.toString();
 

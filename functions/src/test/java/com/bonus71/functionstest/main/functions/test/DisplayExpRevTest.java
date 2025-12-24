@@ -2,7 +2,7 @@ package com.bonus71.functionstest.main.functions.test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import com.bonus71.functions.main.functions.DisplayFunctionA;
+import com.bonus71.functions.main.functions.DisplayExpRev;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.sql.SQLException;
@@ -30,7 +30,7 @@ public class DisplayFunctionATest {
     public void testShowAllRunsAndPrintsHeaders() throws SQLException {
 
 
-    DisplayFunctionA.showAll();
+    DisplayExpRev.showAll();
 
 
     String output = outContent.toString();
