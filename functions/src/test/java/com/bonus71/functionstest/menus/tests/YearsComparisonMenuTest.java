@@ -29,10 +29,10 @@ class FakeYearsComparisonRepository extends YearsComparisonRepository {
 
 public class YearsComparisonMenuTest {
 
-  @Test
-  void testCompare_ReturnsCorrectFormattedString() throws SQLException {
+    @Test
+    void testCompare_ReturnsCorrectFormattedString() throws SQLException {
 
-    FakeYearsComparisonRepository fakeRepo = new FakeYearsComparisonRepository();
+        FakeYearsComparisonRepository fakeRepo = new FakeYearsComparisonRepository();
 
     fakeRepo.add(2025,
                 new YearsComparison(2025, "61000000000", "57900000000", "3100000000"));
@@ -42,8 +42,17 @@ public class YearsComparisonMenuTest {
     YearsComparisonMenu menu = new YearsComparisonMenu(fakeRepo);
 
 
-    String result = menu.compare(2025, 2022);
+        String result = menu.compare(2025, 2022);
 
+
+        assertTrue(result.contains("=== Comparison 2025 vs 2022 ==="));
+        assertTrue(result.contains("Net Revenues 2025: 61000000000"));
+        assertTrue(result.contains("Net Revenues 2022: 59600000000"));
+        assertTrue(result.contains("Expenses 2025:    57900000000"));
+        assertTrue(result.contains("Expenses 2022:    71300000000"));
+        assertTrue(result.contains("Balance 2025:     3100000000"));
+        assertTrue(result.contains("Balance 2022:     -11700000000"));
+    }
 
     assertTrue(result.contains("=== Comparison 2025 vs 2022 ==="));
     assertTrue(result.contains("Net Revenues 2025: 61000000000"));
@@ -57,33 +66,30 @@ public class YearsComparisonMenuTest {
   @Test
     void testCompare_WhenYearNotFound_ReturnsErrorMessage() throws SQLException {
 
-    FakeYearsComparisonRepository fakeRepo = new FakeYearsComparisonRepository();
+        FakeYearsComparisonRepository fakeRepo = new FakeYearsComparisonRepository();
 
 
-    fakeRepo.add(2025,
+        fakeRepo.add(2025,
                 new YearsComparison(2025, "10", "5", "5"));
 
-    YearsComparisonMenu menu = new YearsComparisonMenu(fakeRepo);
+        YearsComparisonMenu menu = new YearsComparisonMenu(fakeRepo);
+        String result = menu.compare(2025, 2020);
 
 
-    String result = menu.compare(2025, 2020);
-
-
-    assertEquals("No data found for 2025 or 2020", result);
-  }
+        assertEquals("No data found for 2025 or 2020", result);
+    }
 
   @Test
     void testGeneralConclusions_ReturnsCorrectText() {
 
-    YearsComparisonMenu menu = new YearsComparisonMenu(); // δεν χρειάζεται repo
+        YearsComparisonMenu menu = new YearsComparisonMenu();
+
+        String result = menu.generalConclusions();
 
 
-    String result = menu.generalConclusions();
-
-
-    assertTrue(result.contains("General Conclusions for the Four-Year Period"));
-    assertTrue(result.contains("Revenues: Increase steadily from 2022"));
-    assertTrue(result.contains("2024: +0.3B slight surplus"));
-    assertTrue(result.contains("2025 (Jan–Oct): +3.1B surplus"));
-  }
+        assertTrue(result.contains("General Conclusions for the Four-Year Period"));
+        assertTrue(result.contains("Revenues: Increase steadily from 2022"));
+        assertTrue(result.contains("2024: +0.3B slight surplus"));
+        assertTrue(result.contains("2025 (Jan–Oct): +3.1B surplus"));
+    }
 }

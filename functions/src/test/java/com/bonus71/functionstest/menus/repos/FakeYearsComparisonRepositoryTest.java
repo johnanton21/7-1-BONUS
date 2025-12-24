@@ -12,18 +12,17 @@ import org.junit.jupiter.api.Test;
 
 public class FakeYearsComparisonRepositoryTest {
 
-  // Fake repository που δεν συνδέεται με βάση
-  static class FakeYearsComparisonRepository extends YearsComparisonRepository {
-    private final Map<Integer, YearsComparison> data = new HashMap<>();
+
+    static class FakeYearsComparisonRepository extends YearsComparisonRepository {
+        private final Map<Integer, YearsComparison> data = new HashMap<>();
 
     public void add(int year, YearsComparison yc) {
       data.put(year, yc);
     }
 
         @Override
-        public YearsComparison findByYear(int year) throws SQLException {
-            return data.get(year);  // Επιστρέφει μόνο από τη μνήμη
-        }
+        public YearsComparison findByYear(int year) {
+            return data.get(year);
     }
   }
 
