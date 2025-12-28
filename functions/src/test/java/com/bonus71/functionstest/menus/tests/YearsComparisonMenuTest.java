@@ -6,13 +6,11 @@ import com.bonus71.functions.menus.YearsComparisonMenu;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.bonus71.data.entity.Comparison.YearsComparison;
-import com.bonus71.data.repository.YearsComparisonRepository;
-import com.bonus71.functions.menus.YearsComparisonMenu;
+
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
-import org.junit.jupiter.api.Test;
+
 
 class FakeYearsComparisonRepository extends YearsComparisonRepository {
   private final Map<Integer, YearsComparison> data = new HashMap<>();
