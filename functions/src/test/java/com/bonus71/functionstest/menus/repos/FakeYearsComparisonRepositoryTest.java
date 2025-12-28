@@ -3,14 +3,18 @@ package com.bonus71.functionstest.menus.repos;
 import com.bonus71.data.entity.Comparison.YearsComparison;
 import com.bonus71.data.repository.YearsComparisonRepository;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 public class FakeYearsComparisonRepositoryTest {
 
+
     static class FakeYearsComparisonRepository extends YearsComparisonRepository {
+
         private final Map<Integer, YearsComparison> data = new HashMap<>();
 
         public void add(int year, YearsComparison yc) {
