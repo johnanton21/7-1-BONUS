@@ -1,4 +1,4 @@
-package com.bonus71.functionstest;
+package com.bonus71.functionstest.menus.tests;
 
 import com.bonus71.data.entity.Comparison.YearsComparison;
 import com.bonus71.data.repository.YearsComparisonRepository;
