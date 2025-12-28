@@ -337,10 +337,10 @@ public class Main extends JFrame {
           sb.append(e.getCode()).append(" | ")
                       .append(e.getCategory()).append(" | ")
                       .append(e.getEuros()).append("\n");
-                }
+        }
                 showTextDialog("Expenditures", sb.toString());
-            }
-            case "Add" -> {
+      }
+      case "Add" -> {
                 String code = JOptionPane.showInputDialog(this, "Enter Code:");
                 if (code == null) return;
                 String category = JOptionPane.showInputDialog(this, "Enter Category:");
@@ -353,8 +353,8 @@ public class Main extends JFrame {
 
                 repo.insert(new Expenditure(codeInt, category, euros));
                 JOptionPane.showMessageDialog(this, "Expenditure added successfully!");
-            }
-            case "Update" -> {
+      }
+      case "Update" -> {
                 String code = JOptionPane.showInputDialog(this, "Enter Code to update:");
                 if (code == null) return;
                 String category = JOptionPane.showInputDialog(this, "Enter new Category:");
@@ -367,8 +367,8 @@ public class Main extends JFrame {
 
                 repo.update(new Expenditure(codeInt, category, euros));
                 JOptionPane.showMessageDialog(this, "Expenditure updated successfully!");
-            }
-            case "Delete" -> {
+      }
+      case "Delete" -> {
                 String code = JOptionPane.showInputDialog(this, "Enter Code to delete:");
                 if (code == null) return;
 
@@ -382,8 +382,6 @@ public class Main extends JFrame {
                     repo.delete(codeInt);
                     JOptionPane.showMessageDialog(this, "Expenditure deleted successfully!");
                 }
-            }
-        }
       }
       default -> throw new IllegalStateException("Unexpected value: " + operation);
     }
@@ -454,8 +452,8 @@ public class Main extends JFrame {
                     JOptionPane.showMessageDialog(this, "Revenue deleted successfully!");
                 }
             }
-        }
-      }
+
+
       default -> throw new IllegalStateException("Unexpected value: " + operation);
     }
   }
@@ -491,88 +489,89 @@ public class Main extends JFrame {
     }
 
     switch (operation) {
-      case "View" -> {
-        StringBuilder sb = new StringBuilder("MINISTRY OF " + ministryName.toUpperCase() + "\n\n");
-        List<?> items = null;
+        case "View" -> {
+            StringBuilder sb = new StringBuilder("MINISTRY OF " + ministryName.toUpperCase() + "\n\n");
+            List<?> items = null;
 
-        if (repo instanceof EducationRepository r) {
-          items = r.findAll();
-        } else {
-          if (repo instanceof EnvironmentRepository r) items = r.findAll();
-          else if (repo instanceof NationalDefenseRepository r) items = r.findAll();
-          else if (repo instanceof FinanceMinistryRepository r) items = r.findAll();
-          else if (repo instanceof HealthRepository r) items = r.findAll();
-        }
+            if (repo instanceof EducationRepository r) {
+                items = r.findAll();
+            } else {
+                if (repo instanceof EnvironmentRepository r) items = r.findAll();
+                else if (repo instanceof NationalDefenseRepository r) items = r.findAll();
+                else if (repo instanceof FinanceMinistryRepository r) items = r.findAll();
+                else if (repo instanceof HealthRepository r) items = r.findAll();
+            }
 
-        if (items != null) {
-          for (Object item : items) {
-            if (item instanceof Education e) {
-              sb.append(e.getMajorCategory()).append(" | ")
-                              .append(e.getName()).append(" | ")
-                              .append(e.getEuros()).append("\n");
-            } else if (item instanceof Environment e) {
-              sb.append(e.getMajorCategory()).append(" | ")
-                              .append(e.getName()).append(" | ")
-                              .append(e.getEuros()).append("\n");
-            } else if (item instanceof NationalDefense e) {
-              sb.append(e.getMajorCategory()).append(" | ")
-                              .append(e.getName()).append(" | ")
-                              .append(e.getEuros()).append("\n");
-            } else if (item instanceof FinanceMinistry e) {
-              sb.append(e.getMajorCategory()).append(" | ")
-                              .append(e.getName()).append(" | ")
-                              .append(e.getEuros()).append("\n");
-            } else if (item instanceof Health e) {
-              sb.append(e.getMajorCategory()).append(" | ")
-                              .append(e.getName()).append(" | ")
-                              .append(e.getEuros()).append("\n");
-                        }
+            if (items != null) {
+                for (Object item : items) {
+                    if (item instanceof Education e) {
+                        sb.append(e.getMajorCategory()).append(" | ")
+                                .append(e.getName()).append(" | ")
+                                .append(e.getEuros()).append("\n");
+                    } else if (item instanceof Environment e) {
+                        sb.append(e.getMajorCategory()).append(" | ")
+                                .append(e.getName()).append(" | ")
+                                .append(e.getEuros()).append("\n");
+                    } else if (item instanceof NationalDefense e) {
+                        sb.append(e.getMajorCategory()).append(" | ")
+                                .append(e.getName()).append(" | ")
+                                .append(e.getEuros()).append("\n");
+                    } else if (item instanceof FinanceMinistry e) {
+                        sb.append(e.getMajorCategory()).append(" | ")
+                                .append(e.getName()).append(" | ")
+                                .append(e.getEuros()).append("\n");
+                    } else if (item instanceof Health e) {
+                        sb.append(e.getMajorCategory()).append(" | ")
+                                .append(e.getName()).append(" | ")
+                                .append(e.getEuros()).append("\n");
                     }
                 }
-                showTextDialog(ministryName, sb.toString());
             }
-            case "Add" -> {
-                String major = JOptionPane.showInputDialog(this, "Enter Major Category:");
-                if (major == null) return;
-                String name = JOptionPane.showInputDialog(this, "Enter Name:");
-                if (name == null) return;
-                String euros = JOptionPane.showInputDialog(this, "Enter Euros:");
-                if (euros == null) return;
-
-                Integer majorCat = parseInteger(major, "Major Category");
-                if (majorCat == null) return;
-
-                if (repo instanceof EducationRepository r) r.insert(new Education(majorCat, name, euros));
-                else if (repo instanceof EnvironmentRepository r) r.insert(new Environment(majorCat, name, euros));
-                else if (repo instanceof NationalDefenseRepository r) r.insert(new NationalDefense(majorCat, name, euros));
-                else if (repo instanceof FinanceMinistryRepository r) r.insert(new FinanceMinistry(majorCat, name, euros));
-                else if (repo instanceof HealthRepository r) r.insert(new Health(majorCat, name, euros));
-
-                JOptionPane.showMessageDialog(this, ministryName + " entry added successfully!");
-            }
-            case "Update" -> {
-                String major = JOptionPane.showInputDialog(this, "Enter Major Category to update:");
-                if (major == null) return;
-                String name = JOptionPane.showInputDialog(this, "Enter new Name:");
-                if (name == null) return;
-                String euros = JOptionPane.showInputDialog(this, "Enter new Euros:");
-                if (euros == null) return;
-
-                Integer majorCat = parseInteger(major, "Major Category");
-                if (majorCat == null) return;
-
-                if (repo instanceof EducationRepository r) r.update(new Education(majorCat, name, euros));
-                else if (repo instanceof EnvironmentRepository r) r.update(new Environment(majorCat, name, euros));
-                else if (repo instanceof NationalDefenseRepository r) r.update(new NationalDefense(majorCat, name, euros));
-                else if (repo instanceof FinanceMinistryRepository r) r.update(new FinanceMinistry(majorCat, name, euros));
-                else if (repo instanceof HealthRepository r) r.update(new Health(majorCat, name, euros));
-
-                JOptionPane.showMessageDialog(this, ministryName + " entry updated successfully!");
-            }
-          }
+            showTextDialog(ministryName, sb.toString());
         }
+        case "Add" -> {
+            String major = JOptionPane.showInputDialog(this, "Enter Major Category:");
+            if (major == null) return;
+            String name = JOptionPane.showInputDialog(this, "Enter Name:");
+            if (name == null) return;
+            String euros = JOptionPane.showInputDialog(this, "Enter Euros:");
+            if (euros == null) return;
+
+            Integer majorCat = parseInteger(major, "Major Category");
+            if (majorCat == null) return;
+
+            if (repo instanceof EducationRepository r) r.insert(new Education(majorCat, name, euros));
+            else if (repo instanceof EnvironmentRepository r) r.insert(new Environment(majorCat, name, euros));
+            else if (repo instanceof NationalDefenseRepository r) r.insert(new NationalDefense(majorCat, name, euros));
+            else if (repo instanceof FinanceMinistryRepository r) r.insert(new FinanceMinistry(majorCat, name, euros));
+            else if (repo instanceof HealthRepository r) r.insert(new Health(majorCat, name, euros));
+
+            JOptionPane.showMessageDialog(this, ministryName + " entry added successfully!");
+        }
+        case "Update" -> {
+            String major = JOptionPane.showInputDialog(this, "Enter Major Category to update:");
+            if (major == null) return;
+            String name = JOptionPane.showInputDialog(this, "Enter new Name:");
+            if (name == null) return;
+            String euros = JOptionPane.showInputDialog(this, "Enter new Euros:");
+            if (euros == null) return;
+
+            Integer majorCat = parseInteger(major, "Major Category");
+            if (majorCat == null) return;
+
+            if (repo instanceof EducationRepository r) r.update(new Education(majorCat, name, euros));
+            else if (repo instanceof EnvironmentRepository r) r.update(new Environment(majorCat, name, euros));
+            else if (repo instanceof NationalDefenseRepository r) r.update(new NationalDefense(majorCat, name, euros));
+            else if (repo instanceof FinanceMinistryRepository r) r.update(new FinanceMinistry(majorCat, name, euros));
+            else if (repo instanceof HealthRepository r) r.update(new Health(majorCat, name, euros));
+
+            JOptionPane.showMessageDialog(this, ministryName + " entry updated successfully!");
+
+
+        }
+
         showTextDialog(ministryName, sb.toString());
-      }
+
       case "Add" -> {
         String major = JOptionPane.showInputDialog(this, "Enter Major Category:");
         if (major == null) {
@@ -626,8 +625,8 @@ public class Main extends JFrame {
                     JOptionPane.showMessageDialog(this, ministryName + " entry deleted successfully!");
                 }
             }
-        }
-      }
+
+
       default -> throw new IllegalStateException("Unexpected value: " + operation);
     }
   }
