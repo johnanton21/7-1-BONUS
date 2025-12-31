@@ -8,6 +8,9 @@ import com.bonus71.functions.menus.YearsComparisonMenu;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 
 class FakeYearsComparisonRepository extends YearsComparisonRepository {
