@@ -4,6 +4,9 @@ import com.bonus71.data.entity.Comparison.YearsComparison;
 import com.bonus71.data.repository.YearsComparisonRepository;
 import com.bonus71.functions.menus.YearsComparisonMenu;
 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 import java.sql.SQLException;
 import java.util.HashMap;
