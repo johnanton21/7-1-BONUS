@@ -530,49 +530,6 @@ public class Main extends JFrame {
             showTextDialog(ministryName, sb.toString());
         }
         case "Add" -> {
-            String major = JOptionPane.showInputDialog(this, "Enter Major Category:");
-            if (major == null) return;
-            String name = JOptionPane.showInputDialog(this, "Enter Name:");
-            if (name == null) return;
-            String euros = JOptionPane.showInputDialog(this, "Enter Euros:");
-            if (euros == null) return;
-
-            Integer majorCat = parseInteger(major, "Major Category");
-            if (majorCat == null) return;
-
-            if (repo instanceof EducationRepository r) r.insert(new Education(majorCat, name, euros));
-            else if (repo instanceof EnvironmentRepository r) r.insert(new Environment(majorCat, name, euros));
-            else if (repo instanceof NationalDefenseRepository r) r.insert(new NationalDefense(majorCat, name, euros));
-            else if (repo instanceof FinanceMinistryRepository r) r.insert(new FinanceMinistry(majorCat, name, euros));
-            else if (repo instanceof HealthRepository r) r.insert(new Health(majorCat, name, euros));
-
-            JOptionPane.showMessageDialog(this, ministryName + " entry added successfully!");
-        }
-        case "Update" -> {
-            String major = JOptionPane.showInputDialog(this, "Enter Major Category to update:");
-            if (major == null) return;
-            String name = JOptionPane.showInputDialog(this, "Enter new Name:");
-            if (name == null) return;
-            String euros = JOptionPane.showInputDialog(this, "Enter new Euros:");
-            if (euros == null) return;
-
-            Integer majorCat = parseInteger(major, "Major Category");
-            if (majorCat == null) return;
-
-            if (repo instanceof EducationRepository r) r.update(new Education(majorCat, name, euros));
-            else if (repo instanceof EnvironmentRepository r) r.update(new Environment(majorCat, name, euros));
-            else if (repo instanceof NationalDefenseRepository r) r.update(new NationalDefense(majorCat, name, euros));
-            else if (repo instanceof FinanceMinistryRepository r) r.update(new FinanceMinistry(majorCat, name, euros));
-            else if (repo instanceof HealthRepository r) r.update(new Health(majorCat, name, euros));
-
-            JOptionPane.showMessageDialog(this, ministryName + " entry updated successfully!");
-
-
-        }
-
-        showTextDialog(ministryName, sb.toString());
-
-      case "Add" -> {
         String major = JOptionPane.showInputDialog(this, "Enter Major Category:");
         if (major == null) {
           return;
@@ -596,6 +553,7 @@ public class Main extends JFrame {
         JOptionPane.showMessageDialog(this, ministryName + " entry added successfully!");
       }
       case "Update" -> {
+            StringBuilder sb = new StringBuilder("MINISTRY OF " + ministryName.toUpperCase() + "\n\n");
         String major = JOptionPane.showInputDialog(this, "Enter Major Category to update:");
         if (major == null) {
           return;
