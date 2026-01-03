@@ -1,4 +1,4 @@
-package com.bonus71.functionstest.menus.repos;
+package com.bonus71.functionstest.main.functions.test.repos;
 
 import com.bonus71.data.entity.ministry.Education;
 import com.bonus71.data.repository.EducationRepository;

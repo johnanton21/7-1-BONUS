@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.bonus71.data.entity.ministry.Education;
 import com.bonus71.functions.menus.MinistryOfEducationMenu;
-import com.bonus71.functionstest.menus.repos.FakeEducationRepository;
+import com.bonus71.functionstest.main.functions.test.repos.FakeEducationRepository;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

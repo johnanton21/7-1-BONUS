@@ -53,14 +53,25 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
+<<<<<<< HEAD
                 <version>0.8.14</version>
                 <executions>
+=======
+                <version>0.8.11</version>
+
+                <executions>
+
+>>>>>>> 872d23c (FIX YEARS COMPARISON ERROR)
                     <execution>
                         <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 872d23c (FIX YEARS COMPARISON ERROR)
                     <execution>
                         <id>report</id>
                         <phase>test</phase>
@@ -68,6 +79,10 @@
                             <goal>report</goal>
                         </goals>
                     </execution>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 872d23c (FIX YEARS COMPARISON ERROR)
                 </executions>
             </plugin>
         </plugins>

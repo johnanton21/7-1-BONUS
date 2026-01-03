@@ -1,11 +1,11 @@
 package com.bonus71.functionstest.menus.tests;
-
+import com.bonus71.functionstest.main.functions.test.repos.FakeExpenditureRepository;
+import com.bonus71.functionstest.main.functions.test.repos.FakeRevenueRepository;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.bonus71.data.entity.financial.Expenditure;
 import com.bonus71.functions.menus.ExpenditureMenu;
-import com.bonus71.functionstest.menus.repos.FakeExpenditureRepository;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
