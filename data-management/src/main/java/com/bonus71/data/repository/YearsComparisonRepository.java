@@ -1,11 +1,12 @@
 package com.bonus71.data.repository;
+
 import com.bonus71.data.config.DatabaseConfig;
 import com.bonus71.data.entity.Comparison.YearsComparison;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 
 public class YearsComparisonRepository {
 
@@ -13,6 +14,7 @@ public class YearsComparisonRepository {
             "SELECT YEAR, NET_REVENUES, EXPENSES, BALANCE FROM COMPARISON WHERE YEAR = ?";
 
     public YearsComparison findByYear(int year) throws SQLException {
+
         try (Connection conn = DatabaseConfig.getConnection();
              PreparedStatement ps = conn.prepareStatement(SELECT_BY_YEAR)) {
 
