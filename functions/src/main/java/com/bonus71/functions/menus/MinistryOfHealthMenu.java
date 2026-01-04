@@ -23,7 +23,8 @@ public class MinistryOfHealthMenu {
                     System.out.println(p.getMajorCategory() + " | " + p.getName() + " | " + p.getEuros()));
       case 2 -> {
         System.out.print("Code: ");
-        int m = scanner.nextInt(); scanner.nextLine();
+        int m = scanner.nextInt();
+        scanner.nextLine();
         System.out.print("Name: ");
         String o = scanner.nextLine();
         System.out.print("Euros: ");
