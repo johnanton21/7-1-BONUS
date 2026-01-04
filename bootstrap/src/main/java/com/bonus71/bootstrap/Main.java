@@ -338,50 +338,52 @@ public class Main extends JFrame {
                       .append(e.getCategory()).append(" | ")
                       .append(e.getEuros()).append("\n");
         }
-                showTextDialog("Expenditures", sb.toString());
+        showTextDialog("Expenditures", sb.toString());
       }
       case "Add" -> {
-                String code = JOptionPane.showInputDialog(this, "Enter Code:");
-                if (code == null) return;
-                String category = JOptionPane.showInputDialog(this, "Enter Category:");
-                if (category == null) return;
-                String euros = JOptionPane.showInputDialog(this, "Enter Euros:");
-                if (euros == null) return;
+        String code = JOptionPane.showInputDialog(this, "Enter Code:");
+        if (code == null) {
+          return;
+        }
+        String category = JOptionPane.showInputDialog(this, "Enter Category:");
+        if (category == null) return;
+        String euros = JOptionPane.showInputDialog(this, "Enter Euros:");
+        if (euros == null) return;
 
-                Integer codeInt = parseInteger(code, "Code");
-                if (codeInt == null) return;
+        Integer codeInt = parseInteger(code, "Code");
+        if (codeInt == null) return;
 
-                repo.insert(new Expenditure(codeInt, category, euros));
-                JOptionPane.showMessageDialog(this, "Expenditure added successfully!");
+        repo.insert(new Expenditure(codeInt, category, euros));
+        JOptionPane.showMessageDialog(this, "Expenditure added successfully!");
       }
       case "Update" -> {
-                String code = JOptionPane.showInputDialog(this, "Enter Code to update:");
-                if (code == null) return;
-                String category = JOptionPane.showInputDialog(this, "Enter new Category:");
-                if (category == null) return;
-                String euros = JOptionPane.showInputDialog(this, "Enter new Euros:");
-                if (euros == null) return;
+        String code = JOptionPane.showInputDialog(this, "Enter Code to update:");
+        if (code == null) return;
+        String category = JOptionPane.showInputDialog(this, "Enter new Category:");
+        if (category == null) return;
+        String euros = JOptionPane.showInputDialog(this, "Enter new Euros:");
+        if (euros == null) return;
 
-                Integer codeInt = parseInteger(code, "Code");
-                if (codeInt == null) return;
+        Integer codeInt = parseInteger(code, "Code");
+        if (codeInt == null) return;
 
-                repo.update(new Expenditure(codeInt, category, euros));
-                JOptionPane.showMessageDialog(this, "Expenditure updated successfully!");
+        repo.update(new Expenditure(codeInt, category, euros));
+        JOptionPane.showMessageDialog(this, "Expenditure updated successfully!");
       }
       case "Delete" -> {
-                String code = JOptionPane.showInputDialog(this, "Enter Code to delete:");
-                if (code == null) return;
+        String code = JOptionPane.showInputDialog(this, "Enter Code to delete:");
+        if (code == null) return;
 
-                Integer codeInt = parseInteger(code, "Code");
-                if (codeInt == null) return;
+        Integer codeInt = parseInteger(code, "Code");
+        if (codeInt == null) return;
 
-                int confirm = JOptionPane.showConfirmDialog(this,
+        int confirm = JOptionPane.showConfirmDialog(this,
                         "Are you sure you want to delete this expenditure?",
                         "Confirm Delete", JOptionPane.YES_NO_OPTION);
-                if (confirm == JOptionPane.YES_OPTION) {
-                    repo.delete(codeInt);
-                    JOptionPane.showMessageDialog(this, "Expenditure deleted successfully!");
-                }
+        if (confirm == JOptionPane.YES_OPTION) {
+          repo.delete(codeInt);
+          JOptionPane.showMessageDialog(this, "Expenditure deleted successfully!");
+        }
       }
       default -> throw new IllegalStateException("Unexpected value: " + operation);
     }
@@ -406,52 +408,52 @@ public class Main extends JFrame {
           sb.append(e.getCode()).append(" | ")
                       .append(e.getCategory()).append(" | ")
                       .append(e.getEuros()).append("\n");
-                }
-                showTextDialog("Revenues", sb.toString());
-            }
-            case "Add" -> {
-                String code = JOptionPane.showInputDialog(this, "Enter Code:");
-                if (code == null) return;
-                String category = JOptionPane.showInputDialog(this, "Enter Category:");
-                if (category == null) return;
-                String euros = JOptionPane.showInputDialog(this, "Enter Euros:");
-                if (euros == null) return;
+        }
+        showTextDialog("Revenues", sb.toString());
+      }
+      case "Add" -> {
+        String code = JOptionPane.showInputDialog(this, "Enter Code:");
+        if (code == null) return;
+        String category = JOptionPane.showInputDialog(this, "Enter Category:");
+        if (category == null) return;
+        String euros = JOptionPane.showInputDialog(this, "Enter Euros:");
+        if (euros == null) return;
 
-                Integer codeInt = parseInteger(code, "Code");
-                if (codeInt == null) return;
+        Integer codeInt = parseInteger(code, "Code");
+        if (codeInt == null) return;
 
-                repo.insert(new Revenue(codeInt, category, euros));
-                JOptionPane.showMessageDialog(this, "Revenue added successfully!");
-            }
-            case "Update" -> {
-                String code = JOptionPane.showInputDialog(this, "Enter Code to update:");
-                if (code == null) return;
-                String category = JOptionPane.showInputDialog(this, "Enter new Category:");
-                if (category == null) return;
-                String euros = JOptionPane.showInputDialog(this, "Enter new Euros:");
-                if (euros == null) return;
+        repo.insert(new Revenue(codeInt, category, euros));
+        JOptionPane.showMessageDialog(this, "Revenue added successfully!");
+      }
+      case "Update" -> {
+        String code = JOptionPane.showInputDialog(this, "Enter Code to update:");
+        if (code == null) return;
+        String category = JOptionPane.showInputDialog(this, "Enter new Category:");
+        if (category == null) return;
+        String euros = JOptionPane.showInputDialog(this, "Enter new Euros:");
+        if (euros == null) return;
 
-                Integer codeInt = parseInteger(code, "Code");
-                if (codeInt == null) return;
+        Integer codeInt = parseInteger(code, "Code");
+        if (codeInt == null) return;
 
-                repo.update(new Revenue(codeInt, category, euros));
-                JOptionPane.showMessageDialog(this, "Revenue updated successfully!");
-            }
-            case "Delete" -> {
-                String code = JOptionPane.showInputDialog(this, "Enter Code to delete:");
-                if (code == null) return;
+        repo.update(new Revenue(codeInt, category, euros));
+        JOptionPane.showMessageDialog(this, "Revenue updated successfully!");
+      }
+      case "Delete" -> {
+        String code = JOptionPane.showInputDialog(this, "Enter Code to delete:");
+        if (code == null) return;
 
-                Integer codeInt = parseInteger(code, "Code");
-                if (codeInt == null) return;
+        Integer codeInt = parseInteger(code, "Code");
+        if (codeInt == null) return;
 
-                int confirm = JOptionPane.showConfirmDialog(this,
+        int confirm = JOptionPane.showConfirmDialog(this,
                         "Are you sure you want to delete this revenue?",
                         "Confirm Delete", JOptionPane.YES_NO_OPTION);
-                if (confirm == JOptionPane.YES_OPTION) {
-                    repo.delete(codeInt);
-                    JOptionPane.showMessageDialog(this, "Revenue deleted successfully!");
-                }
-            }
+        if (confirm == JOptionPane.YES_OPTION) {
+          repo.delete(codeInt);
+          JOptionPane.showMessageDialog(this, "Revenue deleted successfully!");
+        }
+      }
 
 
       default -> throw new IllegalStateException("Unexpected value: " + operation);
@@ -489,47 +491,47 @@ public class Main extends JFrame {
     }
 
     switch (operation) {
-        case "View" -> {
-            StringBuilder sb = new StringBuilder("MINISTRY OF " + ministryName.toUpperCase() + "\n\n");
-            List<?> items = null;
+      case "View" -> {
+        StringBuilder sb = new StringBuilder("MINISTRY OF " + ministryName.toUpperCase() + "\n\n");
+        List<?> items = null;
 
-            if (repo instanceof EducationRepository r) {
-                items = r.findAll();
-            } else {
-                if (repo instanceof EnvironmentRepository r) items = r.findAll();
-                else if (repo instanceof NationalDefenseRepository r) items = r.findAll();
-                else if (repo instanceof FinanceMinistryRepository r) items = r.findAll();
-                else if (repo instanceof HealthRepository r) items = r.findAll();
-            }
-
-            if (items != null) {
-                for (Object item : items) {
-                    if (item instanceof Education e) {
-                        sb.append(e.getMajorCategory()).append(" | ")
-                                .append(e.getName()).append(" | ")
-                                .append(e.getEuros()).append("\n");
-                    } else if (item instanceof Environment e) {
-                        sb.append(e.getMajorCategory()).append(" | ")
-                                .append(e.getName()).append(" | ")
-                                .append(e.getEuros()).append("\n");
-                    } else if (item instanceof NationalDefense e) {
-                        sb.append(e.getMajorCategory()).append(" | ")
-                                .append(e.getName()).append(" | ")
-                                .append(e.getEuros()).append("\n");
-                    } else if (item instanceof FinanceMinistry e) {
-                        sb.append(e.getMajorCategory()).append(" | ")
-                                .append(e.getName()).append(" | ")
-                                .append(e.getEuros()).append("\n");
-                    } else if (item instanceof Health e) {
-                        sb.append(e.getMajorCategory()).append(" | ")
-                                .append(e.getName()).append(" | ")
-                                .append(e.getEuros()).append("\n");
-                    }
-                }
-            }
-            showTextDialog(ministryName, sb.toString());
+        if (repo instanceof EducationRepository r) {
+          items = r.findAll();
+        } else {
+          if (repo instanceof EnvironmentRepository r) items = r.findAll();
+          else if (repo instanceof NationalDefenseRepository r) items = r.findAll();
+          else if (repo instanceof FinanceMinistryRepository r) items = r.findAll();
+          else if (repo instanceof HealthRepository r) items = r.findAll();
         }
-        case "Add" -> {
+
+        if (items != null) {
+          for (Object item : items) {
+            if (item instanceof Education e) {
+              sb.append(e.getMajorCategory()).append(" | ")
+                                .append(e.getName()).append(" | ")
+                                .append(e.getEuros()).append("\n");
+            } else if (item instanceof Environment e) {
+              sb.append(e.getMajorCategory()).append(" | ")
+                                .append(e.getName()).append(" | ")
+                                .append(e.getEuros()).append("\n");
+            } else if (item instanceof NationalDefense e) {
+              sb.append(e.getMajorCategory()).append(" | ")
+                                .append(e.getName()).append(" | ")
+                                .append(e.getEuros()).append("\n");
+            } else if (item instanceof FinanceMinistry e) {
+              sb.append(e.getMajorCategory()).append(" | ")
+                                .append(e.getName()).append(" | ")
+                                .append(e.getEuros()).append("\n");
+            } else if (item instanceof Health e) {
+              sb.append(e.getMajorCategory()).append(" | ")
+                                .append(e.getName()).append(" | ")
+                                .append(e.getEuros()).append("\n");
+            }
+          }
+        }
+        showTextDialog(ministryName, sb.toString());
+      }
+      case "Add" -> {
         String major = JOptionPane.showInputDialog(this, "Enter Major Category:");
         if (major == null) {
           return;
@@ -553,7 +555,7 @@ public class Main extends JFrame {
         JOptionPane.showMessageDialog(this, ministryName + " entry added successfully!");
       }
       case "Update" -> {
-            StringBuilder sb = new StringBuilder("MINISTRY OF " + ministryName.toUpperCase() + "\n\n");
+        StringBuilder sb = new StringBuilder("MINISTRY OF " + ministryName.toUpperCase() + "\n\n");
         String major = JOptionPane.showInputDialog(this, "Enter Major Category to update:");
         if (major == null) {
           return;
@@ -567,22 +569,22 @@ public class Main extends JFrame {
           return;
         }
 
-                Integer majorCat = parseInteger(major, "Major Category");
-                if (majorCat == null) return;
+        Integer majorCat = parseInteger(major, "Major Category");
+        if (majorCat == null) return;
 
-                int confirm = JOptionPane.showConfirmDialog(this,
+        int confirm = JOptionPane.showConfirmDialog(this,
                         "Are you sure you want to delete this entry?",
                         "Confirm Delete", JOptionPane.YES_NO_OPTION);
-                if (confirm == JOptionPane.YES_OPTION) {
-                    if (repo instanceof EducationRepository r) r.delete(majorCat);
-                    else if (repo instanceof EnvironmentRepository r) r.delete(majorCat);
-                    else if (repo instanceof NationalDefenseRepository r) r.delete(majorCat);
-                    else if (repo instanceof FinanceMinistryRepository r) r.delete(majorCat);
-                    else if (repo instanceof HealthRepository r) r.delete(majorCat);
+        if (confirm == JOptionPane.YES_OPTION) {
+          if (repo instanceof EducationRepository r) r.delete(majorCat);
+          else if (repo instanceof EnvironmentRepository r) r.delete(majorCat);
+          else if (repo instanceof NationalDefenseRepository r) r.delete(majorCat);
+          else if (repo instanceof FinanceMinistryRepository r) r.delete(majorCat);
+          else if (repo instanceof HealthRepository r) r.delete(majorCat);
 
-                    JOptionPane.showMessageDialog(this, ministryName + " entry deleted successfully!");
-                }
-            }
+          JOptionPane.showMessageDialog(this, ministryName + " entry deleted successfully!");
+        }
+      }
 
 
       default -> throw new IllegalStateException("Unexpected value: " + operation);
@@ -618,28 +620,28 @@ public class Main extends JFrame {
                 JOptionPane.INFORMATION_MESSAGE);
   }
 
-    /**
-     * Safely parses a string to an integer with user-friendly error handling.
-     * @param input the string to parse
-     * @param fieldName the name of the field being parsed (for error messages)
-     * @return the parsed integer, or null if parsing fails
-     */
-    private Integer parseInteger(String input, String fieldName) {
-        if (input == null || input.trim().isEmpty()) {
-            showError(fieldName + " cannot be empty!");
-            return null;
-        }
-
-        try {
-            return Integer.parseInt(input.trim());
-        } catch (NumberFormatException e) {
-            showError("Invalid " + fieldName + ": Please enter a valid number.");
-            return null;
-        }
+  /**
+   * Safely parses a string to an integer with user-friendly error handling.
+   * @param input the string to parse
+   * @param fieldName the name of the field being parsed (for error messages)
+   * @return the parsed integer, or null if parsing fails
+   */
+  private Integer parseInteger(String input, String fieldName) {
+    if (input == null || input.trim().isEmpty()) {
+      showError(fieldName + " cannot be empty!");
+      return null;
     }
 
-    private void showError(String message) {
-        JOptionPane.showMessageDialog(this, message, "Error",
+    try {
+      return Integer.parseInt(input.trim());
+    } catch (NumberFormatException e) {
+      showError("Invalid " + fieldName + ": Please enter a valid number.");
+      return null;
+    }
+  }
+
+  private void showError(String message) {
+    JOptionPane.showMessageDialog(this, message, "Error",
                 JOptionPane.ERROR_MESSAGE);
   }
 

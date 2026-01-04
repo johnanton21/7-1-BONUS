@@ -24,13 +24,15 @@ public class NationalDefenseMenu {
                     System.out.println(p.getMajorCategory()
                             + " | " + p.getName() + " | " + p.getEuros()));
       case 2 -> {
-        System.out.print("Code: "); int m = scanner.nextInt(); scanner.nextLine();
+        System.out.print("Code: ");
+        int m = scanner.nextInt(); scanner.nextLine();
         System.out.print("Name: "); String o = scanner.nextLine();
         System.out.print("Euros: "); String e = scanner.nextLine();
         repo.insert(new NationalDefense(m, o, e));
       }
       case 3 -> {
-        System.out.print("Code: "); int m = scanner.nextInt(); scanner.nextLine();
+        System.out.print("Code: ");
+        int m = scanner.nextInt(); scanner.nextLine();
         System.out.print("New name: "); String o = scanner.nextLine();
         System.out.print("Νew euros: "); String e = scanner.nextLine();
         repo.update(new NationalDefense(m, o, e));

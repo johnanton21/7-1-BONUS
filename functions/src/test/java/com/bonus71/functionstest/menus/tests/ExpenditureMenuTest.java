@@ -31,7 +31,7 @@ class ExpenditureMenuTest {
 
     Scanner testScanner = new Scanner(System.in);
 
-        ExpenditureMenu.menu(repo);
+    ExpenditureMenu.menu(repo);
 
     return out.toString();
   }
