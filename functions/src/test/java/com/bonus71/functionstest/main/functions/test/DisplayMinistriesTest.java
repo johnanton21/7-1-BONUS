@@ -52,7 +52,7 @@ public class DisplayMinistriesTest {
 
     Scanner scanner = new Scanner("2\n10\nBooks\n25\n");
 
-        ExpenditureMenu.menu(repo);
+    ExpenditureMenu.menu(repo);
 
     ExpenditureMenu.menu(repo);
 

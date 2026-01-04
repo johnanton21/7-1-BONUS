@@ -24,13 +24,17 @@ public class RevenueMenu {
                     System.out.println(e.getCode()
                             + " | " + e.getCategory() + " | " + e.getEuros()));
       case 2 -> {
-        System.out.print("Code: "); int k = scanner.nextInt(); scanner.nextLine();
-        System.out.print("Category: "); String c = scanner.nextLine();
+        System.out.print("Code: ");
+        int k = scanner.nextInt(); scanner.nextLine();
+        System.out.print("Category: ");
+        String c = scanner.nextLine();
         System.out.print("Euros: "); String e = scanner.nextLine();
         repo.insert(new Revenue(k, c, e));
       }
       case 3 -> {
-        System.out.print("Code: "); int k = scanner.nextInt(); scanner.nextLine();
+        System.out.print("Code: ");
+        int k = scanner.nextInt();
+        scanner.nextLine();
         System.out.print("New category: "); String c = scanner.nextLine();
         System.out.print("New euros: "); String e = scanner.nextLine();
         repo.update(new Revenue(k, c, e));
