@@ -76,7 +76,7 @@ public class FinancialServiceFiscalTest {
     double val2 = (double) method.invoke(service, "2,50");
     double val3 = (double) method.invoke(service, "1000");
     double val4 = (double) method.invoke(service, "€3.500");
-    double val5 = (double) method.invoke(service, null);
+    double val5 = (double) method.invoke(service, (Object) null);
     double val6 = (double) method.invoke(service, "");
     double val7 = (double) method.invoke(service, "abc");
 
