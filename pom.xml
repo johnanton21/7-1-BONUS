@@ -36,19 +36,16 @@
         </pluginManagement>
 
         <plugins>
-            <!-- JaCoCo plugin για code coverage -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <executions>
-                    <!-- Prepare agent πριν τα tests -->
                     <execution>
                         <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
-                    <!-- Generate report μετά τα tests -->
                     <execution>
                         <id>report</id>
                         <phase>test</phase>
@@ -59,7 +56,6 @@
                 </executions>
             </plugin>
 
-            <!-- Checkstyle plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
