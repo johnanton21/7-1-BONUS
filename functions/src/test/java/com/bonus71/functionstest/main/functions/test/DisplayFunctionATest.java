@@ -1,9 +1,9 @@
 package com.bonus71.functionstest.main.functions.test;
 
 import com.bonus71.functions.main.functions.DisplayFunctionA;
-import org.junit.After;
-import org.junit.Test;
-import org.junit.Before;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -15,13 +15,13 @@ public class DisplayFunctionATest {
     private final PrintStream originalOut = System.out;
     private ByteArrayOutputStream outContent;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
         System.setOut(originalOut);
     }

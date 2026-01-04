@@ -39,8 +39,8 @@ class MinistryOfEducationMenuTest {
 
         String output = runMenu("1\n");
 
-        assertTrue(output.contains("Schools | Schools | 15000"));
-        assertTrue(output.contains("Universities | Universities | 90000"));
+        assertTrue(output.contains("1 | Schools | 15000"));
+        assertTrue(output.contains("2 | Universities | 90000"));
     }
 
     @Test
