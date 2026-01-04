@@ -1,63 +1,134 @@
 package com.bonus71.functionstest.main.functions.test;
 
-import com.bonus71.data.entity.financial.Expenditure;
-import com.bonus71.data.repository.ExpenditureRepository;
-import com.bonus71.functions.menus.ExpensesMenu;
+import com.bonus71.functions.main.functions.DisplayMinistriesFunctionB;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.io.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DisplayMinistriesFunctionBTest {
 
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final PrintStream originalOut = System.out;
+    private final InputStream originalIn = System.in;
 
-    static class FakeRepo extends ExpenditureRepository {
-        List<Expenditure> list = new ArrayList<>();
+    @BeforeEach
+    void setUp() {
+        System.setOut(new PrintStream(outContent));
+    }
 
-        @Override
-        public List<Expenditure> findAll() {
-            return list;
-        }
-
-        @Override
-        public void insert(Expenditure e) {
-            list.add(e);
-        }
-
-        @Override
-        public void update(Expenditure e) {
-            for (int i = 0; i < list.size(); i++) {
-                if (list.get(i).getCode() == e.getCode()) {
-                    list.set(i, e);
-                    return;
-                }
-            }
-        }
-
-        @Override
-        public void delete(int code) {
-            list.removeIf(e -> e.getCode() == code);
-        }
+    @AfterEach
+    void tearDown() {
+        System.setOut(originalOut);
+        System.setIn(originalIn);
     }
 
     @Test
-    void testAddExpenditure() throws SQLException {
-        FakeRepo repo = new FakeRepo();
+    void testExitImmediately() throws Exception {
+        String input = "0\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
 
-        // Προσομοιώνουμε εισαγωγή χρήστη για επιλογή 2 (Add)
-        Scanner scanner = new Scanner("2\n10\nBooks\n25\n");
+        DisplayMinistriesFunctionB.showMinistriesData();
 
+        String output = outContent.toString();
+        assertTrue(output.contains("DISPLAY MINISTRIES DATA"));
+        assertTrue(output.contains("exiting menu"));
+    }
 
-        ExpensesMenu.menu(repo);
+    @Test
+    void testInvalidChoice() throws Exception {
+        String input = "99\n0\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
 
-        // Έλεγχος ότι το νέο expenditure προστέθηκε
-        assertEquals(1, repo.list.size());
-        assertEquals(10, repo.list.get(0).getCode());
-        assertEquals("Books", repo.list.get(0).getCategory());
-        assertEquals("25", repo.list.get(0).getEuros());
+        DisplayMinistriesFunctionB.showMinistriesData();
+
+        String output = outContent.toString();
+        assertTrue(output.contains("invalid selection"));
+    }
+
+    @Test
+    void testMenuOptions() throws Exception {
+        String input = "0\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+        DisplayMinistriesFunctionB.showMinistriesData();
+
+        String output = outContent.toString();
+        assertTrue(output.contains("MINISTRY OF EDUCATION"));
+        assertTrue(output.contains("MINISTRY OF ENVIRONMENT"));
+        assertTrue(output.contains("MINISTRY OF NATIONAL DEFENSE"));
+        assertTrue(output.contains("MINISTRY OF FINANCE"));
+        assertTrue(output.contains("MINISTRY OF HEALTH"));
+    }
+
+    @Test
+    void testEducationOption() throws Exception {
+        String input = "1\n0\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+        DisplayMinistriesFunctionB.showMinistriesData();
+
+        String output = outContent.toString();
+        assertTrue(output.contains("MINISTRY OF EDUCATION"));
+    }
+
+    @Test
+    void testEnvironmentOption() throws Exception {
+        String input = "2\n0\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+        DisplayMinistriesFunctionB.showMinistriesData();
+
+        String output = outContent.toString();
+        assertTrue(output.contains("MINISTRY OF ENVIRONMENT"));
+    }
+
+    @Test
+    void testNationalDefenseOption() throws Exception {
+        String input = "3\n0\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+        DisplayMinistriesFunctionB.showMinistriesData();
+
+        String output = outContent.toString();
+        assertTrue(output.contains("MINISTRY OF NATIONAL DEFENSE"));
+    }
+
+    @Test
+    void testFinanceOption() throws Exception {
+        String input = "4\n0\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+        DisplayMinistriesFunctionB.showMinistriesData();
+
+        String output = outContent.toString();
+        assertTrue(output.contains("MINISTRY OF FINANCE"));
+    }
+
+    @Test
+    void testHealthOption() throws Exception {
+        String input = "5\n0\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+        DisplayMinistriesFunctionB.showMinistriesData();
+
+        String output = outContent.toString();
+        assertTrue(output.contains("MINISTRY OF HEALTH"));
+    }
+
+    @Test
+    void testMultipleChoices() throws Exception {
+        String input = "1\n2\n3\n0\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+        DisplayMinistriesFunctionB.showMinistriesData();
+
+        String output = outContent.toString();
+        assertTrue(output.contains("MINISTRY OF EDUCATION"));
+        assertTrue(output.contains("MINISTRY OF ENVIRONMENT"));
+        assertTrue(output.contains("MINISTRY OF NATIONAL DEFENSE"));
     }
 }

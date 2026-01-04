@@ -1,70 +1,77 @@
 package com.bonus71.functionstest.menus.tests;
 
 import com.bonus71.data.entity.ministry.Health;
-import com.bonus71.data.repository.HealthRepository;
+import com.bonus71.functions.menus.MinistryOfHealthMenu;
+import com.bonus71.functionstest.menus.repos.FakeHealthRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.sql.SQLException;
-import java.util.List;
+import java.io.*;
+import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class MinistryOfHealthMenuTest {
 
-    @Test
-    void testFindAll() throws SQLException {
-        HealthRepository repo = new HealthRepository();
+    private FakeHealthRepository repo;
 
-        List<Health> results = repo.findAll();
+    @BeforeEach
+    void setup() {
+        repo = new FakeHealthRepository();
+    }
 
-        assertNotNull(results);
+    private String runMenu(String input) throws Exception {
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(out));
+
+        Scanner testScanner = new Scanner(System.in);
+        MinistryOfHealthMenu.menu(repo);
+
+        return out.toString();
     }
 
     @Test
-    void testInsert() throws SQLException {
-        HealthRepository repo = new HealthRepository();
+    void testView() throws Exception {
+        repo.insert(new Health(1, "Hospitals", "120000"));
+        repo.insert(new Health(2, "Primary Care", "45000"));
 
-        Health h = new Health(801, "TestHealth", "400");
-        repo.insert(h);
+        String output = runMenu("1\n");
 
-        boolean exists = repo.findAll().stream()
-                .anyMatch(x -> x.getMajorCategory() == 801);
-
-        assertTrue(exists);
+        assertTrue(output.contains("1 | Hospitals | 120000"));
+        assertTrue(output.contains("2 | Primary Care | 45000"));
     }
 
     @Test
-    void testUpdate() throws SQLException {
-        HealthRepository repo = new HealthRepository();
+    void testAdd() throws Exception {
+        runMenu("2\n3\nMental Health\n35000\n");
 
-        Health h = new Health(802, "OldHealth", "200");
-        repo.insert(h);
+        assertEquals(1, repo.findAll().size());
+        Health h = repo.findAll().get(0);
 
-        Health updated = new Health(802, "NewHealth", "600");
-        repo.update(updated);
-
-        Health result = repo.findAll().stream()
-                .filter(x -> x.getMajorCategory() == 802)
-                .findFirst()
-                .orElse(null);
-
-        assertNotNull(result);
-        assertEquals("NewHealth", result.getName());
-        assertEquals("600", result.getEuros());
+        assertEquals(3, h.getMajorCategory());
+        assertEquals("Mental Health", h.getName());
+        assertEquals("35000", h.getEuros());
     }
 
     @Test
-    void testDelete() throws SQLException {
-        HealthRepository repo = new HealthRepository();
+    void testUpdate() throws Exception {
+        repo.insert(new Health(5, "Emergency Services", "25000"));
 
-        Health h = new Health(803, "TempHealth", "50");
-        repo.insert(h);
+        runMenu("3\n5\nEmergency Care\n40000\n");
 
-        repo.delete(803);
+        Health h = repo.findAll().get(0);
+        assertEquals("Emergency Care", h.getName());
+        assertEquals("40000", h.getEuros());
+    }
 
-        boolean exists = repo.findAll().stream()
-                .anyMatch(x -> x.getMajorCategory() == 803);
+    @Test
+    void testDelete() throws Exception {
+        repo.insert(new Health(9, "Old Program", "5000"));
 
-        assertFalse(exists);
+        runMenu("4\n9\n");
+
+        assertTrue(repo.findAll().isEmpty());
     }
 }
