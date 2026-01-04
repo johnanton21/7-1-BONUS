@@ -103,10 +103,47 @@ public class FinancialService {
     }
 
     try {
+      // Remove currency symbols and whitespace, keep only digits, dots, and commas
+      String cleaned = amount.replaceAll("[^0-9.,-]", "").trim();
 
-      String cleaned = amount.replaceAll("[^0-9.,-]", "");
-      cleaned = cleaned.replace(".", "");
-      cleaned = cleaned.replace(",", ".");
+      // Handle European format (1.234,56) vs US format (1,234.56)
+      // If both comma and dot exist, determine which is the decimal separator
+      if (cleaned.contains(",") && cleaned.contains(".")) {
+        int lastComma = cleaned.lastIndexOf(',');
+        int lastDot = cleaned.lastIndexOf('.');
+
+        if (lastComma > lastDot) {
+          // European format: 1.234,56 -> remove dots, replace comma with dot
+          cleaned = cleaned.replace(".", "").replace(",", ".");
+        } else {
+          // US format: 1,234.56 -> just remove commas
+          cleaned = cleaned.replace(",", "");
+        }
+      } else if (cleaned.contains(",")) {
+        // Only comma exists - could be decimal (2,50) or thousands (1,200)
+        // Assume decimal if only one comma and it's near the end (2-3 digits after)
+        int commaPos = cleaned.lastIndexOf(',');
+        int digitsAfterComma = cleaned.length() - commaPos - 1;
+
+        if (digitsAfterComma <= 2 && cleaned.indexOf(',') == commaPos) {
+          // Likely decimal separator: 2,50
+          cleaned = cleaned.replace(",", ".");
+        } else {
+          // Likely thousands separator: 1,200
+          cleaned = cleaned.replace(",", "");
+        }
+      } else if (cleaned.contains(".")) {
+        // Only dot exists - could be decimal (25.5) or thousands (3.500)
+        // If dot has exactly 3 digits after it, it's likely thousands separator (European)
+        int dotPos = cleaned.lastIndexOf('.');
+        int digitsAfterDot = cleaned.length() - dotPos - 1;
+
+        if (digitsAfterDot == 3 && cleaned.indexOf('.') == dotPos) {
+          // Likely thousands separator: 3.500
+          cleaned = cleaned.replace(".", "");
+        }
+        // Otherwise assume decimal separator (US format): 25.5
+      }
 
       return Double.parseDouble(cleaned);
     } catch (NumberFormatException e) {

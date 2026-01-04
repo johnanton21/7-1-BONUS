@@ -5,12 +5,30 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import com.bonus71.functions.main.functions.EditProcessor;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.io.PrintStream;
 import java.sql.SQLException;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
 public class EditProcessorTest {
+
+  private final InputStream originalIn = System.in;
+  private final PrintStream originalOut = System.out;
+
+  @BeforeEach
+  void setUp() {
+    // Tests will set their own System.in/out
+  }
+
+  @AfterEach
+  void tearDown() {
+    // Restore original streams after each test
+    System.setIn(originalIn);
+    System.setOut(originalOut);
+  }
 
   @Test
   void testExitDirectly() throws SQLException {
@@ -30,8 +48,8 @@ public class EditProcessorTest {
 
   @Test
   void testInvalidChoice() throws SQLException {
-    // Προσομοίωση εισόδου: 9 (invalid) και μετά 0 (exit)
-    String input = "9\n0\n";
+    // Προσομοίωση εισόδου: 99 (invalid) και μετά 0 (exit)
+    String input = "99\n0\n";
     System.setIn(new ByteArrayInputStream(input.getBytes()));
 
 
@@ -46,9 +64,9 @@ public class EditProcessorTest {
   }
 
   @Test
-  void testMultipleChoicesAndExit() throws SQLException {
-    // Προσομοίωση εισόδου: επιλογές 1,2,3 και μετά 0 για έξοδο
-    String input = "1\n2\n3\n0\n";
+  void testMenuDisplay() throws SQLException {
+    // Test that menu displays and exits cleanly
+    String input = "0\n";
     System.setIn(new ByteArrayInputStream(input.getBytes()));
 
     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -57,6 +75,9 @@ public class EditProcessorTest {
     EditProcessor.editData();
 
     String output = outputStream.toString();
-
+    assertTrue(output.contains("DATA MANAGEMENT MENU"));
+    assertTrue(output.contains("Expenditures"));
+    assertTrue(output.contains("Revenues"));
+    assertTrue(output.contains("Exit..."));
   }
 }

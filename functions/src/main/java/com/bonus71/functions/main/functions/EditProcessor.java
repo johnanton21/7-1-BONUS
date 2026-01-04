@@ -18,9 +18,10 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class EditProcessor {
-  private static final Scanner scanner = new Scanner(System.in);
 
   public static void editData() throws SQLException {
+    // Create scanner from current System.in (allows for testing)
+    Scanner scanner = new Scanner(System.in);
 
     ExpenditureRepository exodaRepo = new ExpenditureRepository();
     RevenueRepository esodaRepo = new RevenueRepository();
