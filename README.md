@@ -44,6 +44,7 @@ java -jar target/bootstrap-1.0-SNAPSHOT.jar
 ```
 
 ## UML
+Detailed UML diagrams regarding the code architecture and system design.
 
 ## ALGORITHMS AND DATA STRUCTURES
 
