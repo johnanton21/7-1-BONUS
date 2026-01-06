@@ -11,4 +11,4 @@
 
 From the root directory of the project, where the parent `pom.xml` file is located, run:
 ```bash
-\mvn clean install\
+mvn clean install
