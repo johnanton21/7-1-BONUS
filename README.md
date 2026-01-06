@@ -38,8 +38,8 @@ java -jar target/bootstrap-1.0-SNAPSHOT.jar
 ├── functions/              # Core business logic module
 ├── graphics/               # Visualization and UI components module
 ├── .gitignore              # Files to be ignored by Git
-├── pom.xml                 # Parent Maven configuration
-└── README.md               # Project documentation
+├── README.md               # Project documentation
+└── pom.xml                 # Parent Maven configuration
 ```
 
 ## UML
