@@ -51,4 +51,4 @@ Detailed UML diagrams regarding the code architecture and system design.
 ## SUPPLEMENTARY TECHNICAL DOCUMENTATION
 * **[Test Coverage](./JACOCO_INSTRUCTIONS.md):** Detailed reports on unit testing and code coverage using **JaCoCo**.
 * **[Code Documentation](.):** Comprehensive **JavaDocs** for all core classes.
-* <ins>Code Quality:</ins> Static code analysis reports using **Checkstyle** to ensure maintainability.
+* <ins>Code Quality:</ins> Static code analysis using **Checkstyle** to ensure maintainability.
