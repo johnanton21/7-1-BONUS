@@ -1,4 +1,4 @@
-# 7+1+BONUS - TECHNICAL REFERENCE
+# 7+1+BONUS - TECHNICAL REFERENCE/DOCUMENTATION
 
 ## BUDGET-HER0
 "BUDGET-HERO" is a state budget overview and processing system. The application displays current and historical state budget data, performs comparisons between different years, and visualizes them through various graphical elements. Additionally, it calculates and displays the fiscal balance and updates the data based on user modifications.
@@ -32,11 +32,11 @@ java -jar target/bootstrap-1.0-SNAPSHOT.jar
 ## PROJECT STRUCTURE
 ```text
 .
-├── bootstrap/              # Main entry point & application startup
-├── config/                 # Configuration files (checkstyle, etc.)
-├── data-management/        # Data processing and storage logic
-├── functions/              # Core business logic
-├── graphics/               # Visualization and UI components
+├── bootstrap/              # Main entry point & application startup module
+├── config/                 # Configuration files (checkstyle)
+├── data-management/        # Data processing module
+├── functions/              # Core business logic module
+├── graphics/               # Visualization and UI components module
 ├── .gitignore              # Files to be ignored by Git
 ├── JACOCO_INSTRUCTIONS.md  # Instructions for test coverage
 ├── pom.xml                 # Parent Maven configuration
