@@ -38,7 +38,6 @@ java -jar target/bootstrap-1.0-SNAPSHOT.jar
 ├── functions/              # Core business logic module
 ├── graphics/               # Visualization and UI components module
 ├── .gitignore              # Files to be ignored by Git
-├── JACOCO_INSTRUCTIONS.md  # Instructions for test coverage
 ├── pom.xml                 # Parent Maven configuration
 └── README.md               # Project documentation
 ```
@@ -49,6 +48,6 @@ Detailed UML diagrams regarding the code architecture and system design.
 ## ALGORITHMS AND DATA STRUCTURES
 
 ## SUPPLEMENTARY TECHNICAL DOCUMENTATION
-* **[Test Coverage](./JACOCO_INSTRUCTIONS.md):** Detailed reports on unit testing and code coverage using **JaCoCo**.
+* **[Test Coverage](.):** Detailed reports on unit testing and code coverage using **JaCoCo**.
 * **[Code Documentation](.):** Comprehensive **JavaDocs** for all core classes.
 * <ins>Code Quality:</ins> Static code analysis using **Checkstyle** to ensure maintainability.
