@@ -30,6 +30,18 @@ java -jar target/bootstrap-1.0-SNAPSHOT.jar
 4. To terminate the process: press `7`
 
 ## PROJECT STRUCTURE
+```text
+.
+├── bootstrap/              # Main entry point & application startup
+├── config/                 # Configuration files (checkstyle, etc.)
+├── data-management/        # Data processing and storage logic
+├── functions/              # Core business logic
+├── graphics/               # Visualization and UI components
+├── .gitignore              # Files to be ignored by Git
+├── JACOCO_INSTRUCTIONS.md  # Instructions for test coverage
+├── pom.xml                 # Parent Maven configuration
+└── README.md               # Project documentation
+```
 
 ## UML
 
