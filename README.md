@@ -20,3 +20,9 @@ Navigate to the module `bootstrap` and run the main class:
 cd bootstrap
 java -jar target/bootstrap-1.0-SNAPSHOT.jar
 ```
+
+## USAGE
+> When the program starts, follow the on-screen instructions.
+1. Launch the application from the terminal
+2. Provide the required input
+3. The program processes the input and displays the results in the console.
