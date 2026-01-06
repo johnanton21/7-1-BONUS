@@ -22,8 +22,7 @@ java -jar target/bootstrap-1.0-SNAPSHOT.jar
 ```
 
 ## USAGE
-> When the program starts, follow the on-screen instructions
 1. Launch the application from the terminal
-2. Provide the required input (1-7)
+2. Provide the required input `(1-7)`
 3. The program processes the input and displays the results in the console
 4. When you press `7` the program will be terminated
