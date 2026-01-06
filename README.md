@@ -4,12 +4,12 @@
 
 ## COMPILATION 
 
-### Prerequisites
+**Prerequisites**
 - Java JDK
 - Apache Maven
 - `JAVA_HOME` environment variable properly set
 
-### Compilation
+**Compilation**
 
 From the root directory of the project, where the parent `pom.xml` file is located, run:
 ```bash
@@ -28,3 +28,5 @@ java -jar target/bootstrap-1.0-SNAPSHOT.jar
 2. Provide the required input `(1-7)`
 3. The program processes the input and displays the results in the console
 4. To terminate the process: press `7`
+
+## PROJECT STRUCTURE
