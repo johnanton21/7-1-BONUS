@@ -1,9 +1,9 @@
 # 7+1+BONUS - TECHNICAL REFERENCE
 
 ## BUDGET-HER0
+"BUDGET-HERO" is a state budget overview and processing system. The application displays current and historical state budget data, performs comparisons between different years, and visualizes them through various graphical elements. Additionally, it calculates and displays the fiscal balance and updates the data based on user modifications.
 
 ## COMPILATION 
-
 **Prerequisites**
 - Java JDK
 - Apache Maven
