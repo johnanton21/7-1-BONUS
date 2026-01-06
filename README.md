@@ -49,6 +49,6 @@ Detailed UML diagrams regarding the code architecture and system design.
 ## ALGORITHMS AND DATA STRUCTURES
 
 ## SUPPLEMENTARY TECHNICAL DOCUMENTATION
-* **[Code Quality](./config/checkstyle.xml):** Static code analysis reports using Checkstyle to ensure maintainability.
 * **[Test Coverage](./JACOCO_INSTRUCTIONS.md):** Detailed reports on unit testing and code coverage using **JaCoCo**.
 * **[Code Documentation](.):** Comprehensive **JavaDocs** for all core classes.
+* Code Quality: Static code analysis reports using **Checkstyle** to ensure maintainability.
