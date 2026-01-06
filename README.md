@@ -30,3 +30,9 @@ java -jar target/bootstrap-1.0-SNAPSHOT.jar
 4. To terminate the process: press `7`
 
 ## PROJECT STRUCTURE
+
+## UML
+
+## ALGORITHMS AND DATA STRUCTURES
+
+## SUPPLEMENTARY TECHNICAL DOCUMENTATION
