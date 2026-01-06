@@ -1,5 +1,7 @@
 # 7+1+BONUS - TECHNICAL REFERENCE
 
+## BUDGET-HER0
+
 ## COMPILATION 
 
 ### Prerequisites
@@ -25,4 +27,4 @@ java -jar target/bootstrap-1.0-SNAPSHOT.jar
 1. Launch the application from the terminal
 2. Provide the required input `(1-7)`
 3. The program processes the input and displays the results in the console
-4. When you press `7` the program will be terminated
+4. To terminate the process: press `7`
