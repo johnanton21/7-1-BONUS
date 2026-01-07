@@ -34,9 +34,5 @@ replay_pid*
 # Specific files
 /data-management/src/main/java/com/bonus71/data/DatabaseH2M.java
 
-# Maven build directories
-*target
-target/
-
 # Claude Code
 .claude
