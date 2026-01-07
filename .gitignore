@@ -34,5 +34,3 @@ replay_pid*
 # Specific files
 /data-management/src/main/java/com/bonus71/data/DatabaseH2M.java
 
-# Claude Code
-.claude
