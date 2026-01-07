@@ -1,0 +1,8 @@
+docs/
+ └── jacoco/
+     ├── index.html
+     ├── jacoco-resources/
+     ├── com.bonus71.functions.main.functions/
+     ├── com.bonus71.functions.menus/
+     ├── jacoco.xml
+     └── jacoco-sessions.html
