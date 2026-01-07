@@ -49,6 +49,6 @@ Detailed UML diagrams regarding the code architecture and system design.
 
 ## SUPPLEMENTARY TECHNICAL DOCUMENTATION
 * **[Test Coverage](.):** Detailed reports on unit testing and code coverage using **JaCoCo**.
-* **[Test Coverage report (zip)](https://auebgr-my.sharepoint.com/:u:/r/personal/t8240090_aueb_gr/Documents/Microsoft%20Teams%20Chat%20Files/jacoco.zip?csf=1&web=1&e=ClcDHG)):** Detailed reports on unit testing and code coverage using **JaCoCo**.
+* **[Test Coverage report (zip)](https://auebgr-my.sharepoint.com/:u:/g/personal/t8240090_aueb_gr/IQBQWviWvwnYQocSOlQ3QuilAbq_phfOc2B8iV3FSqhGUi4?e=K1ZzaC9):** Detailed reports on unit testing and code coverage using **JaCoCo**.
 * **[Code Documentation](.):** Comprehensive **JavaDocs** for all core classes.
 * <ins>Code Quality:</ins> Static code analysis using **Checkstyle** to ensure maintainability.
