@@ -43,7 +43,26 @@ import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 
-
+/**
+ * Main application class of the system.
+ *
+ * <p>This class serves as the central controller of the application.
+ * It initializes the graphical user interface, handles user interaction
+ * through menu options and coordinates the execution of all core
+ * functionalities.</p>
+ *
+ * <p>The class provides functionality for:</p>
+ * <ul>
+ *   <li>Displaying and managing budget data</li>
+ *   <li>Calculating fiscal balance</li>
+ *   <li>Analyzing data by ministry and year</li>
+ *   <li>Visualizing statistical information using charts</li>
+ *   <li>Applying changes to financial records</li>
+ * </ul>
+ *
+ * <p>The application is launched from the {@code main} method and relies on
+ * services provided by other modules of the project.</p>
+ */
 public class Main extends JFrame {
   private final FinancialService financialService = new FinancialService();
 
