@@ -48,7 +48,7 @@ Detailed UML diagrams regarding the code architecture and system design.
 ## ALGORITHMS AND DATA STRUCTURES
 
 ## SUPPLEMENTARY TECHNICAL DOCUMENTATION
-* **[Test Coverage](.):** Detailed unit testing structure using **JaCoCo**.
+* **[Test Coverage](https://github.com/johnanton21/7-1-BONUS/blob/458793b6cb2a1ff60f4fd52053a33085ff9a41e1/docs/Jacoco):** Detailed unit testing structure using **JaCoCo**.
 * **[Test Coverage report (zip)](https://auebgr-my.sharepoint.com/:u:/g/personal/t8240090_aueb_gr/IQBQWviWvwnYQocSOlQ3QuilAbq_phfOc2B8iV3FSqhGUi4?e=K1ZzaC9):** Detailed reports on unit testing and code coverage using **JaCoCo**.
 * **[Code Documentation](.):** Comprehensive **JavaDocs** for all core classes.
 * <ins>Code Quality:</ins> Static code analysis using **Checkstyle** to ensure maintainability.
