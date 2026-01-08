@@ -1,4 +1,15 @@
 package com.bonus71.data.entity.financial;
+/**
+ * Represents a detailed financial expenditure record.
+ *
+ * <p>This class models a detailed view of public expenditures by department.
+ * It distinguishes between regular budget allocations and public investment
+ * budget allocations, providing a comprehensive breakdown of financial spending.</p>
+ *
+ * <p>The {@code ExpenditureDetailed} entity is primarily used for in-depth
+ * financial analysis, reporting, and visualization of government spending
+ * across different administrative departments.</p>
+ */
 
 public class ExpenditureDetailed {
 
@@ -7,6 +18,19 @@ public class ExpenditureDetailed {
   private String regularBudget;
   private String publicInvestmentBudget;
   private String total;
+
+    /**
+     * Constructs an {@code ExpenditureDetailed} object with detailed
+     * budget allocation data.
+     *
+     * @param code the unique identifier code of the expenditure
+     * @param department the department or administrative unit associated
+     *                   with the expenditure
+     * @param regularBudget the amount allocated from the regular budget
+     * @param publicInvestmentBudget the amount allocated from the public
+     *                               investment budget
+     * @param total the total expenditure amount
+     */
 
   public ExpenditureDetailed(int code,
                                String department,

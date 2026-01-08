@@ -3,6 +3,23 @@ package com.bonus71.data.config;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+/**
+ * Database configuration utility class.
+ *
+ * <p>This class is responsible for configuring and providing access
+ * to the application's database. It centralizes all database connection
+ * settings, including the JDBC URL, credentials, and driver initialization.</p>
+ *
+ * <p>The class uses the MySQL JDBC driver and establishes connections
+ * through the {@link java.sql.DriverManager}. A static initialization block
+ * ensures that the database driver is loaded once when the class is first
+ * accessed.</p>
+ *
+ * <p>This class follows a utility-based design and exposes a single
+ * static method for obtaining database connections, allowing repository
+ * classes to interact with the database in a consistent and controlled
+ * manner.</p>
+ */
 
 public class DatabaseConfig {
 

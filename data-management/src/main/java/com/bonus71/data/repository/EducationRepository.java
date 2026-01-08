@@ -8,8 +8,33 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Repository class responsible for data access operations related to
+ * {@link Education} entities.
+ * <p>
+ * This class provides CRUD (Create, Read, Update, Delete) functionality
+ * for the {@code EDUCATION} database table using JDBC. It encapsulates
+ * all SQL logic and database interaction, ensuring separation of concerns
+ * between persistence and business logic layers.
+ * </p>
+ *
+ * <p>
+ * Database connections are managed through {@link DatabaseConfig}, and
+ * all operations use prepared statements to ensure safety and efficiency.
+ * </p>
+ */
 public class EducationRepository {
+    /**
+     * Retrieves all education records from the database.
+     *
+     * <p>
+     * Executes a {@code SELECT * FROM EDUCATION} query and maps each result
+     * row to an {@link Education} entity.
+     * </p>
+     *
+     * @return a list containing all {@link Education} records found
+     * @throws SQLException if a database access error occurs
+     */
   public List<Education> findAll() throws SQLException {
     List<Education> list = new ArrayList<>();
     String sql = "SELECT * FROM EDUCATION";
@@ -28,7 +53,17 @@ public class EducationRepository {
     }
     return list;
   }
-
+    /**
+     * Inserts a new education record into the database.
+     *
+     * <p>
+     * Executes an {@code INSERT INTO EDUCATION} statement using the data
+     * provided by the given {@link Education} entity.
+     * </p>
+     *
+     * @param ministry the {@link Education} entity to be persisted
+     * @throws SQLException if a database access error occurs
+     */
   public void insert(Education ministry) throws SQLException {
     String sql = "INSERT INTO EDUCATION VALUES (?, ?, ?)";
 
@@ -41,7 +76,17 @@ public class EducationRepository {
       ps.executeUpdate();
     }
   }
-
+    /**
+     * Updates an existing education record in the database.
+     *
+     * <p>
+     * Updates the name and euro amount of an education record identified
+     * by its major financial category.
+     * </p>
+     *
+     * @param ministry the {@link Education} entity containing updated data
+     * @throws SQLException if a database access error occurs
+     */
   public void update(Education ministry) throws SQLException {
     String sql = "UPDATE EDUCATION "
             + "SET NAME=?, EUROS=? WHERE MAJOR_CATEGORY=?";
@@ -54,7 +99,17 @@ public class EducationRepository {
       ps.executeUpdate();
     }
   }
-
+    /**
+     * Deletes an education record from the database.
+     *
+     * <p>
+     * Removes the record identified by the specified major financial
+     * category from the {@code EDUCATION} table.
+     * </p>
+     *
+     * @param majorCategory the major financial category identifier
+     * @throws SQLException if a database access error occurs
+     */
   public void delete(int majorCategory) throws SQLException {
     String sql = "DELETE FROM EDUCATION WHERE MAJOR_CATEGORY=?";
 
