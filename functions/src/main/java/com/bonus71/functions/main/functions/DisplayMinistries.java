@@ -7,8 +7,42 @@ import com.bonus71.data.repository.HealthRepository;
 import com.bonus71.data.repository.NationalDefenseRepository;
 import java.sql.SQLException;
 import java.util.Scanner;
+/**
+ * Utility class responsible for displaying financial expenditure data
+ * structured by governmental ministries.
+ *
+ * <p>This class retrieves ministry-related financial information from the
+ * corresponding repository classes and prints the results directly to the
+ * console. It provides an interactive textual menu that allows users to browse
+ * and inspect data per ministry.</p>
+ *
+ * <p><b>Ministries handled:</b></p>
+ * <ul>
+ *     <li>Ministry of Education</li>
+ *     <li>Ministry of Environment</li>
+ *     <li>Ministry of National Defense</li>
+ *     <li>Ministry of Finance</li>
+ *     <li>Ministry of Health</li>
+ * </ul>
+ *
+ * <p>This class is typically used for debugging, inspection, or console-based
+ * demonstration scenarios, and may be triggered from menu-driven UI components
+ * or service layers.</p>
+ */
 
 public class DisplayMinistries {
+    /**
+     * Displays expenditure information categorized by governmental ministries.
+     *
+     * <p>The method prints an interactive console menu that allows the user
+     * to select a ministry. Upon selection, the method fetches data from the
+     * appropriate repository and displays structured financial information
+     * including major category, department name, and associated cost values.</p>
+     *
+     * <p>The user may continue selecting options until they choose to exit.</p>
+     *
+     * @throws SQLException if database access or retrieval fails
+     */
   public static void showMinistriesData() throws SQLException {
 
     Scanner sc = new Scanner(System.in);
