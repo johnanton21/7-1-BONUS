@@ -8,8 +8,42 @@ import org.jfree.chart.plot.PiePlot;
 import org.jfree.data.general.DefaultPieDataset;
 
 
-
+/**
+ * Pie chart visualizing the distribution of government expenditures for 2025 by category.
+ *
+ * <p>
+ * Each slice represents a major category of government spending, such as Health, Education,
+ * Defense, Welfare, and Infrastructure, with the corresponding percentage of the total budget.
+ * The chart is created using JFreeChart and displayed in a Swing JFrame.
+ * </p>
+ *
+ * <p>
+ * Features:
+ * <ul>
+ *   <li>Displays the relative proportion of each spending category as a pie chart.</li>
+ *   <li>Labels show the category name and its percentage.</li>
+ *   <li>Circular pie chart with small interior gap for aesthetics.</li>
+ *   <li>Font styling applied to labels for better readability.</li>
+ * </ul>
+ * </p>
+ *
+ * <p>
+ *  * Note: The data is currently hard-coded for demonstration purposes.
+ *  * It can be extended to fetch actual expenditure data from the financial repositories.
+ *  * </p>
+ *  *
+ *  * <p>
+ *  * Usage:
+ *  * <pre>{@code
+ *  * PieExpenditures2025.showChart(); // Opens a JFrame displaying the pie chart
+ *  * }</pre>
+ *  * </p>
+ *  */
 public class PieExpenditures2025 {
+    /**
+     * Creates and displays the pie chart of government expenditures for 2025.
+     */
+
 
   public static void showChart() {
 
