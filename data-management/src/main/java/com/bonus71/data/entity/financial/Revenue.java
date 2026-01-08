@@ -1,5 +1,17 @@
 package com.bonus71.data.entity.financial;
 
+/**
+ * Represents a financial revenue record.
+ *
+ * <p>This class models a revenue entry, identified by a unique code and
+ * categorized according to its source. It stores the corresponding
+ * monetary amount expressed in euros.</p>
+ *
+ * <p>Instances of this class are used to represent government or
+ * organizational income data and are utilized by repository and service
+ * layers for financial analysis, reporting, and comparison.</p>
+ */
+
 public class Revenue {
 
   private int code;

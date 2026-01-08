@@ -6,7 +6,26 @@ import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
-
+/**
+ * Bar chart comparing financial metrics between 2022 and 2025.
+ *
+ * <p>
+ * Displays Net Revenues, Expenses, and Balance for 2022 and 2025.
+ * Uses JFreeChart to create a vertical bar chart with labeled categories and values.
+ * </p>
+ *
+ * <p>
+ * Data is hard-coded for demonstration purposes.
+ * Can be easily adapted to retrieve values from repository classes.
+ * </p>
+ *
+ * <p>
+ * Usage:
+ * <pre>{@code
+ * Comparison22_25.showChart(); // Opens a JFrame displaying the chart
+ * }</pre>
+ * </p>
+ */
 public class Comparison22_25 extends JFrame {
 
   public Comparison22_25() {
@@ -35,6 +54,9 @@ public class Comparison22_25 extends JFrame {
     setContentPane(chartPanel);
   }
 
+    /**
+     * Opens a JFrame displaying the chart.
+     */
 
   public static void showChart() {
     Comparison22_25 chart = new Comparison22_25();

@@ -6,8 +6,32 @@ import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.category.DefaultCategoryDataset;
 
+/**
+ * Bar chart comparing financial metrics between 2024 and 2025.
+ *
+ * <p>
+ * Displays Net Revenues, Expenses, and Balance for the years 2024 and 2025.
+ * Uses JFreeChart to create a vertical bar chart with labeled categories and values.
+ * </p>
+ *
+ * <p>
+ * Data is currently hard-coded for demonstration purposes.
+ * Can be adapted to retrieve values dynamically from repository classes.
+ * </p>
+ *
+ * <p>
+ * Usage:
+ * <pre>{@code
+ * Comparison24_25.showChart(); // Opens a JFrame displaying the chart
+ * }</pre>
+ * </p>
+ */
 
 public class Comparison24_25 {
+
+    /**
+     * Opens a JFrame displaying the 2024 vs 2025 bar chart.
+     */
 
   public static void showChart() {
 
