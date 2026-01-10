@@ -6,6 +6,25 @@ import com.bonus71.data.repository.ExpenditureRepository;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+/**
+ * Provides a console-based menu for managing expenditure data.
+ *
+ * <p>This class belongs to the {@code functions.menus} module and is responsible
+ * for handling user interaction related to government expenditures. It presents
+ * a simple text menu that allows the user to view, add, update, or delete
+ * expenditure records.</p>
+ *
+ * <p>The class operates as a controller between user input and the data layer,
+ * delegating all data access operations to the {@link ExpenditureRepository}.</p>
+ *
+ * <ul>
+ *   <li>Displays expenditure records</li>
+ *   <li>Inserts new expenditure entries</li>
+ *   <li>Updates existing expenditure data</li>
+ *   <li>Deletes expenditure records</li>
+ * </ul>
+ */
+
 public class ExpenditureMenu {
   public static void menu(ExpenditureRepository repo) throws SQLException {
     Scanner scanner = new Scanner(System.in);

@@ -6,6 +6,25 @@ import com.bonus71.data.repository.ExpenditureRepository;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+/**
+ * Provides a console-based menu for managing expense records.
+ *
+ * <p>This class is part of the {@code functions.menus} package and offers a
+ * command-line interface for interacting with expenditure data. Through a
+ * simple menu, users can view existing records, add new expenses, update
+ * entries, or remove them from the system.</p>
+ *
+ * <p>The class acts as an intermediary between user input and the persistence
+ * layer, delegating all data operations to the {@link ExpenditureRepository}.</p>
+ *
+ * <ul>
+ *   <li>Displays all expense records</li>
+ *   <li>Adds new expense entries</li>
+ *   <li>Updates existing expenses</li>
+ *   <li>Deletes expense records</li>
+ * </ul>
+ */
+
 public class ExpensesMenu {
   public static void menu(ExpenditureRepository repo) throws SQLException {
     Scanner scanner = new Scanner(System.in);
