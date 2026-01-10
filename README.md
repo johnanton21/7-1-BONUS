@@ -1,6 +1,6 @@
 # 7+1+BONUS - TECHNICAL REFERENCE/DOCUMENTATION
 
-## BUDGET-HER0
+## BUDGET-HERO
 "BUDGET-HERO" is an open-source state budget overview and processing system. The application displays current and historical state budget data, performs comparisons between different years, and visualizes them through various graphical elements. Additionally, it calculates and displays the fiscal balance and updates the data based on user modifications. Licensed under the MIT License.
 
 ## COMPILATION 
