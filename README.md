@@ -53,6 +53,7 @@ Detailed UML diagrams regarding the code architecture and system design.
 - The **graphics** module handles data visualization, using aggregate numerical values and chart data structures derived from the linear processing of lists to create pie charts and comparative graphs.
 
 ## SUPPLEMENTARY TECHNICAL DOCUMENTATION
+* **[Licence]():** This project is licensed under the **MIT License**.
 * **[Test Coverage(structure)](https://github.com/johnanton21/7-1-BONUS/blob/458793b6cb2a1ff60f4fd52053a33085ff9a41e1/docs/Jacoco):** Detailed unit testing structure using **JaCoCo**.
 * **[Test Coverage report (zip)](https://drive.google.com/drive/folders/1LK6nllc56X1puiJcOABDAAZZtHUuqAR8?usp=drive_link):** Detailed reports on unit testing and code coverage using **JaCoCo**.
 * **[Code Documentation](.):** Comprehensive **JavaDocs** for all core classes.
