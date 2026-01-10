@@ -17,11 +17,19 @@ mvn clean install
 ```
 
 ## EXECUTION
-Navigate to the module `bootstrap` and run the main class:
+**Step 1:
+To launch the main menu of the application, run:**
+
 ```bash
-cd bootstrap
-java -jar target/bootstrap-1.0-SNAPSHOT.jar
+mvn exec:java -pl bootstrap -Dexec.mainClass=com.bonus71.bootstrap.Main
 ```
+After running this command, the main menu will appear in the terminal.
+
+**Step 2:
+Using the Application**
+
+Once the menu appears, follow the on-screen instructions to interact with the application.
+
 
 ## USAGE
 1. Launch the application from the terminal
