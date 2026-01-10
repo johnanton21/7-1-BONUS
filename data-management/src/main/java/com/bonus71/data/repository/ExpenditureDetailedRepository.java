@@ -16,13 +16,13 @@ import java.util.List;
  * for the {@code EXPENDITURE_DETAILED} database table using JDBC. It
  * encapsulates SQL execution and result mapping logic, ensuring a clear
  * separation between the persistence and business layers.
- * </p>
+
  *
  * <p>
  * All database connections are obtained via {@link DatabaseConfig}, and
  * prepared statements are used throughout to ensure security and
  * performance.
- * </p>
+
  */
 public class ExpenditureDetailedRepository {
     /**
@@ -31,7 +31,7 @@ public class ExpenditureDetailedRepository {
      * <p>
      * Executes a {@code SELECT * FROM EXPENDITURE_DETAILED} query and maps
      * each result row to an {@link ExpenditureDetailed} entity.
-     * </p>
+
      *
      * @return a list containing all {@link ExpenditureDetailed} records found
      * @throws SQLException if a database access error occurs
@@ -63,7 +63,7 @@ public class ExpenditureDetailedRepository {
      * <p>
      * Persists the provided {@link ExpenditureDetailed} entity by executing
      * an {@code INSERT INTO EXPENDITURE_DETAILED} statement.
-     * </p>
+
      *
      * @param expenditure the {@link ExpenditureDetailed} entity to be inserted
      * @throws SQLException if a database access error occurs
@@ -89,7 +89,7 @@ public class ExpenditureDetailedRepository {
      * <p>
      * Updates department and budget-related fields of a record identified
      * by its unique expenditure code.
-     * </p>
+
      *
      * @param expenditure the {@link ExpenditureDetailed} entity containing
      *                    updated data
@@ -122,7 +122,7 @@ public class ExpenditureDetailedRepository {
      * <p>
      * Removes the record identified by the specified expenditure code
      * from the {@code EXPENDITURE_DETAILED} table.
-     * </p>
+
      *
      * @param code the unique expenditure code identifier
      * @throws SQLException if a database access error occurs

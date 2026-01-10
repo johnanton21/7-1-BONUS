@@ -16,12 +16,12 @@ import java.util.List;
  * {@code NATIONAL_DEFENSE} database table using JDBC. Encapsulates SQL
  * execution and result mapping logic, ensuring a clear separation between
  * persistence and business layers.
- * </p>
+
  *
  * <p>
  * Database connections are managed through {@link DatabaseConfig}, and
  * prepared statements are used to ensure security and efficiency.
- * </p>
+
  */
 public class NationalDefenseRepository {
     /**
@@ -30,7 +30,7 @@ public class NationalDefenseRepository {
      * <p>
      * Executes a {@code SELECT * FROM NATIONAL_DEFENSE} query and maps each
      * result row to a {@link NationalDefense} entity.
-     * </p>
+
      *
      * @return a list containing all {@link NationalDefense} records found
      * @throws SQLException if a database access error occurs
@@ -60,7 +60,7 @@ public class NationalDefenseRepository {
      * <p>
      * Persists the provided {@link NationalDefense} entity by executing
      * an {@code INSERT INTO NATIONAL_DEFENSE} statement.
-     * </p>
+
      *
      * @param ministry the {@link NationalDefense} entity to be inserted
      * @throws SQLException if a database access error occurs
@@ -84,7 +84,7 @@ public class NationalDefenseRepository {
      * <p>
      * Updates the name and euro amount of a record identified by its major
      * category.
-     * </p>
+
      *
      * @param ministry the {@link NationalDefense} entity containing updated data
      * @throws SQLException if a database access error occurs
@@ -109,7 +109,7 @@ public class NationalDefenseRepository {
      * <p>
      * Removes the record identified by the specified major category from
      * the {@code NATIONAL_DEFENSE} table.
-     * </p>
+
      *
      * @param majorCategory the major category identifier
      * @throws SQLException if a database access error occurs

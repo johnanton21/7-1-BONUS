@@ -16,12 +16,12 @@ import java.util.List;
  * for the {@code EDUCATION} database table using JDBC. It encapsulates
  * all SQL logic and database interaction, ensuring separation of concerns
  * between persistence and business logic layers.
- * </p>
+
  *
  * <p>
  * Database connections are managed through {@link DatabaseConfig}, and
  * all operations use prepared statements to ensure safety and efficiency.
- * </p>
+
  */
 public class EducationRepository {
     /**
@@ -30,7 +30,7 @@ public class EducationRepository {
      * <p>
      * Executes a {@code SELECT * FROM EDUCATION} query and maps each result
      * row to an {@link Education} entity.
-     * </p>
+
      *
      * @return a list containing all {@link Education} records found
      * @throws SQLException if a database access error occurs
@@ -59,7 +59,7 @@ public class EducationRepository {
      * <p>
      * Executes an {@code INSERT INTO EDUCATION} statement using the data
      * provided by the given {@link Education} entity.
-     * </p>
+
      *
      * @param ministry the {@link Education} entity to be persisted
      * @throws SQLException if a database access error occurs
@@ -82,7 +82,7 @@ public class EducationRepository {
      * <p>
      * Updates the name and euro amount of an education record identified
      * by its major financial category.
-     * </p>
+
      *
      * @param ministry the {@link Education} entity containing updated data
      * @throws SQLException if a database access error occurs
@@ -105,7 +105,7 @@ public class EducationRepository {
      * <p>
      * Removes the record identified by the specified major financial
      * category from the {@code EDUCATION} table.
-     * </p>
+
      *
      * @param majorCategory the major financial category identifier
      * @throws SQLException if a database access error occurs

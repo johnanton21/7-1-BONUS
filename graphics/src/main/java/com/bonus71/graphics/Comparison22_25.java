@@ -54,10 +54,6 @@ public class Comparison22_25 extends JFrame {
     setContentPane(chartPanel);
   }
 
-    /**
-     * Opens a JFrame displaying the chart.
-     */
-
   public static void showChart() {
     Comparison22_25 chart = new Comparison22_25();
     chart.setSize(800, 600);

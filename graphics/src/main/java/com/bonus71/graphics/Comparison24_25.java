@@ -29,9 +29,6 @@ import org.jfree.data.category.DefaultCategoryDataset;
 
 public class Comparison24_25 {
 
-    /**
-     * Opens a JFrame displaying the 2024 vs 2025 bar chart.
-     */
 
   public static void showChart() {
 

@@ -16,12 +16,12 @@ import java.util.List;
  * for the {@code ENVIRONMENT} database table using JDBC. It encapsulates
  * all SQL queries and database interaction logic, ensuring a clear
  * separation between persistence and business layers.
- * </p>
+
  *
  * <p>
  * Database connections are obtained through {@link DatabaseConfig}, and
  * all operations utilize prepared statements for safety and performance.
- * </p>
+
  */
 public class EnvironmentRepository {
     /**
@@ -30,7 +30,7 @@ public class EnvironmentRepository {
      * <p>
      * Executes a {@code SELECT * FROM ENVIRONMENT} query and maps each
      * result row to an {@link Environment} entity.
-     * </p>
+
      *
      * @return a list containing all {@link Environment} records found
      * @throws SQLException if a database access error occurs
@@ -60,7 +60,7 @@ public class EnvironmentRepository {
      * <p>
      * Persists the provided {@link Environment} entity by executing an
      * {@code INSERT INTO ENVIRONMENT} statement.
-     * </p>
+
      *
      * @param ministry the {@link Environment} entity to be inserted
      * @throws SQLException if a database access error occurs
@@ -83,7 +83,7 @@ public class EnvironmentRepository {
      * <p>
      * Updates the name and euro amount of an environment-related record
      * identified by its major financial category.
-     * </p>
+
      *
      * @param ministry the {@link Environment} entity containing updated data
      * @throws SQLException if a database access error occurs
@@ -108,7 +108,7 @@ public class EnvironmentRepository {
      * <p>
      * Removes the record identified by the specified major financial
      * category from the {@code ENVIRONMENT} table.
-     * </p>
+
      *
      * @param majorCategory the major financial category identifier
      * @throws SQLException if a database access error occurs

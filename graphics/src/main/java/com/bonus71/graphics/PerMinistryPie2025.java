@@ -42,9 +42,6 @@ import org.jfree.data.general.DefaultPieDataset;
  */
 
 public class PerMinistryPie2025 {
-    /**
-     * Creates and displays the pie chart of 2025 ministry expenditures.
-     */
 
   public static void showChart() {
 

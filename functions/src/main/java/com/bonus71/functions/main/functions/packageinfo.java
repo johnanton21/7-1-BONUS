@@ -8,7 +8,7 @@
  *     <li>Providing service-level operations for the graphical interface</li>
  *     <li>Executing modification and editing operations on the dataset</li>
  * </ul>
- * </p>
+
  *
  * <p>The classes in this package are used directly by higher-level modules,
  * such as the GUI menus and main application controller, in order to offer

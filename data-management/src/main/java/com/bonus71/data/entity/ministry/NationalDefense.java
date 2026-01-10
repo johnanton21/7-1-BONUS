@@ -6,12 +6,12 @@ package com.bonus71.data.entity.ministry;
  * military organizations, or defense-related programs. Each record is
  * classified under a major financial category and includes a descriptive
  * name along with the corresponding monetary amount expressed in euros.
- * </p>
+
  *
  * <p>
  * The class is intended for use in data transfer, persistence, and reporting
  * processes within the application's financial and statistical modules.
- * </p>
+
  */
 public class NationalDefense {
 
@@ -24,7 +24,7 @@ public class NationalDefense {
      * Each instance represents a defense-related financial record classified
      * under a major category and includes a descriptive name along with the
      * corresponding amount expressed in euros.
-     * </p>
+
      *
      * @param majorCategory the major financial category identifier under which
      *                      this record is classified
