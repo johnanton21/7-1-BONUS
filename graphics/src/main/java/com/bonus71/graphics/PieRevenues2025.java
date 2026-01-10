@@ -17,7 +17,7 @@ import org.jfree.chart.plot.PiePlot;
 import org.jfree.data.general.DefaultPieDataset;
 
 
-/**
+/*
  * Pie chart visualizing government revenues and obligations for 2025.
  *
  * <p>

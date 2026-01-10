@@ -6,7 +6,7 @@
  * Licensed under the MIT License.
  */
 
-/**
+/*
  * Graphics module of the application.
  *
  * Provides classes for creating visual representations of financial and budgetary data.

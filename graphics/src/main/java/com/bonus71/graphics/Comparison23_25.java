@@ -15,7 +15,7 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 
-/**
+/*
  * Bar chart comparing financial metrics between 2023 and 2025.
  *
  * <p>

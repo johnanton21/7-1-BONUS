@@ -18,7 +18,7 @@ import org.jfree.chart.plot.PiePlot;
 import org.jfree.data.general.DefaultPieDataset;
 
 
-/**
+/*
  * Pie chart visualizing the detailed expenditures of all ministries in 2025.
  *
  * <p>
