@@ -1,3 +1,11 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2026 7+1 BONUS
+ *
+ * Licensed under the MIT License.
+ */
+
 package com.bonus71.functions.menus;
 
 
