@@ -6,17 +6,17 @@
   ~
   ~ Licensed under the MIT License.
   -->
+<!DOCTYPE module PUBLIC>
 
 <module name="Checker">
-
     <module name="TreeWalker">
-
-        <module name="OuterTypeFilename"/>
-        <module name="UnusedImports"/>
-        <module name="AvoidStarImport"/>
-        <module name="ClassName"/>
-        <module name="MethodName"/>
-
+        <module name="LineLength">
+            <property name="max" value="120"/>
+        </module>
+        <module name="JavadocStyle"/>
+        <module name="JavadocType"/>
+        <module name="JavadocMethod"/>
+        <module name="JavadocVariable"/>
+        <module name="FinalClass"/>
     </module>
-
 </module>
