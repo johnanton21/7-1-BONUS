@@ -35,9 +35,10 @@ import java.util.List;
  * a structured business logic layer instead of direct repository access.</p>
  */
 public class FinancialService {
-
+    /** Repository για τις δαπάνες. */
   private final ExpenditureRepository expenditureRepository;
-  private final RevenueRepository revenueRepository;
+    /** Repository για τα έσοδα. */
+    private final RevenueRepository revenueRepository;
 
     /**
      * Constructs the service using new repository instances.
