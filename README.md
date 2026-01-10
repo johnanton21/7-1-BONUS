@@ -33,7 +33,7 @@ java -jar target/bootstrap-1.0-SNAPSHOT.jar
 ```text
 .
 ├── bootstrap/              # Main entry point & application startup module
-├── config/                 # Configuration files (checkstyle)
+├── checkstyle/                 # Configuration files (checkstyle)
 ├── data-management/        # Data processing module
 ├── functions/              # Core business logic module
 ├── graphics/               # Visualization and UI components module
