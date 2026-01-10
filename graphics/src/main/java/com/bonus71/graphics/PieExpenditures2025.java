@@ -23,7 +23,7 @@ import org.jfree.data.general.DefaultPieDataset;
  * Each slice represents a major category of government spending, such as Health, Education,
  * Defense, Welfare, and Infrastructure, with the corresponding percentage of the total budget.
  * The chart is created using JFreeChart and displayed in a Swing JFrame.
- * </p>
+
  *
  * <p>
  * Features:
@@ -33,7 +33,7 @@ import org.jfree.data.general.DefaultPieDataset;
  *   <li>Circular pie chart with small interior gap for aesthetics.</li>
  *   <li>Font styling applied to labels for better readability.</li>
  * </ul>
- * </p>
+
  *
  * <p>
  *  * Note: The data is currently hard-coded for demonstration purposes.
