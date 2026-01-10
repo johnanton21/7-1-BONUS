@@ -13,6 +13,25 @@ import com.bonus71.data.repository.RevenueRepository;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+/**
+ * Provides a console-based menu for managing revenue data.
+ *
+ * <p>This class is part of the {@code functions.menus} package and offers a
+ * command-line interface for interacting with revenue records. Users can view,
+ * add, update, and delete revenue entries stored in the system.</p>
+ *
+ * <p>The class acts as a controller between user input and the data access layer,
+ * delegating all operations to the {@link com.bonus71.data.repository.RevenueRepository}.</p>
+ *
+ * <ul>
+ *   <li>Displays revenue records</li>
+ *   <li>Adds new revenue entries</li>
+ *   <li>Updates existing revenue entries</li>
+ *   <li>Deletes revenue entries</li>
+ * </ul>
+ */
+
+
 public class RevenueMenu {
   @SuppressWarnings("checkstyle:OneStatementPerLine")
   public static void menu(RevenueRepository repo) throws SQLException {
