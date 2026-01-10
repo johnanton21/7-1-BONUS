@@ -51,9 +51,7 @@ import org.jfree.data.general.DefaultPieDataset;
 
  */
 public class PieRevenues2025 {
-    /**
-     * Creates and displays the pie chart of government revenues and obligations for 2025.
-     */
+
 
   public static void showChart() {
 

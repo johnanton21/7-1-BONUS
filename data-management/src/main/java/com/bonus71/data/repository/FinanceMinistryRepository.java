@@ -24,12 +24,12 @@ import java.util.List;
  * {@code FINANCE_MINISTRY} database table using JDBC. Encapsulates SQL
  * execution and result mapping, ensuring separation of persistence
  * and business logic layers.
- * </p>
+
  *
  * <p>
  * Database connections are managed through {@link DatabaseConfig}, and
  * prepared statements are used to ensure security and efficiency.
- * </p>
+
  */
 public class FinanceMinistryRepository {
     /**
@@ -38,7 +38,7 @@ public class FinanceMinistryRepository {
      * <p>
      * Executes a {@code SELECT * FROM FINANCE_MINISTRY} query and maps each
      * result row to a {@link FinanceMinistry} entity.
-     * </p>
+
      *
      * @return a list containing all {@link FinanceMinistry} records found
      * @throws SQLException if a database access error occurs
@@ -68,7 +68,7 @@ public class FinanceMinistryRepository {
      * <p>
      * Persists the provided {@link FinanceMinistry} entity by executing
      * an {@code INSERT INTO FINANCE_MINISTRY} statement.
-     * </p>
+
      *
      * @param ministry the {@link FinanceMinistry} entity to be inserted
      * @throws SQLException if a database access error occurs
@@ -92,7 +92,7 @@ public class FinanceMinistryRepository {
      * <p>
      * Updates the name and euro amount of a record identified by its major
      * category.
-     * </p>
+
      *
      * @param ministry the {@link FinanceMinistry} entity containing updated data
      * @throws SQLException if a database access error occurs
@@ -117,7 +117,7 @@ public class FinanceMinistryRepository {
      * <p>
      * Removes the record identified by the specified major category from
      * the {@code FINANCE_MINISTRY} table.
-     * </p>
+
      *
      * @param majorCategory the major category identifier
      * @throws SQLException if a database access error occurs

@@ -24,12 +24,12 @@ import java.util.List;
  * for the {@code EXPENDITURE} database table using JDBC. It encapsulates
  * SQL statements and database interaction logic, promoting a clean
  * separation between persistence and business logic layers.
- * </p>
+
  *
  * <p>
  * Database connections are managed through {@link DatabaseConfig}, and
  * all operations use prepared statements to ensure safety and efficiency.
- * </p>
+
  */
 public class ExpenditureRepository {
     /**
@@ -38,7 +38,7 @@ public class ExpenditureRepository {
      * <p>
      * Executes a {@code SELECT * FROM EXPENDITURE} query and maps each
      * result row to an {@link Expenditure} entity.
-     * </p>
+
      *
      * @return a list containing all {@link Expenditure} records found
      * @throws SQLException if a database access error occurs
@@ -67,7 +67,7 @@ public class ExpenditureRepository {
      * <p>
      * Persists the provided {@link Expenditure} entity by executing an
      * {@code INSERT INTO EXPENDITURE} statement.
-     * </p>
+
      *
      * @param expenditure the {@link Expenditure} entity to be inserted
      * @throws SQLException if a database access error occurs
@@ -90,7 +90,7 @@ public class ExpenditureRepository {
      * <p>
      * Updates the category and euro amount of an expenditure record
      * identified by its unique code.
-     * </p>
+
      *
      * @param expenditure the {@link Expenditure} entity containing updated data
      * @throws SQLException if a database access error occurs
@@ -113,7 +113,7 @@ public class ExpenditureRepository {
      * <p>
      * Removes the record identified by the specified expenditure code
      * from the {@code EXPENDITURE} table.
-     * </p>
+
      *
      * @param code the unique expenditure code identifier
      * @throws SQLException if a database access error occurs

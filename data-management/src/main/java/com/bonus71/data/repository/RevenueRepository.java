@@ -24,12 +24,12 @@ import java.util.List;
  * {@code REVENUE} database table using JDBC. Encapsulates SQL execution
  * and result mapping, ensuring separation between persistence and
  * business logic layers.
- * </p>
+
  *
  * <p>
  * Database connections are managed through {@link DatabaseConfig}, and
  * prepared statements are used to improve security and performance.
- * </p>
+
  */
 public class RevenueRepository {
     /**
@@ -38,7 +38,7 @@ public class RevenueRepository {
      * <p>
      * Executes a {@code SELECT * FROM REVENUE} query and maps each result
      * row to a {@link Revenue} entity.
-     * </p>
+
      *
      * @return a list containing all {@link Revenue} records found
      * @throws SQLException if a database access error occurs
@@ -68,7 +68,7 @@ public class RevenueRepository {
      * <p>
      * Persists the provided {@link Revenue} entity by executing an
      * {@code INSERT INTO REVENUE} statement.
-     * </p>
+
      *
      * @param revenue the {@link Revenue} entity to be inserted
      * @throws SQLException if a database access error occurs
@@ -91,7 +91,7 @@ public class RevenueRepository {
      *
      * <p>
      * Updates the category and euro amount of a record identified by its code.
-     * </p>
+
      *
      * @param revenue the {@link Revenue} entity containing updated data
      * @throws SQLException if a database access error occurs
@@ -114,7 +114,7 @@ public class RevenueRepository {
      *
      * <p>
      * Removes the record identified by the specified code from the {@code REVENUE} table.
-     * </p>
+
      *
      * @param code the unique code identifying the revenue record
      * @throws SQLException if a database access error occurs

@@ -14,12 +14,12 @@ package com.bonus71.data.entity.ministry;
  * organizations, or programs. Each instance corresponds to a specific
  * entry classified under a major financial category and includes a
  * descriptive name along with the allocated or recorded amount in euros.
- * </p>
+
  *
  * <p>
  * The class is primarily used for data transfer, persistence, and reporting
  * purposes within the application's financial and statistical modules.
- * </p>
+
  */
 public class Health {
 

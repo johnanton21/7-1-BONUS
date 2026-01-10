@@ -13,12 +13,12 @@ package com.bonus71.data.entity.ministry;
  * This entity encapsulates budget-related information grouped by a major
  * financial category, including the ministry name and the corresponding
  * amount expressed in euros.
- * </p>
+
  *
  * <p>
  * It is primarily used as a data transfer and persistence object within
  * the finance and reporting modules of the application.
- * </p>
+
  */
 
 public class FinanceMinistry {
@@ -33,7 +33,7 @@ public class FinanceMinistry {
      * Each instance represents a financial record associated with a ministry,
      * classified under a major financial category and including a descriptive
      * name along with the corresponding monetary amount expressed in euros.
-     * </p>
+
      *
      * @param majorCategory the major financial category identifier under which
      *                      this ministry record is classified
