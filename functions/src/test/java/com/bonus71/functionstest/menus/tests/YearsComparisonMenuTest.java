@@ -20,6 +20,11 @@ import java.util.Map;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Test;
 
+/**
+ * * Fake in-memory repository for testing purposes.
+ *
+ */
+
 class FakeYearsComparisonRepository extends YearsComparisonRepository {
   private final Map<Integer, YearsComparison> data = new HashMap<>();
 
@@ -32,6 +37,10 @@ class FakeYearsComparisonRepository extends YearsComparisonRepository {
     return data.get(year);
   }
 }
+
+/**
+ * Unit tests for {@link YearsComparisonMenu} using a fake repository.
+ */
 
 public class YearsComparisonMenuTest {
   @Test

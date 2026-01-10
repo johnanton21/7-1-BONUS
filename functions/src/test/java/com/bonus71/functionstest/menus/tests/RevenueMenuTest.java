@@ -22,6 +22,12 @@ import java.util.Scanner;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Unit tests for {@link RevenueMenu}.
+ *
+ * <p>Tests all menu options (view, add, update, delete) using a fake in-memory repository.</p>
+ */
+
 class RevenueMenuTest {
 
   private FakeRevenueRepository repo;

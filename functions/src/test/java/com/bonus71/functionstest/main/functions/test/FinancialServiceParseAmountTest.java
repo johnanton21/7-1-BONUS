@@ -20,6 +20,26 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Unit test class for {@link FinancialService} focusing on parsing monetary amount strings.
+ *
+ * <p>This class uses JUnit 5 and Mockito to verify that {@link FinancialService} correctly
+ * parses various revenue string formats into numeric values and calculates total revenue.</p>
+ *
+ * <p>Tested scenarios include:
+ * <ul>
+ *   <li>Amounts with comma as decimal separator (e.g., "1,200")</li>
+ *   <li>Amounts with currency symbols and spaces (e.g., " €500 ", "300€")</li>
+ *   <li>Null or empty strings</li>
+ * </ul>
+ *
+ * <p>The test ensures that the {@link FinancialService#calculateTotalRevenue()} method
+ * correctly sums the parsed amounts into the total revenue.</p>
+ *
+ * <p>Setup uses reflection to inject a mock {@link RevenueRepository} into the {@code FinancialService}.</p>
+ */
+
+
 public class FinancialServiceParseAmountTest {
 
   private FinancialService service;

@@ -24,6 +24,26 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Unit test class for {@link FinancialService} focusing on fiscal/budget-related operations.
+ *
+ * <p>This class uses JUnit 5 and Mockito to test fiscal calculations, including
+ * the computation of fiscal balance and status (Surplus, Deficit, Balanced),
+ * as well as parsing of monetary amount strings in various formats.</p>
+ *
+ * <p>Tested operations include:
+ * <ul>
+ *   <li>Calculation of fiscal balance when revenues exceed expenditures (Surplus)</li>
+ *   <li>Calculation of fiscal balance when expenditures exceed revenues (Deficit)</li>
+ *   <li>Calculation of fiscal balance when revenues equal expenditures (Balanced)</li>
+ *   <li>Parsing of amounts from strings with various formats, including currency symbols, commas, dots, null, empty, or invalid strings</li>
+ * </ul>
+ *
+ * <p>Setup uses reflection to inject mock {@link RevenueRepository} and {@link ExpenditureRepository}
+ * instances into the {@code FinancialService} before each test.</p>
+ */
+
+
 public class FinancialServiceFiscalTest {
 
   private FinancialService service;

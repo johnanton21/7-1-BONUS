@@ -20,6 +20,24 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Unit test class for {@link EditProcessor}.
+ *
+ * <p>This class uses JUnit 5 to test the {@code editData()} method.
+ * It simulates user input via {@link System#in} and captures console output
+ * via {@link System#out} to verify the behavior of the data editing menu.</p>
+ *
+ * <p>Test cases include:
+ * <ul>
+ *   <li>Exiting the menu immediately (input "0")</li>
+ *   <li>Handling invalid menu selections</li>
+ *   <li>Displaying the main data management menu with all options</li>
+ * </ul>
+ *
+ * <p>Setup and teardown methods restore the original input and output streams
+ * to ensure standard console behavior after each test.</p>
+ */
+
 
 public class EditProcessorTest {
 

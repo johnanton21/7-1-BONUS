@@ -20,6 +20,27 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * Unit test class for {@link DisplayMinistries}.
+ *
+ * <p>This class uses JUnit 5 to test the {@code showMinistriesData()} method.
+ * It simulates user input via {@link System#in} and captures console output
+ * via {@link System#out} to verify that menu options for all ministries
+ * (Education, Environment, National Defense, Finance, Health) behave as expected.</p>
+ *
+ * <p>Test cases include:
+ * <ul>
+ *   <li>Exiting the menu immediately</li>
+ *   <li>Handling invalid selections</li>
+ *   <li>Displaying each ministry's data correctly</li>
+ *   <li>Handling multiple selections in sequence</li>
+ * </ul>
+ *
+ * <p>Setup and teardown methods redirect input and output streams for testing,
+ * ensuring that standard console behavior is restored after each test.</p>
+ */
+
+
 public class DisplayMinistriesTest {
 
   private final InputStream originalIn = System.in;
