@@ -24,7 +24,7 @@ import org.jfree.data.general.DefaultPieDataset;
  * <p>
  * Each slice represents a ministry or governmental body, with the amount in euros spent in 2025.
  * The chart is created using JFreeChart and displayed in a Swing JFrame.
- * </p>
+
  *
  * <p>
  * Features:
@@ -34,19 +34,19 @@ import org.jfree.data.general.DefaultPieDataset;
  *   <li>Pie chart is circular with a small interior gap for aesthetics.</li>
  *   <li>Font styling is applied to labels for better readability.</li>
  * </ul>
- * </p>
+
  *
  * <p>
  * Note: The data is currently hard-coded for demonstration purposes.
  * It can be extended to fetch live data from the financial repositories.
- * </p>
+
  *
  * <p>
  * Usage:
  * <pre>{@code
  * PerMinistryPie2025.showChart(); // Opens a JFrame displaying the pie chart
  * }</pre>
- * </p>
+
  */
 
 public class PerMinistryPie2025 {
