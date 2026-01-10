@@ -14,6 +14,26 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Unit test class for {@link FinancialService} focusing on revenue-related operations.
+ *
+ * <p>This class uses JUnit 5 and Mockito to test the revenue management functionality
+ * of {@code FinancialService}. A mock {@link RevenueRepository} is injected to
+ * verify that repository methods are called correctly.</p>
+ *
+ * <p>Tested operations include:
+ * <ul>
+ *   <li>Adding a revenue entry via {@link FinancialService#addRevenue(Revenue)}</li>
+ *   <li>Updating a revenue entry via {@link FinancialService#updateRevenue(Revenue)}</li>
+ *   <li>Deleting a revenue entry via {@link FinancialService#deleteRevenue(int)}</li>
+ *   <li>Calculating total revenue when repository is empty via {@link FinancialService#calculateTotalRevenue()}</li>
+ * </ul>
+ *
+ * <p>Setup uses reflection to inject the mock repository into the {@code FinancialService}
+ * instance before each test.</p>
+ */
+
+
 public class FinancialServiceRevenueTest {
 
   private FinancialService service;

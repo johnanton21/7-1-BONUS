@@ -12,6 +12,13 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit tests for {@link ExpensesMenu}.
+ *
+ * <p>Uses a fake in-memory repository to simulate CRUD operations
+ * and tests all menu options: view, add, update, delete, and invalid selection handling.</p>
+ */
+
 class ExpensesMenuTest {
 
     static class FakeExpenditureRepo extends ExpenditureRepository {

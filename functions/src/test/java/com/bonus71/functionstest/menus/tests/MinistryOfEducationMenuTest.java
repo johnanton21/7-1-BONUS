@@ -11,6 +11,12 @@ import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit tests for {@link MinistryOfEducationMenu}.
+ *
+ * <p>Tests all menu options: view, add, update, delete using a fake in-memory repository.</p>
+ */
+
 class MinistryOfEducationMenuTest {
 
     private FakeEducationRepository repo;
