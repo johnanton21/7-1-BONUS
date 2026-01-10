@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ~ MIT License
-  ~
-  ~ Copyright (c) 2026 7+1 BONUS
-  ~
-  ~ Licensed under the MIT License.
-  -->
-<!DOCTYPE module PUBLIC>
+<!DOCTYPE module PUBLIC
+        "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+        "https://checkstyle.org/dtds/configuration_1_3.dtd">
 
 <module name="Checker">
+
+    <!-- Line length is direct child of Checker -->
+    <module name="LineLength">
+        <property name="max" value="120"/>
+    </module>
+
     <module name="TreeWalker">
-        <module name="LineLength">
-            <property name="max" value="120"/>
-        </module>
         <module name="JavadocStyle"/>
         <module name="JavadocType"/>
         <module name="JavadocMethod"/>
         <module name="JavadocVariable"/>
         <module name="FinalClass"/>
     </module>
+
 </module>
