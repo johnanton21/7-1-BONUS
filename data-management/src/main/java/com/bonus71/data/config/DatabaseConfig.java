@@ -30,13 +30,13 @@ import java.sql.SQLException;
  */
 
 public class DatabaseConfig {
-
+    /** JDBC URL για τη σύνδεση με τη βάση δεδομένων. */
   private static final String URL =
 
             "jdbc:mysql://mainline.proxy.rlwy.net:13518/railway?useSSL=true&serverTimezone=UTC";
-
+    /** Όνομα χρήστη για τη βάση δεδομένων. */
   private static final String USER = "root";
-
+    /** Κωδικός πρόσβασης για τη βάση δεδομένων. */
   private static final String PASS = "xvRyHXdJgJHaVvQIcJclFMKzxPAmlsXs";
 
   static {
@@ -52,7 +52,12 @@ public class DatabaseConfig {
     }
 
   }
-
+    /**
+     * Επιστρέφει μια σύνδεση με τη βάση δεδομένων.
+     *
+     * @return μια έγκυρη {@link Connection} με τη βάση δεδομένων
+     * @throws SQLException αν η σύνδεση αποτύχει
+     */
   public static Connection getConnection() throws SQLException {
 
     return DriverManager.getConnection(URL, USER, PASS);

@@ -20,12 +20,16 @@ package com.bonus71.data.entity.financial;
  */
 
 public class ExpenditureDetailed {
-
-  private int code;
-  private String department;
-  private String regularBudget;
-  private String publicInvestmentBudget;
-  private String total;
+    /** Unique identifier code of the expenditure. */
+    private int code;
+    /** Department or administrative unit associated with the expenditure. */
+    private String department;
+    /** Amount allocated from the regular budget. */
+    private String regularBudget;
+    /** Amount allocated from the public investment budget. */
+    private String publicInvestmentBudget;
+    /** Total expenditure amount. */
+    private String total;
 
     /**
      * Constructs an {@code ExpenditureDetailed} object with detailed
@@ -51,43 +55,45 @@ public class ExpenditureDetailed {
     this.publicInvestmentBudget = publicInvestmentBudget;
     this.total = total;
   }
-
+    /** Returns the expenditure code. */
   public int getCode() {
     return code;
   }
-
+    /** Sets the expenditure code. */
   public void setCode(int code) {
     this.code = code;
   }
-
+    /** Returns the department associated with the expenditure. */
   public String getDepartment() {
     return department;
   }
-
+    /** Sets the department associated with the expenditure. */
   public void setDepartment(String department) {
     this.department = department;
   }
-
+    /** Returns the amount allocated from the regular budget. */
   public String getRegularBudget() {
     return regularBudget;
   }
-
+    /** Sets the amount allocated from the regular budget. */
   public void setRegularBudget(String regularBudget) {
     this.regularBudget = regularBudget;
   }
-
+/** Returns the amount allocated from the public investment budget.*/
   public String getPublicInvestmentBudget() {
     return publicInvestmentBudget;
   }
 
+  /** Sets the amount allocated from the public investment budget. */
   public void setPublicInvestmentBudget(String publicInvestmentBudget) {
     this.publicInvestmentBudget = publicInvestmentBudget;
   }
 
+    /** Returns the total expenditure amount. */
   public String getTotal() {
     return total;
   }
-
+    /** Sets the total expenditure amount. */
   public void setTotal(String total) {
     this.total = total;
   }
