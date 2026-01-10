@@ -1,3 +1,11 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2026 7+1 BONUS
+ *
+ * Licensed under the MIT License.
+ */
+
 package com.bonus71.graphics;
 
 import javax.swing.JFrame;
@@ -15,7 +23,7 @@ import org.jfree.data.general.DefaultPieDataset;
  * Each slice represents a major category of government spending, such as Health, Education,
  * Defense, Welfare, and Infrastructure, with the corresponding percentage of the total budget.
  * The chart is created using JFreeChart and displayed in a Swing JFrame.
- * </p>
+
  *
  * <p>
  * Features:
