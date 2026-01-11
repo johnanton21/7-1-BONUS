@@ -139,7 +139,7 @@ public class Main extends JFrame {
     return button;
   }
 
-  // OPTION 1: Display Budget Data
+  //OPTION 1: Display Budget Data
   private void displayBudgetData() {
     try {
       StringBuilder sb = new StringBuilder();
