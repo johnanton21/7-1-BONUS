@@ -7,6 +7,7 @@
  */
 
 package com.bonus71.data.entity.Comparison;
+
 /**
  * Represents a financial comparison for a specific fiscal year.
  *
@@ -21,58 +22,58 @@ package com.bonus71.data.entity.Comparison;
 
 public class YearsComparison {
 
-    private int year;
-    private String netRevenues;
-    private String expenses;
-    private String balance;
+  private int year;
+  private String netRevenues;
+  private String expenses;
+  private String balance;
 
-    public YearsComparison(int year, String netRevenues, String expenses, String balance) {
-        this.year = year;
-        this.netRevenues = netRevenues;
-        this.expenses = expenses;
-        this.balance = balance;
-    }
-    /**
-     * Returns the fiscal year of this comparison.
-     *
-     * @return the fiscal year
-     */
+  public YearsComparison(int year, String netRevenues, String expenses, String balance) {
+    this.year = year;
+    this.netRevenues = netRevenues;
+    this.expenses = expenses;
+    this.balance = balance;
+  }
+  /**
+   * Returns the fiscal year of this comparison.
+   *
+   * @return the fiscal year
+   */
 
-    public int getYear() {
-        return year;
-    }
+  public int getYear() {
+    return year;
+  }
 
-    /**
-     * Sets the fiscal year of this comparison.
-     *
-     * @param year the fiscal year to set
-     */
+  /**
+   * Sets the fiscal year of this comparison.
+   *
+   * @param year the fiscal year to set
+   */
 
-    public void setYear(int year) {
-        this.year = year;
-    }
+  public void setYear(int year) {
+    this.year = year;
+  }
 
-    public String getNetRevenues() {
-        return netRevenues;
-    }
+  public String getNetRevenues() {
+    return netRevenues;
+  }
 
-    public void setNetRevenues(String netRevenues) {
-        this.netRevenues = netRevenues;
-    }
+  public void setNetRevenues(String netRevenues) {
+    this.netRevenues = netRevenues;
+  }
 
-    public String getExpenses() {
-        return expenses;
-    }
+  public String getExpenses() {
+    return expenses;
+  }
 
-    public void setExpenses(String expenses) {
-        this.expenses = expenses;
-    }
+  public void setExpenses(String expenses) {
+    this.expenses = expenses;
+  }
 
-    public String getBalance() {
-        return balance;
-    }
+  public String getBalance() {
+    return balance;
+  }
 
-    public void setBalance(String balance) {
-        this.balance = balance;
-    }
+  public void setBalance(String balance) {
+    this.balance = balance;
+  }
 }

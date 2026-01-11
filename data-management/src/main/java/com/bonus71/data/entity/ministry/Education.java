@@ -7,6 +7,7 @@
  */
 
 package com.bonus71.data.entity.ministry;
+
 /**
  * Represents financial data related to the education sector.
  *
@@ -16,6 +17,7 @@ package com.bonus71.data.entity.ministry;
  *
  * <p>Instances of this class are used to analyze and present financial
  * figures related to education policy and funding.</p>
+ *
  */
 
 public class Education {
@@ -25,13 +27,13 @@ public class Education {
   private String euros;
 
   /**
-     * Constructs an {@code Education} object with the specified attributes.
-     *
-     * @param majorCategory the major classification category of the
-     *                      education-related financial entry
-     * @param name the descriptive name of the education category
-     * @param euros the monetary amount associated with the category in euros
-     */
+   * Constructs an {@code Education} object with the specified attributes.
+   *
+   * @param majorCategory the major classification category of the
+   *                      education-related financial entry
+   * @param name the descriptive name of the education category
+   * @param euros the monetary amount associated with the category in euros
+   */
 
   public Education(int majorCategory, String name, String euros) {
     this.majorCategory = majorCategory;

@@ -16,34 +16,33 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * Repository class responsible for data access operations related to
  * {@link ExpenditureDetailed} entities.
- * <p>
- * This class provides CRUD (Create, Read, Update, Delete) functionality
+ *
+ * <p>This class provides CRUD (Create, Read, Update, Delete) functionality
  * for the {@code EXPENDITURE_DETAILED} database table using JDBC. It
  * encapsulates SQL execution and result mapping logic, ensuring a clear
  * separation between the persistence and business layers.
 
  *
- * <p>
- * All database connections are obtained via {@link DatabaseConfig}, and
+ * <p>All database connections are obtained via {@link DatabaseConfig}, and
  * prepared statements are used throughout to ensure security and
  * performance.
 
  */
 public class ExpenditureDetailedRepository {
-    /**
-     * Retrieves all detailed expenditure records from the database.
-     *
-     * <p>
-     * Executes a {@code SELECT * FROM EXPENDITURE_DETAILED} query and maps
-     * each result row to an {@link ExpenditureDetailed} entity.
+  /**
+   * Retrieves all detailed expenditure records from the database.
+   *
+   * <p>Executes a {@code SELECT * FROM EXPENDITURE_DETAILED} query and maps
+   * each result row to an {@link ExpenditureDetailed} entity.
 
-     *
-     * @return a list containing all {@link ExpenditureDetailed} records found
-     * @throws SQLException if a database access error occurs
-     */
+   *
+   * @return a list containing all {@link ExpenditureDetailed} records found
+   * @throws SQLException if a database access error occurs
+   */
   public List<ExpenditureDetailed> findAll() throws SQLException {
     List<ExpenditureDetailed> list = new ArrayList<>();
     String sql = "SELECT * FROM EXPENDITURE_DETAILED";
@@ -65,17 +64,16 @@ public class ExpenditureDetailedRepository {
 
     return list;
   }
-    /**
-     * Inserts a new detailed expenditure record into the database.
-     *
-     * <p>
-     * Persists the provided {@link ExpenditureDetailed} entity by executing
-     * an {@code INSERT INTO EXPENDITURE_DETAILED} statement.
+  /**
+   * Inserts a new detailed expenditure record into the database.
+   *
+   * <p>Persists the provided {@link ExpenditureDetailed} entity by executing
+   * an {@code INSERT INTO EXPENDITURE_DETAILED} statement.
 
-     *
-     * @param expenditure the {@link ExpenditureDetailed} entity to be inserted
-     * @throws SQLException if a database access error occurs
-     */
+   *
+   * @param expenditure the {@link ExpenditureDetailed} entity to be inserted
+   * @throws SQLException if a database access error occurs
+   */
   public void insert(ExpenditureDetailed expenditure) throws SQLException {
     String sql = "INSERT INTO EXPENDITURE_DETAILED VALUES (?, ?, ?, ?, ?)";
 
@@ -91,18 +89,17 @@ public class ExpenditureDetailedRepository {
       ps.executeUpdate();
     }
   }
-    /**
-     * Updates an existing detailed expenditure record in the database.
-     *
-     * <p>
-     * Updates department and budget-related fields of a record identified
-     * by its unique expenditure code.
+  /**
+   * Updates an existing detailed expenditure record in the database.
+   *
+   * <p>Updates department and budget-related fields of a record identified
+   * by its unique expenditure code.
 
-     *
-     * @param expenditure the {@link ExpenditureDetailed} entity containing
-     *                    updated data
-     * @throws SQLException if a database access error occurs
-     */
+   *
+   * @param expenditure the {@link ExpenditureDetailed} entity containing
+   *                    updated data
+   * @throws SQLException if a database access error occurs
+   */
   public void update(ExpenditureDetailed expenditure) throws SQLException {
     String sql = "UPDATE EXPENDITURE_DETAILED "
             + "SET DEPARTMENT=?, "
@@ -124,17 +121,16 @@ public class ExpenditureDetailedRepository {
     }
   }
 
-    /**
-     * Deletes a detailed expenditure record from the database.
-     *
-     * <p>
-     * Removes the record identified by the specified expenditure code
-     * from the {@code EXPENDITURE_DETAILED} table.
+  /**
+   * Deletes a detailed expenditure record from the database.
+   *
+   * <p>Removes the record identified by the specified expenditure code
+   * from the {@code EXPENDITURE_DETAILED} table.
 
-     *
-     * @param code the unique expenditure code identifier
-     * @throws SQLException if a database access error occurs
-     */
+   *
+   * @param code the unique expenditure code identifier
+   * @throws SQLException if a database access error occurs
+   */
   public void delete(int code) throws SQLException {
     String sql = "DELETE FROM EXPENDITURE_DETAILED WHERE CODE=?";
 

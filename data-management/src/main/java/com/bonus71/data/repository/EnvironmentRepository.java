@@ -19,30 +19,28 @@ import java.util.List;
 /**
  * Repository class responsible for data access operations related to
  * {@link Environment} entities.
- * <p>
- * This class provides CRUD (Create, Read, Update, Delete) functionality
+ *
+ * <p>This class provides CRUD (Create, Read, Update, Delete) functionality
  * for the {@code ENVIRONMENT} database table using JDBC. It encapsulates
  * all SQL queries and database interaction logic, ensuring a clear
  * separation between persistence and business layers.
 
  *
- * <p>
- * Database connections are obtained through {@link DatabaseConfig}, and
+ * <p>Database connections are obtained through {@link DatabaseConfig}, and
  * all operations utilize prepared statements for safety and performance.
 
  */
 public class EnvironmentRepository {
-    /**
-     * Retrieves all environment-related records from the database.
-     *
-     * <p>
-     * Executes a {@code SELECT * FROM ENVIRONMENT} query and maps each
-     * result row to an {@link Environment} entity.
+  /**
+   * Retrieves all environment-related records from the database.
+   *
+   * <p>Executes a {@code SELECT * FROM ENVIRONMENT} query and maps each
+   * result row to an {@link Environment} entity.
 
-     *
-     * @return a list containing all {@link Environment} records found
-     * @throws SQLException if a database access error occurs
-     */
+   *
+   * @return a list containing all {@link Environment} records found
+   * @throws SQLException if a database access error occurs
+   */
   public List<Environment> findAll() throws SQLException {
     List<Environment> list = new ArrayList<>();
     String sql = "SELECT * FROM ENVIRONMENT";
@@ -62,17 +60,16 @@ public class EnvironmentRepository {
 
     return list;
   }
-    /**
-     * Inserts a new environment record into the database.
-     *
-     * <p>
-     * Persists the provided {@link Environment} entity by executing an
-     * {@code INSERT INTO ENVIRONMENT} statement.
+  /**
+   * Inserts a new environment record into the database.
+   *
+   * <p>Persists the provided {@link Environment} entity by executing an
+   * {@code INSERT INTO ENVIRONMENT} statement.
 
-     *
-     * @param ministry the {@link Environment} entity to be inserted
-     * @throws SQLException if a database access error occurs
-     */
+   *
+   * @param ministry the {@link Environment} entity to be inserted
+   * @throws SQLException if a database access error occurs
+   */
   public void insert(Environment ministry) throws SQLException {
     String sql = "INSERT INTO ENVIRONMENT VALUES (?, ?, ?)";
 
@@ -85,17 +82,16 @@ public class EnvironmentRepository {
       ps.executeUpdate();
     }
   }
-    /**
-     * Updates an existing environment record in the database.
-     *
-     * <p>
-     * Updates the name and euro amount of an environment-related record
-     * identified by its major financial category.
+  /**
+   * Updates an existing environment record in the database.
+   *
+   * <p>Updates the name and euro amount of an environment-related record
+   * identified by its major financial category.
 
-     *
-     * @param ministry the {@link Environment} entity containing updated data
-     * @throws SQLException if a database access error occurs
-     */
+   *
+   * @param ministry the {@link Environment} entity containing updated data
+   * @throws SQLException if a database access error occurs
+   */
   public void update(Environment ministry) throws SQLException {
     String sql = "UPDATE ENVIRONMENT "
             + "SET NAME=?, EUROS=? WHERE MAJOR_CATEGORY=?";
@@ -110,17 +106,16 @@ public class EnvironmentRepository {
       ps.executeUpdate();
     }
   }
-    /**
-     * Deletes an environment record from the database.
-     *
-     * <p>
-     * Removes the record identified by the specified major financial
-     * category from the {@code ENVIRONMENT} table.
+  /**
+   * Deletes an environment record from the database.
+   *
+   * <p>Removes the record identified by the specified major financial
+   * category from the {@code ENVIRONMENT} table.
 
-     *
-     * @param majorCategory the major financial category identifier
-     * @throws SQLException if a database access error occurs
-     */
+   *
+   * @param majorCategory the major financial category identifier
+   * @throws SQLException if a database access error occurs
+   */
   public void delete(int majorCategory) throws SQLException {
     String sql = "DELETE FROM ENVIRONMENT WHERE MAJOR_CATEGORY=?";
 
