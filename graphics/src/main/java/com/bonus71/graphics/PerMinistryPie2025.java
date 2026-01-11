@@ -29,7 +29,8 @@ import org.jfree.data.general.DefaultPieDataset;
  * <p>
  * Features:
  * <ul>
- *   <li>Displays all ministries and central government bodies with their corresponding budgets.</li>
+ *   <li>Displays all ministries and central government bodies with their
+ * corresponding budgets.</li>
  *   <li>Labels include the ministry name and amount in euros.</li>
  *   <li>Pie chart is circular with a small interior gap for aesthetics.</li>
  *   <li>Font styling is applied to labels for better readability.</li>
