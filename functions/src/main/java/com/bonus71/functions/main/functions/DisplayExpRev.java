@@ -34,19 +34,19 @@ import java.sql.SQLException;
  */
 
 public class DisplayExpRev {
-    /**
-     * Displays all expenditure, revenue, and detailed expenditure information.
-     *
-     * <p>This method fetches data from the corresponding repositories and prints
-     * the results in categorized blocks:</p>
-     * <ol>
-     *     <li>"DISPLAY EXPENDITURES"</li>
-     *     <li>"DISPLAY REVENUES"</li>
-     *     <li>"DISPLAY ARTICLE 2 EXPENDITURES"</li>
-     * </ol>
-     *
-     * @throws SQLException if a database access error occurs during retrieval
-     */
+  /**
+   * Displays all expenditure, revenue, and detailed expenditure information.
+   *
+   * <p>This method fetches data from the corresponding repositories and prints
+   * the results in categorized blocks:</p>
+   * <ol>
+   *     <li>"DISPLAY EXPENDITURES"</li>
+   *     <li>"DISPLAY REVENUES"</li>
+   *     <li>"DISPLAY ARTICLE 2 EXPENDITURES"</li>
+   * </ol>
+   *
+   * @throws SQLException if a database access error occurs during retrieval
+   */
 
   public static void showAll() throws SQLException {
 

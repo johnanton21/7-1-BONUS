@@ -47,7 +47,8 @@ public class MinistryOfHealthMenu {
 
     switch (ch) {
       case 1 -> repo.findAll().forEach(p ->
-                    System.out.println(p.getMajorCategory() + " | " + p.getName() + " | " + p.getEuros()));
+                    System.out.println(p.getMajorCategory() + " | " + p.getName() + " | "
+                            + p.getEuros()));
       case 2 -> {
         System.out.print("Code: ");
         int m = scanner.nextInt();

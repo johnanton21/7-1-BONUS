@@ -34,51 +34,52 @@ import java.util.List;
  * <p>This service is typically used by controllers or menu layers that require
  * a structured business logic layer instead of direct repository access.</p>
  */
+
 public class FinancialService {
 
   private final ExpenditureRepository expenditureRepository;
   private final RevenueRepository revenueRepository;
 
-    /**
-     * Constructs the service using new repository instances.
-     *
-     * <p>Repositories are created upon initialization and reused for all
-     * operations performed by this service instance.</p>
-     */
+  /**
+   * Constructs the service using new repository instances.
+   *
+   * <p>Repositories are created upon initialization and reused for all
+   * operations performed by this service instance.</p>
+   */
 
   public FinancialService() {
     this.expenditureRepository = new ExpenditureRepository();
     this.revenueRepository = new RevenueRepository();
   }
 
-    /**
-     * Retrieves all revenues from the database.
-     *
-     * @return a list of {@link Revenue} entities
-     * @throws SQLException if a data-access error occurs
-     */
+  /**
+   * Retrieves all revenues from the database.
+   *
+   * @return a list of {@link Revenue} entities
+   * @throws SQLException if a data-access error occurs
+   */
 
   public List<Revenue> getAllRevenues() throws SQLException {
     return revenueRepository.findAll();
   }
 
-    /**
-     * Retrieves all expenditures from the database.
-     *
-     * @return a list of {@link Expenditure} entities
-     * @throws SQLException if a data-access error occurs
-     */
+  /**
+   * Retrieves all expenditures from the database.
+   *
+   * @return a list of {@link Expenditure} entities
+   * @throws SQLException if a data-access error occurs
+   */
 
   public List<Expenditure> getAllExpenditures() throws SQLException {
     return expenditureRepository.findAll();
   }
 
-    /**
-     * Computes the sum of all revenue amounts.
-     *
-     * @return total revenue in euros as a double value
-     * @throws SQLException if revenue retrieval fails
-     */
+  /**
+   * Computes the sum of all revenue amounts.
+   *
+   * @return total revenue in euros as a double value
+   * @throws SQLException if revenue retrieval fails
+   */
 
   public double calculateTotalRevenue() throws SQLException {
     List<Revenue> revenues = revenueRepository.findAll();
@@ -90,12 +91,12 @@ public class FinancialService {
 
     return total;
   }
-    /**
-     * Computes the sum of all expenditure amounts.
-     *
-     * @return total expenditures in euros as a double value
-     * @throws SQLException if expenditure retrieval fails
-     */
+  /**
+   * Computes the sum of all expenditure amounts.
+   *
+   * @return total expenditures in euros as a double value
+   * @throws SQLException if expenditure retrieval fails
+   */
 
   public double calculateTotalExpenditure() throws SQLException {
     List<Expenditure> expenditures = expenditureRepository.findAll();
@@ -107,13 +108,13 @@ public class FinancialService {
 
     return total;
   }
-    /**
-     * Calculates the fiscal balance as:
-     * <pre>totalRevenue - totalExpenditure</pre>
-     *
-     * @return the fiscal balance (positive = surplus, negative = deficit)
-     * @throws SQLException if retrieval or computation fails
-     */
+  /**
+   * Calculates the fiscal balance as:
+   * <pre>totalRevenue - totalExpenditure</pre>
+   *
+   * @return the fiscal balance (positive = surplus, negative = deficit)
+   * @throws SQLException if retrieval or computation fails
+   */
 
   public double calculateFiscalBalance() throws SQLException {
     double totalRevenue = calculateTotalRevenue();
@@ -121,23 +122,24 @@ public class FinancialService {
     return totalRevenue - totalExpenditure;
   }
 
-    /**
-     * Indicates whether the fiscal state reflects a surplus.
-     *
-     * @return {@code true} if revenues >= expenditures, otherwise {@code false}
-     * @throws SQLException if balance calculation fails
-     */
+  /**
+   * Indicates whether the fiscal state reflects a surplus.
+   *
+   * @return {@code true} if revenues >= expenditures, otherwise {@code false}
+   * @throws SQLException if balance calculation fails
+   */
 
   public boolean isSurplus() throws SQLException {
     return calculateFiscalBalance() >= 0;
   }
 
-    /**
-     * Returns a formatted human-readable string describing the fiscal balance.
-     *
-     * @return status string in one of the formats: "Surplus: X euros", "Deficit: X euros", or "Balanced: 0.00 euros"
-     * @throws SQLException if balance calculation fails
-     */
+  /**
+   * Returns a formatted human-readable string describing the fiscal balance.
+   *
+   * @return status string in one of the formats: "Surplus: X euros",
+   * "Deficit: X euros", or "Balanced: 0.00 euros"
+   * @throws SQLException if balance calculation fails
+   */
 
   public String getFiscalBalanceStatus() throws SQLException {
     double balance = calculateFiscalBalance();
@@ -151,81 +153,81 @@ public class FinancialService {
     }
   }
 
-    /**
-     * Updates an existing revenue record.
-     *
-     * @param revenue the updated revenue entity
-     * @throws SQLException if the update fails
-     */
+  /**
+   * Updates an existing revenue record.
+   *
+   * @param revenue the updated revenue entity
+   * @throws SQLException if the update fails
+   */
 
   public void updateRevenue(Revenue revenue) throws SQLException {
     revenueRepository.update(revenue);
   }
 
-    /**
-     * Updates an existing expenditure record.
-     *
-     * @param expenditure the updated expenditure entity
-     * @throws SQLException if the update fails
-     */
+  /**
+   * Updates an existing expenditure record.
+   *
+   * @param expenditure the updated expenditure entity
+   * @throws SQLException if the update fails
+   */
 
   public void updateExpenditure(Expenditure expenditure) throws SQLException {
     expenditureRepository.update(expenditure);
   }
 
-    /**
-     * Inserts a new revenue record.
-     *
-     * @param revenue the entity to insert
-     * @throws SQLException if insertion fails
-     */
+  /**
+   * Inserts a new revenue record.
+   *
+   * @param revenue the entity to insert
+   * @throws SQLException if insertion fails
+   */
 
   public void addRevenue(Revenue revenue) throws SQLException {
     revenueRepository.insert(revenue);
   }
 
-    /**
-     * Inserts a new expenditure record.
-     *
-     * @param expenditure the entity to insert
-     * @throws SQLException if insertion fails
-     */
+  /**
+   * Inserts a new expenditure record.
+   *
+   * @param expenditure the entity to insert
+   * @throws SQLException if insertion fails
+   */
 
   public void addExpenditure(Expenditure expenditure) throws SQLException {
     expenditureRepository.insert(expenditure);
   }
 
-    /**
-     * Deletes an expenditure record based on its identifier.
-     *
-     * @param code the expenditure identifier
-     * @throws SQLException if deletion fails
-     */
+  /**
+   * Deletes an expenditure record based on its identifier.
+   *
+   * @param code the expenditure identifier
+   * @throws SQLException if deletion fails
+   */
 
   public void deleteRevenue(int code) throws SQLException {
     revenueRepository.delete(code);
   }
 
-    /**
-     * Deletes an expenditure record based on its identifier.
-     *
-     * @param code the expenditure identifier
-     * @throws SQLException if deletion fails
-     */
+  /**
+   * Deletes an expenditure record based on its identifier.
+   *
+   * @param code the expenditure identifier
+   * @throws SQLException if deletion fails
+   */
 
   public void deleteExpenditure(int code) throws SQLException {
     expenditureRepository.delete(code);
   }
 
-    /**
-     * Parses a string representing a currency value and attempts to convert it to a double.
-     *
-     * <p>This helper method supports both European and US numeric formats and attempts
-     * to normalize the value before parsing.</p>
-     *
-     * @param amount a formatted currency string (e.g. "1.234,56€" or "$1,234.56")
-     * @return parsed numeric value or {@code 0.0} if parsing fails
-     */
+  /**
+   * Parses a string representing a currency value and attempts to convert it to a double.
+   *
+   * <p>This helper method supports both European and US numeric formats and attempts
+   * to normalize the value before parsing.</p>
+   *
+   * @param amount a formatted currency string (e.g. "1.234,56€" or "$1,234.56")
+   * @return parsed numeric value or {@code 0.0} if parsing fails
+   */
 
   private double parseAmount(String amount) {
     if (amount == null || amount.trim().isEmpty()) {

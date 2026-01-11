@@ -15,12 +15,12 @@ import com.bonus71.data.repository.FinanceMinistryRepository;
 import com.bonus71.data.repository.HealthRepository;
 import com.bonus71.data.repository.NationalDefenseRepository;
 import com.bonus71.data.repository.RevenueRepository;
+import com.bonus71.functions.menus.ExpenditureMenu;
 import com.bonus71.functions.menus.MinistryOfEducationMenu;
 import com.bonus71.functions.menus.MinistryOfFinanceMenu;
-import com.bonus71.functions.menus.MinistryOfHealthMenu;
 import com.bonus71.functions.menus.NationalDefenseMenu;
+import com.bonus71.functions.menus.MinistryOfHealthMenu;
 import com.bonus71.functions.menus.MinistryOfEnvironmentMenu;
-import com.bonus71.functions.menus.ExpenditureMenu;
 import com.bonus71.functions.menus.RevenueMenu;
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -50,20 +50,21 @@ import java.util.Scanner;
  * <p>This utility is typically triggered from the main GUI or the bootstrap logic
  * when the user selects a data administration or editing mode.</p>
  */
+
 public class EditProcessor {
 
-    /**
-     * Starts a continuous data management loop that allows the user to select
-     * a financial data category and perform editing operations through menu components.
-     *
-     * <p>Repositories for each financial category are instantiated at the beginning,
-     * making them available throughout the session. For each user selection, execution
-     * is delegated to the corresponding menu-driven editor.</p>
-     *
-     * <p>The loop terminates only when the user selects the exit option.</p>
-     *
-     * @throws SQLException if a repository operation or database communication fails
-     */
+  /**
+   * Starts a continuous data management loop that allows the user to select
+   * a financial data category and perform editing operations through menu components.
+   *
+   * <p>Repositories for each financial category are instantiated at the beginning,
+   * making them available throughout the session. For each user selection, execution
+   * is delegated to the corresponding menu-driven editor.</p>
+   *
+   * <p>The loop terminates only when the user selects the exit option.</p>
+   *
+   * @throws SQLException if a repository operation or database communication fails
+   */
 
   public static void editData() throws SQLException {
     // Create scanner from current System.in (allows for testing)
@@ -92,21 +93,21 @@ public class EditProcessor {
       int choice = scanner.nextInt();
       scanner.nextLine();
 
-            switch (choice) {
-                case 1 -> ExpenditureMenu.menu(exodaRepo);
-                case 2 -> RevenueMenu.menu(esodaRepo);
-                case 3 -> MinistryOfEducationMenu.menu(paideiaRepo);
-                case 4 -> MinistryOfEnvironmentMenu.menu(perivRepo);
-                case 5 -> NationalDefenseMenu.menu(amynaRepo);
-                case 6 -> MinistryOfFinanceMenu.menu(oikRepo);
-                case 7 -> MinistryOfHealthMenu.menu(ygeiasRepo);
-                case 0 -> {
-                    System.out.println("Exit...");
-                    return;
-                }
-                default -> System.out.println("invalid choice!");
-            }
-
+      switch (choice) {
+        case 1 -> ExpenditureMenu.menu(exodaRepo);
+        case 2 -> RevenueMenu.menu(esodaRepo);
+        case 3 -> MinistryOfEducationMenu.menu(paideiaRepo);
+        case 4 -> MinistryOfEnvironmentMenu.menu(perivRepo);
+        case 5 -> NationalDefenseMenu.menu(amynaRepo);
+        case 6 -> MinistryOfFinanceMenu.menu(oikRepo);
+        case 7 -> MinistryOfHealthMenu.menu(ygeiasRepo);
+        case 0 -> {
+          System.out.println("Exit...");
+          return;
+        }
+        default -> System.out.println("invalid choice!");
       }
+
     }
   }
+}
