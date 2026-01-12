@@ -11,7 +11,7 @@
 
 **Compilation**
 
-From the root directory of the project, where the parent `pom.xml` file is located, run:
+From the root directory of the project `bonus_7_1`, where the parent `pom.xml` file is located, run:
 ```bash
 mvn clean install
 ```
