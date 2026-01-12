@@ -19,30 +19,28 @@ import java.util.List;
 /**
  * Repository class responsible for data access operations related to
  * {@link Expenditure} entities.
- * <p>
- * This class provides CRUD (Create, Read, Update, Delete) functionality
+ *
+ * <p>This class provides CRUD (Create, Read, Update, Delete) functionality
  * for the {@code EXPENDITURE} database table using JDBC. It encapsulates
  * SQL statements and database interaction logic, promoting a clean
  * separation between persistence and business logic layers.
 
  *
- * <p>
- * Database connections are managed through {@link DatabaseConfig}, and
+ * <p>Database connections are managed through {@link DatabaseConfig}, and
  * all operations use prepared statements to ensure safety and efficiency.
 
  */
 public class ExpenditureRepository {
-    /**
-     * Retrieves all expenditure records from the database.
-     *
-     * <p>
-     * Executes a {@code SELECT * FROM EXPENDITURE} query and maps each
-     * result row to an {@link Expenditure} entity.
+  /**
+   * Retrieves all expenditure records from the database.
+   *
+   * <p>Executes a {@code SELECT * FROM EXPENDITURE} query and maps each
+   * result row to an {@link Expenditure} entity.
 
-     *
-     * @return a list containing all {@link Expenditure} records found
-     * @throws SQLException if a database access error occurs
-     */
+   *
+   * @return a list containing all {@link Expenditure} records found
+   * @throws SQLException if a database access error occurs
+   */
   public List<Expenditure> findAll() throws SQLException {
     List<Expenditure> list = new ArrayList<>();
     String sql = "SELECT * FROM EXPENDITURE";
@@ -61,17 +59,16 @@ public class ExpenditureRepository {
     }
     return list;
   }
-    /**
-     * Inserts a new expenditure record into the database.
-     *
-     * <p>
-     * Persists the provided {@link Expenditure} entity by executing an
-     * {@code INSERT INTO EXPENDITURE} statement.
+  /**
+   * Inserts a new expenditure record into the database.
+   *
+   * <p>Persists the provided {@link Expenditure} entity by executing an
+   * {@code INSERT INTO EXPENDITURE} statement.
 
-     *
-     * @param expenditure the {@link Expenditure} entity to be inserted
-     * @throws SQLException if a database access error occurs
-     */
+   *
+   * @param expenditure the {@link Expenditure} entity to be inserted
+   * @throws SQLException if a database access error occurs
+   */
   public void insert(Expenditure expenditure) throws SQLException {
     String sql = "INSERT INTO EXPENDITURE VALUES (?, ?, ?)";
 
@@ -84,17 +81,16 @@ public class ExpenditureRepository {
       ps.executeUpdate();
     }
   }
-    /**
-     * Updates an existing expenditure record in the database.
-     *
-     * <p>
-     * Updates the category and euro amount of an expenditure record
-     * identified by its unique code.
+  /**
+   * Updates an existing expenditure record in the database.
+   *
+   * <p>Updates the category and euro amount of an expenditure record
+   * identified by its unique code.
 
-     *
-     * @param expenditure the {@link Expenditure} entity containing updated data
-     * @throws SQLException if a database access error occurs
-     */
+   *
+   * @param expenditure the {@link Expenditure} entity containing updated data
+   * @throws SQLException if a database access error occurs
+   */
   public void update(Expenditure expenditure) throws SQLException {
     String sql = "UPDATE EXPENDITURE SET CATEGORY=?, EUROS=? WHERE CODE=?";
 
@@ -107,17 +103,16 @@ public class ExpenditureRepository {
       ps.executeUpdate();
     }
   }
-    /**
-     * Deletes an expenditure record from the database.
-     *
-     * <p>
-     * Removes the record identified by the specified expenditure code
-     * from the {@code EXPENDITURE} table.
+  /**
+   * Deletes an expenditure record from the database.
+   *
+   * <p>Removes the record identified by the specified expenditure code
+   * from the {@code EXPENDITURE} table.
 
-     *
-     * @param code the unique expenditure code identifier
-     * @throws SQLException if a database access error occurs
-     */
+   *
+   * @param code the unique expenditure code identifier
+   * @throws SQLException if a database access error occurs
+   */
   public void delete(int code) throws SQLException {
     String sql = "DELETE FROM EXPENDITURE WHERE CODE=?";
 

@@ -23,7 +23,8 @@ import java.sql.SQLException;
  * <p>Key functionalities:</p>
  * <ul>
  *   <li>Retrieve budget data for a specific year using {@link #getYear(int)}</li>
- *   <li>Compare two years and generate a textual comparison report using {@link #compare(int, int)}</li>
+ *   <li>Compare two years and generate a textual comparison report using
+ *   {@link #compare(int, int)}</li>
  *   <li>Provide general conclusions across multiple years using {@link #generalConclusions()}</li>
  * </ul>
  *

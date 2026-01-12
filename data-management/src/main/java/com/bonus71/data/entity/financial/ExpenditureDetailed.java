@@ -7,6 +7,7 @@
  */
 
 package com.bonus71.data.entity.financial;
+
 /**
  * Represents a detailed financial expenditure record.
  *
@@ -27,18 +28,18 @@ public class ExpenditureDetailed {
   private String publicInvestmentBudget;
   private String total;
 
-    /**
-     * Constructs an {@code ExpenditureDetailed} object with detailed
-     * budget allocation data.
-     *
-     * @param code the unique identifier code of the expenditure
-     * @param department the department or administrative unit associated
-     *                   with the expenditure
-     * @param regularBudget the amount allocated from the regular budget
-     * @param publicInvestmentBudget the amount allocated from the public
-     *                               investment budget
-     * @param total the total expenditure amount
-     */
+  /**
+   * Constructs an {@code ExpenditureDetailed} object with detailed
+   * budget allocation data.
+   *
+   * @param code the unique identifier code of the expenditure
+   * @param department the department or administrative unit associated
+   *                   with the expenditure
+   * @param regularBudget the amount allocated from the regular budget
+   * @param publicInvestmentBudget the amount allocated from the public
+   *                               investment budget
+   * @param total the total expenditure amount
+   */
 
   public ExpenditureDetailed(int code,
                                String department,

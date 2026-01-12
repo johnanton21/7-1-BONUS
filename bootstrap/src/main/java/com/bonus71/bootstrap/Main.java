@@ -677,6 +677,7 @@ public class Main extends JFrame {
   /**
    * Safely parses a string to an integer with user-friendly error handling.
    * @param input the string to parse
+   *
    * @param fieldName the name of the field being parsed (for error messages)
    * @return the parsed integer, or null if parsing fails
    */

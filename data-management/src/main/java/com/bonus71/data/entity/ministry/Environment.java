@@ -26,14 +26,14 @@ public class Environment {
   private String name;
   private String euros;
 
-    /**
-     * Constructs an {@code Environment} object with the specified attributes.
-     *
-     * @param majorCategory the major classification category of the
-     *                      environment-related financial entry
-     * @param name the descriptive name of the environmental category
-     * @param euros the monetary amount associated with the category in euros
-     */
+  /**
+   * Constructs an {@code Environment} object with the specified attributes.
+   *
+   * @param majorCategory the major classification category of the
+   *                      environment-related financial entry
+   * @param name the descriptive name of the environmental category
+   * @param euros the monetary amount associated with the category in euros
+   */
 
   public Environment(int majorCategory, String name, String euros) {
     this.majorCategory = majorCategory;

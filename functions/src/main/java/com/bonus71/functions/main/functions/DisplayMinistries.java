@@ -39,18 +39,18 @@ import java.util.Scanner;
  */
 
 public class DisplayMinistries {
-    /**
-     * Displays expenditure information categorized by governmental ministries.
-     *
-     * <p>The method prints an interactive console menu that allows the user
-     * to select a ministry. Upon selection, the method fetches data from the
-     * appropriate repository and displays structured financial information
-     * including major category, department name, and associated cost values.</p>
-     *
-     * <p>The user may continue selecting options until they choose to exit.</p>
-     *
-     * @throws SQLException if database access or retrieval fails
-     */
+  /**
+   * Displays expenditure information categorized by governmental ministries.
+   *
+   * <p>The method prints an interactive console menu that allows the user
+   * to select a ministry. Upon selection, the method fetches data from the
+   * appropriate repository and displays structured financial information
+   * including major category, department name, and associated cost values.</p>
+   *
+   * <p>The user may continue selecting options until they choose to exit.</p>
+   *
+   * @throws SQLException if database access or retrieval fails
+   */
   public static void showMinistriesData() throws SQLException {
 
     Scanner sc = new Scanner(System.in);

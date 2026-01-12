@@ -7,6 +7,7 @@
  */
 
 package com.bonus71.data.entity.financial;
+
 /**
  * Represents a financial expenditure record.
  *
@@ -25,12 +26,12 @@ public class Expenditure {
   private String euros;
 
   /**
-     * Constructs an {@code Expenditure} object with the specified attributes.
-     *
-     * @param code the unique identifier code of the expenditure
-     * @param category the category describing the type of expenditure
-     * @param euros the monetary amount of the expenditure in euros
-     */
+   * Constructs an {@code Expenditure} object with the specified attributes.
+   *
+   * @param code the unique identifier code of the expenditure
+   * @param category the category describing the type of expenditure
+   * @param euros the monetary amount of the expenditure in euros
+   */
 
   public Expenditure(int code, String category, String euros) {
     this.code = code;
@@ -38,23 +39,23 @@ public class Expenditure {
     this.euros = euros;
   }
 
-    /**
-     * Returns the expenditure code.
-     *
-     * @return the expenditure code
-     */
+  /**
+   * Returns the expenditure code.
+   *
+   * @return the expenditure code
+   */
 
-    public int getCode() {
+  public int getCode() {
     return code;
   }
 
-    /**
-     * Sets the expenditure code.
-     *
-     * @param code the expenditure code to set
-     */
+  /**
+   * Sets the expenditure code.
+   *
+   * @param code the expenditure code to set
+   */
 
-    public void setCode(int code) {
+  public void setCode(int code) {
     this.code = code;
   }
 
