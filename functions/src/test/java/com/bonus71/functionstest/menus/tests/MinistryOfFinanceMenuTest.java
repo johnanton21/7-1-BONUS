@@ -1,73 +1,91 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2026 7+1 BONUS
+ *
+ * Licensed under the MIT License.
+ */
+
 package com.bonus71.functionstest.menus.tests;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import com.bonus71.data.entity.ministry.FinanceMinistry;
-import com.bonus71.data.repository.FinanceMinistryRepository;
-import java.sql.SQLException;
-import java.util.List;
+import com.bonus71.functions.menus.MinistryOfFinanceMenu;
+import com.bonus71.functionstest.menus.repos.FakeFinanceMinistryRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.*;
+import java.util.Scanner;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ * Unit tests for {@link MinistryOfFinanceMenu}.
+ *
+ * <p>Tests all menu options: view, add, update, delete using a fake in-memory repository.</p>
+ */
 
 class MinistryOfFinanceMenuTest {
 
-  @Test
-    void testFindAll() throws SQLException {
-    FinanceMinistryRepository repo = new FinanceMinistryRepository();
+    private FakeFinanceMinistryRepository repo;
 
-    List<FinanceMinistry> results = repo.findAll();
+    @BeforeEach
+    void setup() {
+        repo = new FakeFinanceMinistryRepository();
+    }
 
-    assertNotNull(results);
-  }
+    private String runMenu(String input) throws Exception {
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
 
-  @Test
-    void testInsert() throws SQLException {
-    FinanceMinistryRepository repo = new FinanceMinistryRepository();
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(out));
 
-    FinanceMinistry fm = new FinanceMinistry(501, "FinanceTest", "1000");
-    repo.insert(fm);
+        Scanner testScanner = new Scanner(System.in);
+        MinistryOfFinanceMenu.menu(repo);
 
-    boolean exists = repo.findAll().stream()
-                .anyMatch(x -> x.getMajorCategory() == 501);
+        return out.toString();
+    }
 
-    assertTrue(exists);
-  }
+    @Test
+    void testView() throws Exception {
+        repo.insert(new FinanceMinistry(1, "Tax Revenue", "100000"));
+        repo.insert(new FinanceMinistry(2, "Budget Planning", "75000"));
 
-  @Test
-    void testUpdate() throws SQLException {
-    FinanceMinistryRepository repo = new FinanceMinistryRepository();
+        String output = runMenu("1\n");
 
-    FinanceMinistry fm = new FinanceMinistry(502, "OldFinance", "200");
-    repo.insert(fm);
+        assertTrue(output.contains("1 | Tax Revenue | 100000"));
+        assertTrue(output.contains("2 | Budget Planning | 75000"));
+    }
 
-    FinanceMinistry updated = new FinanceMinistry(502, "NewFinance", "900");
-    repo.update(updated);
+    @Test
+    void testAdd() throws Exception {
+        runMenu("2\n3\nPublic Debt\n85000\n");
 
-    FinanceMinistry result = repo.findAll().stream()
-                .filter(x -> x.getMajorCategory() == 502)
-                .findFirst()
-                .orElse(null);
+        assertEquals(1, repo.findAll().size());
+        FinanceMinistry f = repo.findAll().get(0);
 
-    assertNotNull(result);
-    assertEquals("NewFinance", result.getName());
-    assertEquals("900", result.getEuros());
-  }
+        assertEquals(3, f.getMajorCategory());
+        assertEquals("Public Debt", f.getName());
+        assertEquals("85000", f.getEuros());
+    }
 
-  @Test
-    void testDelete() throws SQLException {
-    FinanceMinistryRepository repo = new FinanceMinistryRepository();
+    @Test
+    void testUpdate() throws Exception {
+        repo.insert(new FinanceMinistry(5, "Treasury", "50000"));
 
-    FinanceMinistry fm = new FinanceMinistry(503, "TempFinance", "80");
-    repo.insert(fm);
+        runMenu("3\n5\nState Treasury\n65000\n");
 
-    repo.delete(503);
+        FinanceMinistry f = repo.findAll().get(0);
+        assertEquals("State Treasury", f.getName());
+        assertEquals("65000", f.getEuros());
+    }
 
-    boolean exists = repo.findAll().stream()
-                .anyMatch(x -> x.getMajorCategory() == 503);
+    @Test
+    void testDelete() throws Exception {
+        repo.insert(new FinanceMinistry(9, "Old Budget", "20000"));
 
-    assertFalse(exists);
-  }
+        runMenu("4\n9\n");
+
+        assertTrue(repo.findAll().isEmpty());
+    }
 }

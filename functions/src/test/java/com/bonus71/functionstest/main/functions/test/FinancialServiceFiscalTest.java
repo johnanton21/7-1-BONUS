@@ -1,3 +1,11 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2026 7+1 BONUS
+ *
+ * Licensed under the MIT License.
+ */
+
 package com.bonus71.functionstest.main.functions.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,6 +23,26 @@ import java.sql.SQLException;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+/**
+ * Unit test class for {@link FinancialService} focusing on fiscal/budget-related operations.
+ *
+ * <p>This class uses JUnit 5 and Mockito to test fiscal calculations, including
+ * the computation of fiscal balance and status (Surplus, Deficit, Balanced),
+ * as well as parsing of monetary amount strings in various formats.</p>
+ *
+ * <p>Tested operations include:
+ * <ul>
+ *   <li>Calculation of fiscal balance when revenues exceed expenditures (Surplus)</li>
+ *   <li>Calculation of fiscal balance when expenditures exceed revenues (Deficit)</li>
+ *   <li>Calculation of fiscal balance when revenues equal expenditures (Balanced)</li>
+ *   <li>Parsing of amounts from strings with various formats, including currency symbols, commas, dots, null, empty, or invalid strings</li>
+ * </ul>
+ *
+ * <p>Setup uses reflection to inject mock {@link RevenueRepository} and {@link ExpenditureRepository}
+ * instances into the {@code FinancialService} before each test.</p>
+ */
+
 
 public class FinancialServiceFiscalTest {
 
@@ -76,7 +104,7 @@ public class FinancialServiceFiscalTest {
     double val2 = (double) method.invoke(service, "2,50");
     double val3 = (double) method.invoke(service, "1000");
     double val4 = (double) method.invoke(service, "€3.500");
-    double val5 = (double) method.invoke(service, null);
+    double val5 = (double) method.invoke(service, (Object) null);
     double val6 = (double) method.invoke(service, "");
     double val7 = (double) method.invoke(service, "abc");
 

@@ -1,3 +1,11 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2026 7+1 BONUS
+ *
+ * Licensed under the MIT License.
+ */
+
 package com.bonus71.functionstest.main.functions.test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -9,6 +17,20 @@ import java.sql.SQLException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+/**
+ * Unit test class for {@link DisplayExpRev}.
+ *
+ * <p>This class uses JUnit 5 to test the output of the {@code showAll()} method
+ * in DisplayExpRev. It captures the console output and verifies that all
+ * expected headers and sections are printed correctly, ensuring that the
+ * method displays expenditures, revenues, and detailed expenditures
+ * as intended.</p>
+ *
+ * <p>Setup and teardown methods redirect {@link System#out} to a
+ * {@link ByteArrayOutputStream} for capturing printed output, which is
+ * then asserted in the test methods.</p>
+ */
 
 
 public class DisplayExpRevTest {

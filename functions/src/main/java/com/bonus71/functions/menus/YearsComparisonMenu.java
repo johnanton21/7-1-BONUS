@@ -1,8 +1,36 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2026 7+1 BONUS
+ *
+ * Licensed under the MIT License.
+ */
+
 package com.bonus71.functions.menus;
 
 import com.bonus71.data.entity.Comparison.YearsComparison;
 import com.bonus71.data.repository.YearsComparisonRepository;
 import java.sql.SQLException;
+
+/**
+ * Provides methods to compare budget data across different years.
+ *
+ * <p>This class is part of the {@code functions.menus} package and serves as
+ * a menu/controller for performing year-to-year comparisons of revenues,
+ * expenses, and balances. It interacts with the data layer via
+ * {@link YearsComparisonRepository}.</p>
+ *
+ * <p>Key functionalities:</p>
+ * <ul>
+ *   <li>Retrieve budget data for a specific year using {@link #getYear(int)}</li>
+ *   <li>Compare two years and generate a textual comparison report using {@link #compare(int, int)}</li>
+ *   <li>Provide general conclusions across multiple years using {@link #generalConclusions()}</li>
+ * </ul>
+ *
+ * <p>This class is used primarily by the main application to show year-based
+ * comparisons in the user interface.</p>
+ */
+
 
 public class YearsComparisonMenu {
 

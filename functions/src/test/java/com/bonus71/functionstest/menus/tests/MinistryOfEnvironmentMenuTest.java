@@ -1,75 +1,91 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2026 7+1 BONUS
+ *
+ * Licensed under the MIT License.
+ */
+
 package com.bonus71.functionstest.menus.tests;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import com.bonus71.data.entity.ministry.Environment;
-import com.bonus71.data.repository.EnvironmentRepository;
-import java.sql.SQLException;
-import java.util.List;
+import com.bonus71.functions.menus.MinistryOfEnvironmentMenu;
+import com.bonus71.functionstest.menus.repos.FakeEnvironmentRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.*;
+import java.util.Scanner;
 
+import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit tests for {@link MinistryOfEnvironmentMenu}.
+ *
+ * <p>Tests all menu options: view, add, update, delete using a fake in-memory repository.</p>
+ */
 
 class MinistryOfEnvironmentMenuTest {
 
-  @Test
-    void testFindAll() throws SQLException {
-    EnvironmentRepository repo = new EnvironmentRepository();
+    private FakeEnvironmentRepository repo;
 
-    List<Environment> results = repo.findAll();
+    @BeforeEach
+    void setup() {
+        repo = new FakeEnvironmentRepository();
+    }
 
-    assertNotNull(results);
-  }
+    private String runMenu(String input) throws Exception {
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
 
-  @Test
-    void testInsert() throws SQLException {
-    EnvironmentRepository repo = new EnvironmentRepository();
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(out));
 
-    Environment env = new Environment(901, "TestEnv", "300");
-    repo.insert(env);
+        Scanner testScanner = new Scanner(System.in);
+        MinistryOfEnvironmentMenu.menu(repo);
 
-    boolean exists = repo.findAll().stream()
-                .anyMatch(x -> x.getMajorCategory() == 901);
+        return out.toString();
+    }
 
-    assertTrue(exists);
-  }
+    @Test
+    void testView() throws Exception {
+        repo.insert(new Environment(1, "Climate Change", "50000"));
+        repo.insert(new Environment(2, "Recycling", "25000"));
 
-  @Test
-    void testUpdate() throws SQLException {
-    EnvironmentRepository repo = new EnvironmentRepository();
+        String output = runMenu("1\n");
 
-    Environment env = new Environment(902, "Old", "100");
-    repo.insert(env);
+        assertTrue(output.contains("1 | Climate Change | 50000"));
+        assertTrue(output.contains("2 | Recycling | 25000"));
+    }
 
-    Environment updated = new Environment(902, "New", "999");
-    repo.update(updated);
+    @Test
+    void testAdd() throws Exception {
+        runMenu("2\n3\nWildlife Protection\n30000\n");
 
-    Environment result = repo.findAll().stream()
-                .filter(x -> x.getMajorCategory() == 902)
-                .findFirst()
-                .orElse(null);
+        assertEquals(1, repo.findAll().size());
+        Environment e = repo.findAll().get(0);
 
-    assertNotNull(result);
-    assertEquals("New", result.getName());
-    assertEquals("999", result.getEuros());
-  }
+        assertEquals(3, e.getMajorCategory());
+        assertEquals("Wildlife Protection", e.getName());
+        assertEquals("30000", e.getEuros());
+    }
 
-  @Test
-    void testDelete() throws SQLException {
-    EnvironmentRepository repo = new EnvironmentRepository();
+    @Test
+    void testUpdate() throws Exception {
+        repo.insert(new Environment(5, "Pollution Control", "15000"));
 
-    Environment env = new Environment(903, "DeleteMe", "10");
-    repo.insert(env);
+        runMenu("3\n5\nAir Quality\n20000\n");
 
-    repo.delete(903);
+        Environment e = repo.findAll().get(0);
+        assertEquals("Air Quality", e.getName());
+        assertEquals("20000", e.getEuros());
+    }
 
-    boolean exists = repo.findAll().stream()
-                .anyMatch(x -> x.getMajorCategory() == 903);
+    @Test
+    void testDelete() throws Exception {
+        repo.insert(new Environment(9, "Waste Management", "10000"));
 
-    assertFalse(exists);
-  }
+        runMenu("4\n9\n");
+
+        assertTrue(repo.findAll().isEmpty());
+    }
 }

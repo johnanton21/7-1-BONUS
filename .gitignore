@@ -37,6 +37,3 @@ replay_pid*
 # Maven build directories
 *target
 target/
-
-# Claude Code
-.claude

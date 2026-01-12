@@ -1,3 +1,11 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2026 7+1 BONUS
+ *
+ * Licensed under the MIT License.
+ */
+
 package com.bonus71.functionstest.menus.tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,6 +20,11 @@ import java.util.Map;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Test;
 
+/**
+ * * Fake in-memory repository for testing purposes.
+ *
+ */
+
 class FakeYearsComparisonRepository extends YearsComparisonRepository {
   private final Map<Integer, YearsComparison> data = new HashMap<>();
 
@@ -24,6 +37,10 @@ class FakeYearsComparisonRepository extends YearsComparisonRepository {
     return data.get(year);
   }
 }
+
+/**
+ * Unit tests for {@link YearsComparisonMenu} using a fake repository.
+ */
 
 public class YearsComparisonMenuTest {
   @Test

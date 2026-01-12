@@ -1,71 +1,91 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2026 7+1 BONUS
+ *
+ * Licensed under the MIT License.
+ */
+
 package com.bonus71.functionstest.menus.tests;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import com.bonus71.data.entity.ministry.NationalDefense;
-import com.bonus71.data.repository.NationalDefenseRepository;
-import java.sql.SQLException;
-import java.util.List;
+import com.bonus71.functions.menus.NationalDefenseMenu;
+import com.bonus71.functionstest.menus.repos.FakeNationalDefenseRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.io.*;
+import java.util.Scanner;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ * Unit tests for {@link NationalDefenseMenu}.
+ *
+ * <p>Tests all menu options: view, add, update, delete using a fake in-memory repository.</p>
+ */
 
 class NationalDefenseMenuTest {
 
-  @Test
-    void testFindAll() throws SQLException {
-    NationalDefenseRepository repo = new NationalDefenseRepository();
+    private FakeNationalDefenseRepository repo;
 
-    List<NationalDefense> results = repo.findAll();
+    @BeforeEach
+    void setup() {
+        repo = new FakeNationalDefenseRepository();
+    }
 
-    assertNotNull(results);
-  }
+    private String runMenu(String input) throws Exception {
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
 
-  @Test
-    void testInsert() throws SQLException {
-    NationalDefenseRepository repo = new NationalDefenseRepository();
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(out));
 
-    NationalDefense nd = new NationalDefense(1001, "TestDefense", "800");
-    repo.insert(nd);
-    boolean exists = repo.findAll().stream()
-                .anyMatch(x -> x.getMajorCategory() == 1001);
+        Scanner testScanner = new Scanner(System.in);
+        NationalDefenseMenu.menu(repo);
 
-    assertTrue(exists);
-  }
+        return out.toString();
+    }
 
-  @Test
-    void testUpdate() throws SQLException {
-    NationalDefenseRepository repo = new NationalDefenseRepository();
+    @Test
+    void testView() throws Exception {
+        repo.insert(new NationalDefense(1, "Army", "250000"));
+        repo.insert(new NationalDefense(2, "Navy", "180000"));
 
-    NationalDefense nd = new NationalDefense(1002, "Old", "100");
-    repo.insert(nd);
+        String output = runMenu("1\n");
 
-    NationalDefense updated = new NationalDefense(1002, "New", "999");
-    repo.update(updated);
+        assertTrue(output.contains("1 | Army | 250000"));
+        assertTrue(output.contains("2 | Navy | 180000"));
+    }
 
-    NationalDefense result = repo.findAll().stream()
-                .filter(x -> x.getMajorCategory() == 1002)
-                .findFirst()
-                .orElse(null);
+    @Test
+    void testAdd() throws Exception {
+        runMenu("2\n3\nAir Force\n200000\n");
 
-    assertNotNull(result);
-    assertEquals("New", result.getName());
-    assertEquals("999", result.getEuros());
-  }
+        assertEquals(1, repo.findAll().size());
+        NationalDefense nd = repo.findAll().get(0);
 
-  @Test
-    void testDelete() throws SQLException {
-    NationalDefenseRepository repo = new NationalDefenseRepository();
+        assertEquals(3, nd.getMajorCategory());
+        assertEquals("Air Force", nd.getName());
+        assertEquals("200000", nd.getEuros());
+    }
 
-    NationalDefense nd = new NationalDefense(1003, "ToDelete", "70");
-    repo.insert(nd);
+    @Test
+    void testUpdate() throws Exception {
+        repo.insert(new NationalDefense(5, "Coast Guard", "60000"));
 
-    repo.delete(1003);
+        runMenu("3\n5\nMaritime Defense\n75000\n");
 
-    boolean exists = repo.findAll().stream()
-                .anyMatch(x -> x.getMajorCategory() == 1003);
+        NationalDefense nd = repo.findAll().get(0);
+        assertEquals("Maritime Defense", nd.getName());
+        assertEquals("75000", nd.getEuros());
+    }
 
-    assertFalse(exists);
-  }
+    @Test
+    void testDelete() throws Exception {
+        repo.insert(new NationalDefense(9, "Old Equipment", "10000"));
+
+        runMenu("4\n9\n");
+
+        assertTrue(repo.findAll().isEmpty());
+    }
 }

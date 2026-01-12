@@ -1,3 +1,11 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2026 7+1 BONUS
+ *
+ * Licensed under the MIT License.
+ */
+
 package com.bonus71.functionstest.menus.tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,6 +21,12 @@ import java.util.Scanner;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Unit tests for {@link ExpenditureMenu}.
+ *
+ * <p>Uses {@link FakeExpenditureRepository} to simulate database operations in-memory.
+ * Tests all menu operations: view, add, update, delete, and invalid selection handling.</p>
+ */
 
 class ExpenditureMenuTest {
 

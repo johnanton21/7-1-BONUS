@@ -1,9 +1,36 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2026 7+1 BONUS
+ *
+ * Licensed under the MIT License.
+ */
+
 package com.bonus71.functions.menus;
 
 import com.bonus71.data.entity.ministry.Health;
 import com.bonus71.data.repository.HealthRepository;
 import java.sql.SQLException;
 import java.util.Scanner;
+
+/**
+ * Provides a console-based menu for managing data related to the Ministry of Health.
+ *
+ * <p>This class is part of the {@code functions.menus} package and offers a
+ * command-line interface for interacting with health ministry budget records.
+ * Users can view, add, update, and delete entries associated with the Ministry of Health.</p>
+ *
+ * <p>The class serves as a controller between user input and the data layer,
+ * delegating all persistence operations to the {@link HealthRepository}.</p>
+ *
+ * <ul>
+ *   <li>Displays health ministry budget records</li>
+ *   <li>Adds new ministry entries</li>
+ *   <li>Updates existing ministry data</li>
+ *   <li>Deletes ministry records</li>
+ * </ul>
+ */
+
 
 public class MinistryOfHealthMenu {
   public static void menu(HealthRepository repo) throws SQLException {

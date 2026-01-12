@@ -1,3 +1,11 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2026 7+1 BONUS
+ *
+ * Licensed under the MIT License.
+ */
+
 package com.bonus71.functionstest.menus.repos;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -10,6 +18,13 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.jupiter.api.Test;
+
+/**
+ * Unit tests for a fake {@link YearsComparisonRepository} used in testing.
+ *
+ * <p>This fake repository stores {@link YearsComparison} objects in-memory
+ * keyed by year, allowing tests to simulate database queries without a real database.</p>
+ */
 
 public class FakeYearsComparisonRepositoryTest {
 

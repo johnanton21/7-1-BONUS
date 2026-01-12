@@ -1,3 +1,11 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2026 7+1 BONUS
+ *
+ * Licensed under the MIT License.
+ */
+
 package com.bonus71.graphics;
 
 import java.awt.Font;
@@ -10,8 +18,39 @@ import org.jfree.chart.plot.PiePlot;
 import org.jfree.data.general.DefaultPieDataset;
 
 
+/*
+ * Pie chart visualizing the detailed expenditures of all ministries in 2025.
+ *
+ * <p>
+ * Each slice represents a ministry or governmental body, with the amount in euros spent in 2025.
+ * The chart is created using JFreeChart and displayed in a Swing JFrame.
+
+ *
+ * <p>
+ * Features:
+ * <ul>
+ *   <li>Displays all ministries and central government bodies with their corresponding budgets.</li>
+ *   <li>Labels include the ministry name and amount in euros.</li>
+ *   <li>Pie chart is circular with a small interior gap for aesthetics.</li>
+ *   <li>Font styling is applied to labels for better readability.</li>
+ * </ul>
+
+ *
+ * <p>
+ * Note: The data is currently hard-coded for demonstration purposes.
+ * It can be extended to fetch live data from the financial repositories.
+
+ *
+ * <p>
+ * Usage:
+ * <pre>{@code
+ * PerMinistryPie2025.showChart(); // Opens a JFrame displaying the pie chart
+ * }</pre>
+
+ */
 
 public class PerMinistryPie2025 {
+
   public static void showChart() {
 
 

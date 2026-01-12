@@ -1,3 +1,11 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2026 7+1 BONUS
+ *
+ * Licensed under the MIT License.
+ */
+
 package com.bonus71.bootstrap;
 
 
@@ -20,6 +28,11 @@ import com.bonus71.data.repository.RevenueRepository;
 import com.bonus71.functions.main.functions.FinancialService;
 import com.bonus71.functions.menus.YearsComparisonMenu;
 import com.bonus71.graphics.Comparison22_25;
+import com.bonus71.graphics.Comparison23_25;
+import com.bonus71.graphics.Comparison24_25;
+import com.bonus71.graphics.PerMinistryPie2025;
+import com.bonus71.graphics.PieExpenditures2025;
+import com.bonus71.graphics.PieRevenues2025;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -38,7 +51,26 @@ import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 
-
+/**
+ * Main application class of the system.
+ *
+ * <p>This class serves as the central controller of the application.
+ * It initializes the graphical user interface, handles user interaction
+ * through menu options and coordinates the execution of all core
+ * functionalities.</p>
+ *
+ * <p>The class provides functionality for:</p>
+ * <ul>
+ *   <li>Displaying and managing budget data</li>
+ *   <li>Calculating fiscal balance</li>
+ *   <li>Analyzing data by ministry and year</li>
+ *   <li>Visualizing statistical information using charts</li>
+ *   <li>Applying changes to financial records</li>
+ * </ul>
+ *
+ * <p>The application is launched from the {@code main} method and relies on
+ * services provided by other modules of the project.</p>
+ */
 public class Main extends JFrame {
   private final FinancialService financialService = new FinancialService();
 
@@ -593,7 +625,29 @@ public class Main extends JFrame {
 
   // OPTION 6: Analyze Statistical Data
   private void analyzeStatisticalData() {
-    Comparison22_25.showChart();
+    String[] charts = {
+      "Comparison 2025 vs 2022",
+      "Comparison 2025 vs 2023",
+      "Comparison 2025 vs 2024",
+      "Pie Chart - Per Ministry 2025",
+      "Pie Chart - Expenditures 2025",
+      "Pie Chart - Revenues 2025"
+    };
+
+    String choice = (String) JOptionPane.showInputDialog(this,
+                "Select chart to display:", "Analyze Statistical Data",
+                JOptionPane.QUESTION_MESSAGE, null, charts, charts[0]);
+
+    if (choice != null) {
+      switch (choice) {
+        case "Comparison 2025 vs 2022" -> Comparison22_25.showChart();
+        case "Comparison 2025 vs 2023" -> Comparison23_25.showChart();
+        case "Comparison 2025 vs 2024" -> Comparison24_25.showChart();
+        case "Pie Chart - Per Ministry 2025" -> PerMinistryPie2025.showChart();
+        case "Pie Chart - Expenditures 2025" -> PieExpenditures2025.showChart();
+        case "Pie Chart - Revenues 2025" -> PieRevenues2025.showChart();
+      }
+    }
   }
 
   // OPTION 7: Exit
