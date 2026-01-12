@@ -43,6 +43,7 @@ Once the menu appears, follow the on-screen instructions to interact with the ap
 ├── bootstrap/              # Main entry point & application startup module
 ├── checkstyle/                 # Configuration files (checkstyle)
 ├── data-management/        # Data processing module
+├── docs                    # JaCoCo docs
 ├── functions/              # Core business logic module
 ├── graphics/               # Visualization and UI components module
 ├── .gitignore              # Files to be ignored by Git
