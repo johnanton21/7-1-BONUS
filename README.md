@@ -13,33 +13,31 @@
 **Step 1. Clone the repository** 
 ```bash
 git clone https://github.com/johnanton21/7-1-BONUS.git
-cd 
+cd 7-1-BONUS
+```
 
-
-
-From the root directory of the project `bonus_7_1`, where the parent `pom.xml` file is located, run:
+**2. Compile all modules**
+From the root directory of the project, where the parent `pom.xml` file is located, run:
 ```bash
-mvn clean install
+mvn clean compile
 ```
 
 ## EXECUTION
-**Step 1:
-To launch the main menu of the application, run:**
+**Step 1: To launch the main menu of the application, run:**
 
 ```bash
 mvn exec:java -pl bootstrap -Dexec.mainClass=com.bonus71.bootstrap.Main
 ```
 After running this command, the main menu will appear in the terminal.
 
-**Step 2:
-Using the Application**
+**Step 2: Using the Application**
 
 Once the menu appears, follow the on-screen instructions to interact with the application.
 
 
 ## USAGE
 1. Launch the application from the terminal
-2. Provide the required input `(1-7)`
+2. Provide the required input `(1-7)` when prompted
 3. The program processes the input and displays the results in the console
 4. To terminate the process: press `7`
 
