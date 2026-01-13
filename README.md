@@ -12,7 +12,8 @@
 
 **Step 1. Clone the repository** 
 ```bash
-git clone
+git clone https://github.com/johnanton21/7-1-BONUS.git
+cd 
 
 
 
