@@ -1,0 +1,12 @@
+com.bonus71.bootstrap
+com.bonus71.data
+com.bonus71.data.config
+com.bonus71.data.entity
+com.bonus71.data.entity.Comparison
+com.bonus71.data.entity.financial
+com.bonus71.data.entity.ministry
+com.bonus71.data.repository
+com.bonus71.functions
+com.bonus71.functions.main.functions
+com.bonus71.functions.menus
+com.bonus71.graphics
