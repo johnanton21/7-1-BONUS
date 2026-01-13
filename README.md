@@ -9,7 +9,12 @@
 - Apache Maven
 - `JAVA_HOME` environment variable properly set
 
-**Compilation**
+
+**Step 1. Clone the repository** 
+```bash
+git clone
+
+
 
 From the root directory of the project `bonus_7_1`, where the parent `pom.xml` file is located, run:
 ```bash
@@ -38,6 +43,7 @@ Once the menu appears, follow the on-screen instructions to interact with the ap
 4. To terminate the process: press `7`
 
 ## PROJECT STRUCTURE
+This project is implemented as a **multi-module Maven project**.
 ```text
 .
 ├── bootstrap/              # Main entry point & application startup module
