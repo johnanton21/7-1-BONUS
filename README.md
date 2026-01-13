@@ -17,6 +17,7 @@ cd 7-1-BONUS
 ```
 
 **2. Compile all modules**
+
 From the root directory of the project, where the parent `pom.xml` file is located, run:
 ```bash
 mvn clean compile
